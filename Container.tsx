@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
     container: {
         width: Dimensions.get("window").width,
         height: Dimensions.get("window").height,
-        padding: Dimensions.get("window").height / 74
+        padding: Dimensions.get("window").height / 74,
+        backgroundColor: '#8de1e7'
     }
 })
 
