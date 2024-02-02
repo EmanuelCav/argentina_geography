@@ -9,6 +9,11 @@ type RouteType = {
 
 export type StackNavigation = NativeStackNavigationProp<RouteType>
 
+export type Action = {
+    type: string;
+    payload: any;
+}
+
 export type ButtonMenuPropsType = {
     text: string;
     func: () => void;

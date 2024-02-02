@@ -8,6 +8,8 @@ import Options from "./app/screens/Options";
 import Categories from "./app/screens/Categories";
 import Playing from "./app/screens/Playing";
 
+import UserGlobalContext from "./app/server/context/user.context";
+
 const Stack = createNativeStackNavigator();
 
 const theme = {
@@ -21,17 +23,19 @@ const theme = {
 export default function App() {
   return (
     <NavigationContainer theme={theme}>
-      <Container>
-        <StatusBar backgroundColor='cyan' translucent={false} />
-        <Stack.Navigator initialRouteName="Home" screenOptions={{
-          headerShown: false
-        }}>
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Playing" component={Playing} />
-          <Stack.Screen name="Categories" component={Categories} />
-          <Stack.Screen name="Options" component={Options} />
-        </Stack.Navigator>
-      </Container>
+      <UserGlobalContext>
+        <Container>
+          <StatusBar backgroundColor='cyan' translucent={false} />
+          <Stack.Navigator initialRouteName="Home" screenOptions={{
+            headerShown: false
+          }}>
+            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Playing" component={Playing} />
+            <Stack.Screen name="Categories" component={Categories} />
+            <Stack.Screen name="Options" component={Options} />
+          </Stack.Navigator>
+        </Container>
+      </UserGlobalContext>
     </NavigationContainer>
   );
 }
