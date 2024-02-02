@@ -1,1 +1,1 @@
-export const GET_USER = 'GET_USER'
+export const UPDATE_OPTIONS = 'UPDATE_OPTIONS'

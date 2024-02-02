@@ -17,8 +17,7 @@ const Home = ({ navigation }: { navigation: StackNavigation }) => {
 
   useEffect(() => {
     console.log(user);
-    
-  }, [])
+  }, [user])
 
   return (
     <View style={generalStyles.containerGeneral}>
