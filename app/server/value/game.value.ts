@@ -1,4 +1,5 @@
-export const initialState = {
-    game: [],
-    corrects: 0,
+import { IGame } from "../../interface/Game";
+
+export const initialState: IGame = {
+    questions: []
 }

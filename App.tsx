@@ -10,6 +10,7 @@ import Playing from "./app/screens/Playing";
 import Statistics from "./app/screens/Statistics";
 
 import UserGlobalContext from "./app/server/context/user.context";
+import GameGlobalContext from "./app/server/context/game.context";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,18 +26,20 @@ export default function App() {
   return (
     <NavigationContainer theme={theme}>
       <UserGlobalContext>
-        <Container>
-          <StatusBar backgroundColor='cyan' translucent={false} />
-          <Stack.Navigator initialRouteName="Home" screenOptions={{
-            headerShown: false
-          }}>
-            <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="Playing" component={Playing} />
-            <Stack.Screen name="Categories" component={Categories} />
-            <Stack.Screen name="Options" component={Options} />
-            <Stack.Screen name="Statistics" component={Statistics} />
-          </Stack.Navigator>
-        </Container>
+        <GameGlobalContext>
+          <Container>
+            <StatusBar backgroundColor='cyan' translucent={false} />
+            <Stack.Navigator initialRouteName="Home" screenOptions={{
+              headerShown: false
+            }}>
+              <Stack.Screen name="Home" component={Home} />
+              <Stack.Screen name="Playing" component={Playing} />
+              <Stack.Screen name="Categories" component={Categories as any} />
+              <Stack.Screen name="Options" component={Options} />
+              <Stack.Screen name="Statistics" component={Statistics} />
+            </Stack.Navigator>
+          </Container>
+        </GameGlobalContext>
       </UserGlobalContext>
     </NavigationContainer>
   );

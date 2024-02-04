@@ -1,0 +1,1 @@
+export const GENERATE_GAME = 'GENERATE_GAME'

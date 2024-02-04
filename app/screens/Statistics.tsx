@@ -24,7 +24,7 @@ const Statistics = ({ navigation }: { navigation: StackNavigation }) => {
         <View style={generalStyles.containerGeneral}>
             <HeaderStatistics categories={categories} />
             <BodyStatistics categories={categories} />
-            <ButtonAccept text='ACEPTAR' func={goBack} />
+            <ButtonAccept text='ACEPTAR' func={goBack} isCategory={false} />
         </View>
     )
 }

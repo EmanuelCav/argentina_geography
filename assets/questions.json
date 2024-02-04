@@ -1,0 +1,170 @@
+[
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075303/geography_argentina/tucuman_dbghwh.png",
+        "category": "Provincias/Distritos",
+        "answer": "Tucumán",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075303/geography_argentina/tierra_del_fuego_u6prb7.png",
+        "category": "Provincias/Distritos",
+        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075290/geography_argentina/santiago_del_estero_s5dani.png",
+        "category": "Provincias/Distritos",
+        "answer": "Santiago del Estero",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075290/geography_argentina/santa_fe_jfm4ko.png",
+        "category": "Provincias/Distritos",
+        "answer": "Santa Fe",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075289/geography_argentina/santa_cruz_ibhmo8.png",
+        "category": "Provincias/Distritos",
+        "answer": "Santa Cruz",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075289/geography_argentina/san_luis_n58em2.png",
+        "category": "Provincias/Distritos",
+        "answer": "San Luis",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075289/geography_argentina/san_juan_yrumty.png",
+        "category": "Provincias/Distritos",
+        "answer": "San Juan",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075287/geography_argentina/salta_wldwck.png",
+        "category": "Provincias/Distritos",
+        "answer": "Salta",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075287/geography_argentina/salta_wldwck.png",
+        "category": "Provincias/Distritos",
+        "answer": "Neuquén",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075287/geography_argentina/rio_negro_zma6b5.png",
+        "category": "Provincias/Distritos",
+        "answer": "Río Negro",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075287/geography_argentina/misiones_rgxwmn.png",
+        "category": "Provincias/Distritos",
+        "answer": "Misiones",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075286/geography_argentina/mendoza_o1sjyw.png",
+        "category": "Provincias/Distritos",
+        "answer": "Mendoza",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075286/geography_argentina/la_rioja_uv1tr3.png",
+        "category": "Provincias/Distritos",
+        "answer": "La Rioja",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075255/geography_argentina/la_pampa_depajm.png",
+        "category": "Provincias/Distritos",
+        "answer": "La Pampa",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075230/geography_argentina/jujuy_vtrbmv.png",
+        "category": "Provincias/Distritos",
+        "answer": "Jujuy",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/corrientes_lrebia.png",
+        "category": "Provincias/Distritos",
+        "answer": "Corrientes",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/entre_rios_wzrue3.png",
+        "category": "Provincias/Distritos",
+        "answer": "Entre Ríos",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/formosa_kdgifs.png",
+        "category": "Provincias/Distritos",
+        "answer": "Formosa",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/cordoba_apvwft.png",
+        "category": "Provincias/Distritos",
+        "answer": "Córdoba",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/cordoba_apvwft.png",
+        "category": "Provincias/Distritos",
+        "answer": "Catamarca",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/chaco_lconwp.png",
+        "category": "Provincias/Distritos",
+        "answer": "Chaco",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075228/geography_argentina/caba_oatjqm.png",
+        "category": "Provincias/Distritos",
+        "answer": "Ciudad Autónoma de Buenos Aires",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075228/geography_argentina/chubut_r8wvqj.png",
+        "category": "Provincias/Distritos",
+        "answer": "Chubut",
+        "options": []
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075228/geography_argentina/buenos_aires_quoagz.png",
+        "category": "Provincias/Distritos",
+        "answer": "Buenos Aires",
+        "options": []
+    }
+]

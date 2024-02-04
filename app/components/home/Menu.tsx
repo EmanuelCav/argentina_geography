@@ -1,19 +1,31 @@
 import { View } from 'react-native'
 
+import allQuestions from '../../../assets/questions.json'
+
 import { homeStyles } from '../../styles/home.styles'
 
-import { StackNavigation } from '../../types/props.types'
+import { MenuPropsType } from '../../types/props.types'
 
 import ButtonMenu from './components/ButtonMenu'
 
-const Menu = ({ navigation }: { navigation: StackNavigation }) => {
+const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameAction }: MenuPropsType) => {
 
   const start = () => {
-    navigation.navigate('Playing')
+    if (categories.filter(c => c.isSelect).length === 0) {
+      navigation.navigate('Categories', {
+        isPlaying: true
+      })
+      
+      return
+    }
+    
+    gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation)
   }
 
-  const categories = () => {
-    navigation.navigate('Categories')
+  const category = () => {
+    navigation.navigate('Categories', {
+      isPlaying: false
+    })
   }
 
   const options = () => {
@@ -26,10 +38,10 @@ const Menu = ({ navigation }: { navigation: StackNavigation }) => {
 
   return (
     <View style={homeStyles.containerMenu}>
-        <ButtonMenu text='INICIAR' func={start} />
-        <ButtonMenu text='CATEGORÍAS' func={categories} />
-        <ButtonMenu text='OPCIONES' func={options} />
-        <ButtonMenu text='ESTADÍSTICAS' func={statistics} />
+      <ButtonMenu text='INICIAR' func={start} />
+      <ButtonMenu text='CATEGORÍAS' func={category} />
+      <ButtonMenu text='OPCIONES' func={options} />
+      <ButtonMenu text='ESTADÍSTICAS' func={statistics} />
     </View>
   )
 }
