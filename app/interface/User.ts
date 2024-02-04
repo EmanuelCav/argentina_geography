@@ -7,6 +7,7 @@ export interface IUser {
     amountQuestions: number;
     categories: ICategory[];
     optionsAction?: (optionData: IOptionUser, navigation: StackNavigation) => void;
+    categoryAction?: (category: ICategory[]) => void;
 }
 
 export interface IOptionUser {

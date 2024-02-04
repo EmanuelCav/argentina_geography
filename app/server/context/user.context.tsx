@@ -1,12 +1,11 @@
 import { ReactNode, createContext, useReducer } from 'react'
 
 import { IOptionUser, IUser } from '../../interface/User'
+import { ICategory } from '../../interface/Game'
 import { Action, StackNavigation } from '../../types/props.types'
 
 import { initialState } from '../value/user.value'
-
-import { UPDATE_OPTIONS } from '../constants/user.const'
-
+import { SELECT_CATEGORY, UPDATE_OPTIONS } from '../constants/user.const'
 import userReducer from '../reducer/user.reducer'
 
 export const UserContext = createContext<IUser>(initialState)
@@ -35,8 +34,23 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
 
     }
 
+    const categoryAction = (categories: ICategory[]) => {
+
+        try {
+
+            dispatch({
+                type: SELECT_CATEGORY,
+                payload: categories
+            })
+            
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+
     return (
-        <UserContext.Provider value={{ ...state, optionsAction }}>
+        <UserContext.Provider value={{ ...state, optionsAction, categoryAction }}>
             {children}
         </UserContext.Provider>
     )

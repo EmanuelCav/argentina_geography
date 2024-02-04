@@ -2,6 +2,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { SetStateAction } from "react";
 
 import { IOptionUser } from "../interface/User";
+import { ICategory } from "../interface/Game";
 
 type RouteType = {
     Home: undefined;
@@ -36,4 +37,15 @@ export type ButtonOptionsPropsType = {
     text: string;
     amountOptions: number;
     func: (number: number) => void;
+}
+
+export type ShowCategoriesPropsType = {
+    categoryAction: (categories: ICategory[]) => void;
+    categories: ICategory[];
+}
+
+export type CategoryPropsType = {
+    categoryAction: (categories: ICategory[]) => void;
+    categories: ICategory[];
+    category: ICategory;
 }
