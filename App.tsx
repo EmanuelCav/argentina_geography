@@ -7,6 +7,7 @@ import Home from "./app/screens/Home";
 import Options from "./app/screens/Options";
 import Categories from "./app/screens/Categories";
 import Playing from "./app/screens/Playing";
+import Statistics from "./app/screens/Statistics";
 
 import UserGlobalContext from "./app/server/context/user.context";
 
@@ -33,6 +34,7 @@ export default function App() {
             <Stack.Screen name="Playing" component={Playing} />
             <Stack.Screen name="Categories" component={Categories} />
             <Stack.Screen name="Options" component={Options} />
+            <Stack.Screen name="Statistics" component={Statistics} />
           </Stack.Navigator>
         </Container>
       </UserGlobalContext>

@@ -8,12 +8,13 @@ import Title from '../components/home/Title'
 import { generalStyles } from '../styles/general.styles'
 
 import { StackNavigation } from '../types/props.types'
+import { IUser } from '../interface/User'
 
 import { UserContext } from '../server/context/user.context'
 
 const Home = ({ navigation }: { navigation: StackNavigation }) => {
 
-  const user = useContext(UserContext)
+  const user = useContext<IUser>(UserContext)
 
   useEffect(() => {
     console.log(user);

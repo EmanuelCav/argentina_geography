@@ -1,20 +1,20 @@
 import { useContext } from "react";
 import { View } from 'react-native'
 
-import { generalStyles } from '../styles/general.styles'
-
 import ButtonAccept from '../components/components/ButtonAccept'
-import ShowCategories from '../components/categories/ShowCategories'
-import TitleCategories from '../components/categories/TitleCategories'
+import HeaderStatistics from "../components/statistics/HeaderStatistics";
+import BodyStatistics from "../components/statistics/BodyStatistics";
 
 import { StackNavigation } from '../types/props.types'
 import { IUser } from "../interface/User";
 
 import { UserContext } from '../server/context/user.context'
 
-const Categories = ({ navigation }: { navigation: StackNavigation }) => {
+import { generalStyles } from "../styles/general.styles";
 
-    const { categories, categoryAction } = useContext<IUser>(UserContext)
+const Statistics = ({ navigation }: { navigation: StackNavigation }) => {
+
+    const { categories } = useContext<IUser>(UserContext)
 
     const goBack = () => {
         navigation.goBack()
@@ -22,11 +22,11 @@ const Categories = ({ navigation }: { navigation: StackNavigation }) => {
 
     return (
         <View style={generalStyles.containerGeneral}>
-            <TitleCategories />
-            <ShowCategories categories={categories} categoryAction={categoryAction!} />
+            <HeaderStatistics categories={categories} />
+            <BodyStatistics categories={categories} />
             <ButtonAccept text='ACEPTAR' func={goBack} />
         </View>
     )
 }
 
-export default Categories
+export default Statistics

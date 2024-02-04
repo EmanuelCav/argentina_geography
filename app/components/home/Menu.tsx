@@ -20,11 +20,16 @@ const Menu = ({ navigation }: { navigation: StackNavigation }) => {
     navigation.navigate('Options')
   }
 
+  const statistics = () => {
+    navigation.navigate('Statistics')
+  }
+
   return (
     <View style={homeStyles.containerMenu}>
         <ButtonMenu text='INICIAR' func={start} />
         <ButtonMenu text='CATEGORÍAS' func={categories} />
         <ButtonMenu text='OPCIONES' func={options} />
+        <ButtonMenu text='ESTADÍSTICAS' func={statistics} />
     </View>
   )
 }

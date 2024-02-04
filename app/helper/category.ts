@@ -4,7 +4,9 @@ export const selectCategory = (categories: ICategory[], category: ICategory): IC
 
     const newCategories = categories.map((c) => c.category === category.category ? {
         category: category.category,
-        isSelect: !category.isSelect
+        isSelect: !category.isSelect,
+        corrects: category.corrects,
+        questions: category.questions
     } : c)
 
     return newCategories

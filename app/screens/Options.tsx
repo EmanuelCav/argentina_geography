@@ -7,14 +7,14 @@ import ButtonAccept from '../components/components/ButtonAccept'
 
 import { generalStyles } from '../styles/general.styles'
 
-import { IOptionUser } from '../interface/User'
+import { IOptionUser, IUser } from '../interface/User'
 import { StackNavigation } from '../types/props.types'
 
 import { UserContext } from '../server/context/user.context'
 
 const Options = ({ navigation }: { navigation: StackNavigation }) => {
 
-    const { amountOptions, amountQuestions, optionsAction } = useContext(UserContext)
+    const { amountOptions, amountQuestions, optionsAction } = useContext<IUser>(UserContext)
 
     const initialState: IOptionUser = {
         amountOptions,

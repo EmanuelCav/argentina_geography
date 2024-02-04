@@ -9,6 +9,7 @@ type RouteType = {
     Playing: undefined;
     Categories: undefined;
     Options: undefined;
+    Statistics: undefined;
 }
 
 export type StackNavigation = NativeStackNavigationProp<RouteType>
