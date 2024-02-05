@@ -1,6 +1,6 @@
-import { ICategory, IGame, IQuestion } from "../interface/Game"
+import { ICategory, IQuestion } from "../interface/Game"
 
-export const generateGame = (questions: IQuestion[], amountQuestions: number, amountOptions: number): IGame => {
+export const generateGame = (questions: IQuestion[], amountQuestions: number, amountOptions: number): IQuestion[] => {
 
     for (let i = 0; i < amountQuestions; i++) {
 
@@ -17,9 +17,7 @@ export const generateGame = (questions: IQuestion[], amountQuestions: number, am
 
     }
 
-    return {
-        questions
-    }
+    return questions
 
 }
 

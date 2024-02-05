@@ -73,3 +73,24 @@ export type MenuPropsType = {
     amountQuestions: number;
     gameAction: (allQuestions: IQuestion[], categories: ICategory[], amountQuesions: number, amountOptions: number, navigation: StackNavigation) => void
 }
+
+export type GameStatisticsPropsType = {
+    seconds: number;
+    minutes: number;
+    setSeconds: (seconds: number) => void;
+    setMinutes: (minutes: number) => void;
+    questions: number;
+    numberQuestion: number;
+}
+
+export type TimePropsType = {
+    seconds: number;
+    minutes: number;
+    setSeconds: (seconds: number) => void;
+    setMinutes: (minutes: number) => void;
+}
+
+export type QuestionGameStatisticsPropsType = {
+    questions: number, 
+    numberQuestion: number
+}
