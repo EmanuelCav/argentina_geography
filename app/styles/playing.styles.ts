@@ -28,8 +28,8 @@ export const playingStyles = StyleSheet.create({
 
     containerImageQuestion: {
         width: '100%',
-        height: '85%', 
-        justifyContent: 'center', 
+        height: '85%',
+        justifyContent: 'center',
         alignItems: 'center'
     },
 
@@ -37,7 +37,7 @@ export const playingStyles = StyleSheet.create({
         height: '100%',
         width: '100%'
     },
-    
+
     containerGameStatistics: {
         height: '8%',
         justifyContent: 'space-around',
@@ -51,7 +51,34 @@ export const playingStyles = StyleSheet.create({
     },
 
     containerOptions: {
+        width: '100%',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+        flexDirection: 'row',
         flex: 1
+    },
+
+    containerSectionOptions: {
+        width: '50%',
+        height: '100%',
+        padding: Dimensions.get("window").height / 106
+    },
+
+    containerOption: {
+        padding: Dimensions.get("window").height / 106,
+        borderRadius: 8,
+        borderWidth: 2,
+        borderColor: '#FFFFFF',
+        borderStyle: 'solid',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1,
+        marginVertical: Dimensions.get("window").height / 61.66
+    },
+
+    textOption: {
+        color: '#ffffff',
+        fontWeight: '500'
     }
 
 })

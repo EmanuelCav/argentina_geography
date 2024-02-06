@@ -23,9 +23,9 @@ const Playing = () => {
     return (
         <View style={generalStyles.containerGeneral}>
             <Question question={questions[numberQuestion]} />
-            <GameStatistics minutes={minutes} seconds={seconds} setSeconds={setSeconds} setMinutes={setMinutes} 
-            questions={questions.length} numberQuestion={numberQuestion} />
-            <Options />
+            <GameStatistics minutes={minutes} seconds={seconds} setSeconds={setSeconds} setMinutes={setMinutes}
+                questions={questions.length} numberQuestion={numberQuestion} />
+            <Options options={questions[numberQuestion].options} />
         </View>
     )
 }
