@@ -51,3 +51,9 @@ export const shuffle = (array: any[]): any[] => {
 
     return array;
 }
+
+export const emptyOptions = (questions: IQuestion[]) => {
+    for (let i = 0; i < questions.length; i++) {
+        questions[i].options = []
+    }
+}

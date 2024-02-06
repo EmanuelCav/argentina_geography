@@ -1,7 +1,7 @@
 import { IUser } from "../../interface/User";
 import { Action } from "../../types/props.types";
 
-import { SELECT_CATEGORY, UPDATE_OPTIONS } from "../constants/user.const";
+import { SELECT_CATEGORY, UPDATE_OPTIONS, CORRECT_QUESTION } from "../constants/user.const";
 
 import { initialState } from "../value/user.value";
 

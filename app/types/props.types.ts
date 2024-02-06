@@ -81,6 +81,12 @@ export type GameStatisticsPropsType = {
     setMinutes: (minutes: number) => void;
     questions: number;
     numberQuestion: number;
+    realSeconds: number; 
+    realMinutes: number;
+    isCorrect: boolean; 
+    isIncorrect: boolean; 
+    isFinish: boolean; 
+    isPreFinish: boolean;
 }
 
 export type TimePropsType = {
@@ -88,6 +94,12 @@ export type TimePropsType = {
     minutes: number;
     setSeconds: (seconds: number) => void;
     setMinutes: (minutes: number) => void;
+    realSeconds: number; 
+    realMinutes: number;
+    isCorrect: boolean; 
+    isIncorrect: boolean; 
+    isFinish: boolean; 
+    isPreFinish: boolean;
 }
 
 export type QuestionGameStatisticsPropsType = {
