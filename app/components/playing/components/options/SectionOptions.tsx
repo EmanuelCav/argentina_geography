@@ -4,12 +4,14 @@ import { playingStyles } from '../../../../styles/playing.styles'
 
 import Option from './Option'
 
-const SectionOptions = ({ options }: { options: string[] }) => {
+import { SectionOptionsPropsTypes } from '../../../../types/props.types'
+
+const SectionOptions = ({ options, amountOptions, nextQuestion }: SectionOptionsPropsTypes) => {
     return (
         <View style={playingStyles.containerSectionOptions}>
             {
                 options.map((option: string, index: number) => {
-                    return <Option option={option} key={index} />
+                    return <Option option={option} nextQuestion={nextQuestion} key={index} amountOptions={amountOptions} />
                 })
             }
         </View>

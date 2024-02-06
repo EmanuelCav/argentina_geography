@@ -47,7 +47,9 @@ export const playingStyles = StyleSheet.create({
     },
 
     textGameStatistics: {
-        fontSize: Dimensions.get("window").height / 41
+        fontSize: Dimensions.get("window").height / 41,
+        color: '#ffffff',
+        fontWeight: '500'
     },
 
     containerOptions: {
@@ -78,7 +80,59 @@ export const playingStyles = StyleSheet.create({
 
     textOption: {
         color: '#ffffff',
-        fontWeight: '500'
+        fontWeight: '500',
+        textAlign: 'center'
+    },
+
+    containerAnswer: {
+        width: '100%',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flexDirection: 'column',
+        flex: 1,
+        backgroundColor: '#ffffff',
+        padding: Dimensions.get("window").height / 74
+    },
+
+    textAnswer: {
+        fontSize: Dimensions.get("window").height / 46,
+        textAlign: 'center'
+    },
+
+    containerResponseAnswer: {
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row'
+    },
+
+    containerPreFinish: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(93, 193, 185, 0.5)',
+    },
+
+    containPreFinish: {
+        width: '66.66%',
+        height: '25%',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        borderColor: '#5dc1b9',
+        backgroundColor: '#ffffff',
+        borderStyle: 'solid',
+        borderWidth: 3,
+        padding: Dimensions.get("window").height / 106
+    },
+
+    textPreFinish: {
+        fontSize: Dimensions.get("window").height / 41,
+        fontWeight: '600',
+        color: '#5dc1b9'
     }
 
 })

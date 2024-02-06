@@ -94,3 +94,21 @@ export type QuestionGameStatisticsPropsType = {
     questions: number, 
     numberQuestion: number
 }
+
+export type OptionPropsTypes = {
+    option: string;
+    amountOptions: number;
+    nextQuestion: (value: string) => void;
+}
+
+export type SectionOptionsPropsTypes = {
+    options: string[]
+    amountOptions: number;
+    nextQuestion: (value: string) => void;
+}
+
+export type AnswerPropsType = {
+    answer: boolean;
+    correctAnswer: string;
+    continueGame: () => void;
+}
