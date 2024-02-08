@@ -40,8 +40,8 @@ const ShowCategories = ({ categories, categoryAction }: ShowCategoriesPropsType)
                 }
             </View>
             <View style={categoriesStyle.containerActionCategories}>
-                <Icon name="caretleft" color={min < 8 ? '#dddddd' : '#ffffff'} size={Dimensions.get("window").height / 41} onPress={left} />
-                <Icon name="caretright" color={max > categories.length - 8 ? '#dddddd' : '#ffffff'} size={Dimensions.get("window").height / 41} onPress={rigth} />
+                <Icon name="caretleft" color={min < 8 ? '#dddddd' : '#ffffff'} size={Dimensions.get("window").height / 28} onPress={left} />
+                <Icon name="caretright" color={max > categories.length - 8 ? '#dddddd' : '#ffffff'} size={Dimensions.get("window").height / 28} onPress={rigth} />
             </View>
         </View>
     )

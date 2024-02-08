@@ -17,9 +17,11 @@ const Question = ({ question }: { question: IQuestion }) => {
                             style={playingStyles.imageQuestion} />
                     </View>
                 ) : (
-                    <Text style={[playingStyles.textQuestion]}>
-                        {question.text}
-                    </Text>
+                    <View style={playingStyles.containerImageQuestion}>
+                        <Text style={playingStyles.textQuestionText}>
+                            {question.text}
+                        </Text>
+                    </View>
                 )
             }
         </View>

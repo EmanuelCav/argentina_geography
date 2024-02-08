@@ -23,7 +23,15 @@ export const playingStyles = StyleSheet.create({
     textQuestion: {
         fontSize: Dimensions.get("window").height / 41,
         color: '#ffffff',
-        fontWeight: '500'
+        fontWeight: '500',
+        textAlign: 'center'
+    },
+
+    textQuestionText: {
+        fontSize: Dimensions.get("window").height / 33,
+        color: '#ffffff',
+        fontWeight: '500',
+        textAlign: 'center'
     },
 
     containerImageQuestion: {

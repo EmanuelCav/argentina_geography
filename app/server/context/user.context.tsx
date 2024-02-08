@@ -5,8 +5,10 @@ import { ICategory } from '../../interface/Game'
 import { Action, StackNavigation } from '../../types/props.types'
 
 import { initialState } from '../value/user.value'
-import { SELECT_CATEGORY, UPDATE_OPTIONS } from '../constants/user.const'
+import { SELECT_CATEGORY, UPDATE_OPTIONS, USER } from '../constants/user.const'
 import userReducer from '../reducer/user.reducer'
+
+import { setStorage } from '../../helper/storage'
 
 export const UserContext = createContext<IUser>(initialState)
 
@@ -26,8 +28,14 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
                 }
             })
 
+            setStorage({
+                categories: state.categories,
+                amountQuestions: optionData.amountQuestions,
+                amountOptions: optionData.amountOptions
+            })
+
             navigation.goBack()
-            
+
         } catch (error) {
             console.log(error);
         }
@@ -42,7 +50,30 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
                 type: SELECT_CATEGORY,
                 payload: categories
             })
-            
+
+            setStorage({
+                categories,
+                amountQuestions: state.amountQuestions,
+                amountOptions: state.amountOptions
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+
+    const userAction = (data: IUser) => {
+
+        try {
+
+            dispatch({
+                type: USER,
+                payload: JSON.parse(data as any)
+            })
+
+            setStorage(state)
+
         } catch (error) {
             console.log(error);
         }
@@ -50,7 +81,7 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
     }
 
     return (
-        <UserContext.Provider value={{ ...state, optionsAction, categoryAction }}>
+        <UserContext.Provider value={{ ...state, optionsAction, categoryAction, userAction }}>
             {children}
         </UserContext.Provider>
     )

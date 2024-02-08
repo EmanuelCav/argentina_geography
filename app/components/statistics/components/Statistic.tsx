@@ -10,7 +10,7 @@ const Statistic = ({ category }: { category: ICategory }) => {
             <Text style={statiscsStyles.categoryText}>{category.category}</Text>
             <Text style={statiscsStyles.statisticText}>Cantidad de preguntas: {category.questions}</Text>
             <Text style={statiscsStyles.statisticText}>
-                Correctas: {category.corrects} ({category.questions > 0 ? ((100 * category.corrects) / category.questions) : 0}%)
+                Correctas: {category.corrects} ({category.questions > 0 ? ((100 * category.corrects) / category.questions).toFixed(2) : 0}%)
             </Text>
         </View>
     )

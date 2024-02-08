@@ -8,6 +8,7 @@ export interface IUser {
     categories: ICategory[];
     optionsAction?: (optionData: IOptionUser, navigation: StackNavigation) => void;
     categoryAction?: (category: ICategory[]) => void;
+    userAction?: (data: IUser) => void;
 }
 
 export interface IOptionUser {

@@ -44,7 +44,27 @@ export const initialState: IUser = {
         corrects: 0,
         questions: 0
     }, {
+        category: "Pueblos Originarios",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
         category: "Comunas de CABA",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Barrios Porteños",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Partidos del AMBA",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Partidos del Interior de Buenos Aires",
         isSelect: false,
         corrects: 0,
         questions: 0
@@ -140,6 +160,46 @@ export const initialState: IUser = {
         questions: 0
     }, {
         category: "Departamentos de Tucumán",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Ciudades 1",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Ciudades 2",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Ciudades 3",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Ciudades 4",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Ciudades 5",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Ciudades 6",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Ciudades 7",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Ciudades 8",
         isSelect: false,
         corrects: 0,
         questions: 0

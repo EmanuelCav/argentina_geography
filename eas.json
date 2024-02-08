@@ -1,0 +1,31 @@
+{
+  "cli": {
+    "version": ">= 5.9.1"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      "env": {
+        "EXPO_BANNER": "ca-app-pub-8789796567862358/4018558447",
+        "EXPO_INTERSTITIAL": "ca-app-pub-8789796567862358/1807328074",
+        "EXPO_STORAGE": "user_game_storage"
+      }
+    },
+    "test": {
+      "env": {
+        "EXPO_BANNER": "ca-app-pub-8789796567862358/4018558447",
+        "EXPO_INTERSTITIAL": "ca-app-pub-8789796567862358/1807328074",
+        "EXPO_STORAGE": "user_game_storage"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

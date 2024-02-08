@@ -15,13 +15,14 @@ const GameGlobalContext = ({ children }: { children: ReactNode }) => {
 
     const [state, dispatch] = useReducer<(state: IGame, action: Action) => IGame>(gameReducer, initialState)
 
-    const gameAction = (allQuestions: IQuestion[], categories: ICategory[], amountQuesions: number, amountOptions: number, navigation: StackNavigation) => {
-
-        const questions = shuffle(generateQuestions(allQuestions, categories).slice(0, amountQuesions))
-        const game = generateGame(questions, amountQuesions, amountOptions)
-
-        console.log(game);
+    const gameAction = (allQuestions: IQuestion[], categories: ICategory[], amountQuestions: number, amountOptions: number, navigation: StackNavigation) => {
         
+        const questions = generateQuestions(allQuestions, categories, amountQuestions)
+
+        console.log(questions);
+        
+        
+        const game = generateGame(questions, amountQuestions, amountOptions)
 
         dispatch({
             type: GENERATE_GAME,

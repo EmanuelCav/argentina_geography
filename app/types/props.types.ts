@@ -4,6 +4,7 @@ import { SetStateAction } from "react";
 import { IOptionUser } from "../interface/User";
 import { ICategory, IQuestion } from "../interface/Game";
 import { RouteProp } from "@react-navigation/native";
+import { InterstitialAd } from "react-native-google-mobile-ads";
 
 export type RouteType = {
     Home: undefined;

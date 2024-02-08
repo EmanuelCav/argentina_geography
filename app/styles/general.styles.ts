@@ -7,8 +7,10 @@ export const generalStyles = StyleSheet.create({
     },
 
     containerBanner: {
-        height: '20%',
-        backgroundColor: 'yellow'
+        height: '10%',
+        width: '100%',
+        justifyContent: 'flex-start',
+        alignItems: 'center'
     },
 
     containerButtonAccept: {

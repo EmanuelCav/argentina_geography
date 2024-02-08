@@ -134,7 +134,7 @@
     },
     {
         "question": "¿Qué provincia se encuentra aquí?",
-        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/cordoba_apvwft.png",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/catamarca_hghmjm.png",
         "category": "Provincias/Distritos",
         "answer": "Catamarca",
         "options": []
@@ -147,7 +147,7 @@
         "options": []
     },
     {
-        "question": "¿Qué provincia se encuentra aquí?",
+        "question": "¿Qué distrito se encuentra aquí?",
         "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075228/geography_argentina/caba_oatjqm.png",
         "category": "Provincias/Distritos",
         "answer": "Ciudad Autónoma de Buenos Aires",
@@ -166,5 +166,166 @@
         "category": "Provincias/Distritos",
         "answer": "Buenos Aires",
         "options": []
-    }
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Ushuaia",
+        "options": [],
+        "text": "Tierra del Fuego, Antártida e Islas del Atlántico Sur"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Río Gallegos",
+        "options": [],
+        "text": "Santa Cruz"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Rawson",
+        "options": [],
+        "text": "Chubut"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Viedma",
+        "options": [],
+        "text": "Río Negro"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Neuquén",
+        "options": [],
+        "text": "Neuquén"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Santa Rosa",
+        "options": [],
+        "text": "La Pampa"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "La Plata",
+        "options": [],
+        "text": "Buenos Aires"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Paraná",
+        "options": [],
+        "text": "Entre Ríos"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Corrientes",
+        "options": [],
+        "text": "Corrientes"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Mendoza"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Posadas",
+        "options": [],
+        "text": "Misiones"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Córdoba"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "San Luis",
+        "options": [],
+        "text": "San Luis"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "San Juan",
+        "options": [],
+        "text": "San Juan"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Santa Fe de la Vera Cruz",
+        "options": [],
+        "text": "Santa Fe"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "La Rioja",
+        "options": [],
+        "text": "La Rioja"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "San Fernando del Valle de Catamarca",
+        "options": [],
+        "text": "Catamarca"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Resistencia",
+        "options": [],
+        "text": "Chaco"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Santiago del Estero",
+        "options": [],
+        "text": "Santiago del Estero"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "San Miguel de Tucumán",
+        "options": [],
+        "text": "Tucumán"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Formosa",
+        "options": [],
+        "text": "Formosa"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Salta",
+        "options": [],
+        "text": "Salta"
+    },
+    {
+        "question": "Cuál es la capital de",
+        "category": "Capitales",
+        "answer": "Jujuy",
+        "options": [],
+        "text": "Jujuy"
+    }     
 ]

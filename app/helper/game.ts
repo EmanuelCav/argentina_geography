@@ -7,7 +7,10 @@ export const generateGame = (questions: IQuestion[], amountQuestions: number, am
         const options: IQuestion[] = shuffle(questions.filter(q => (q.category === questions[i].category) && (q.answer !== questions[i].answer)))
         const optionRandom = Math.floor(Math.random() * amountOptions)
 
+        if(questions[i].options.length > 0) continue
+
         for (let j = 0; j < amountOptions; j++) {
+
             if(j === optionRandom) {
                 questions[i].options.push(questions[i].answer)
             } else {
@@ -21,19 +24,31 @@ export const generateGame = (questions: IQuestion[], amountQuestions: number, am
 
 }
 
-export const generateQuestions = (allQuestions: IQuestion[], categories: ICategory[]): IQuestion[] => {
+export const generateQuestions = (allQuestions: IQuestion[], categories: ICategory[], amountQuestions: number): IQuestion[] => {
 
     let avaibleQuestions: IQuestion[] = []
 
     for (let i = 0; i < categories.filter(c => c.isSelect).length; i++) {
-        const filterQuestions: IQuestion[] = allQuestions.filter(q => q.category === categories[i].category)
+        const filterQuestions: IQuestion[] = allQuestions.filter(q => q.category === categories.filter(c => c.isSelect)[i].category)
 
         for (let j = 0; j < filterQuestions.length; j++) {
             avaibleQuestions.push(filterQuestions[j])
         }
     }
 
-    return avaibleQuestions
+    if(avaibleQuestions.length < amountQuestions) {
+
+        let copyAvaibleQuestions = [...avaibleQuestions]
+
+        for (let i = 0; i < (amountQuestions - avaibleQuestions.length); i++) {
+            copyAvaibleQuestions.push(shuffle(avaibleQuestions)[i])
+        }
+
+        return copyAvaibleQuestions
+        
+    }
+
+    return shuffle(avaibleQuestions).slice(0, amountQuestions)
 
 }
 
