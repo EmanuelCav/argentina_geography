@@ -4,7 +4,13 @@ export const homeStyles = StyleSheet.create({
 
     containerTitle: {
         height: '25%',
-        backgroundColor: 'violet'
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+        borderBottomWidth: 1,
+        borderBottomColor: '#5dc1b9',
+        borderStyle: 'solid'
     },
 
     containerMenu: {
@@ -28,6 +34,26 @@ export const homeStyles = StyleSheet.create({
         fontSize: Dimensions.get("window").height / 41,
         color: '#ffffff',
         fontWeight: '500'
+    },
+
+    imageTitle: {
+        height: '100%',
+        width: '100%'
+    },
+
+    textTitle: {
+        fontSize: Dimensions.get("window").height / 31,
+        color: '#5dc1b9',
+        fontWeight: '500',
+        textAlign: 'center'
+    },
+
+    containerEventTitle: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: Dimensions.get("window").height / 37,
+        width: '50%',
+        height: '100%'
     }
 
 })

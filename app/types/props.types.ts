@@ -124,3 +124,26 @@ export type AnswerPropsType = {
     correctAnswer: string;
     continueGame: () => void;
 }
+
+export type FinishPropsType = {
+    seconds: number; 
+    minutes: number; 
+    corrects: number; 
+    questions: number;
+    showErrors: () => void; 
+    continueHome : () => void;
+    isGameError: boolean;
+}
+
+export type StatisticsFinishPropsType = {
+    seconds: number; 
+    minutes: number; 
+    corrects: number; 
+    questions: number;
+}
+
+export type ActionsFinishPropsType = {
+    areErrors: boolean;
+    showErrors: () => void; 
+    continueHome : () => void;
+}

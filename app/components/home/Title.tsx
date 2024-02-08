@@ -1,11 +1,15 @@
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 
 import { homeStyles } from '../../styles/home.styles'
+
+import TextTitle from './components/TextTitle'
+import ImageTitle from './components/ImageTitle'
 
 const Title = () => {
   return (
     <View style={homeStyles.containerTitle}>
-        <Text>Title</Text>
+      <ImageTitle />
+      <TextTitle />
     </View>
   )
 }

@@ -35,7 +35,7 @@ const Categories = ({ navigation, route }: CategoriesType) => {
         <View style={generalStyles.containerGeneral}>
             <TitleCategories />
             <ShowCategories categories={categories} categoryAction={categoryAction!} />
-            <ButtonAccept text='ACEPTAR' isCategory={categories.filter(c => c.isSelect).length === 0} func={accept} />
+            <ButtonAccept text='ACEPTAR' isCategory={route.params.isPlaying ? categories.filter(c => c.isSelect).length === 0 : false} func={accept} />
         </View>
     )
 }

@@ -132,7 +132,49 @@ export const playingStyles = StyleSheet.create({
     textPreFinish: {
         fontSize: Dimensions.get("window").height / 41,
         fontWeight: '600',
-        color: '#5dc1b9'
+        color: '#5dc1b9',
+        textAlign: 'center',
+        marginTop: Dimensions.get("window").height / 92
+    },
+
+    containFinish: {
+        width: '95%',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        borderColor: '#5dc1b9',
+        backgroundColor: '#ffffff',
+        borderStyle: 'solid',
+        borderWidth: 3,
+        padding: Dimensions.get("window").height / 106
+    },
+
+    buttonFinish: {
+        padding: Dimensions.get("window").height / 74,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderColor: '#ffffff',
+        borderStyle: 'solid',
+        borderWidth: 2,
+        width: '100%',
+        marginTop: Dimensions.get("window").height / 92
+    },
+
+    textButtonFinish: {
+        fontSize: Dimensions.get("window").height / 41,
+        color: '#ffffff',
+        fontWeight: '500'
+    },
+
+    containerStatisticsFinish: {
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        width: '100%'
+    },
+
+    containerActionsFinish: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%'
     }
 
 })
