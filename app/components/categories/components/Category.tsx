@@ -25,6 +25,7 @@ const Category = ({ category, categories, categoryAction }: CategoryPropsType) =
       <Checkbox
         value={category.isSelect}
         style={{ padding: Dimensions.get("window").height / 92.5 }}
+        onValueChange={changeCategory}
       />
     </Pressable>
   )

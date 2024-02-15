@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import { BackHandler, View } from 'react-native'
-import { InterstitialAd, AdEventType, TestIds } from 'react-native-google-mobile-ads';
-import { EXPO_INTERSTITIAL } from '@env';
+// import { InterstitialAd, AdEventType, TestIds } from 'react-native-google-mobile-ads';
+// import { EXPO_INTERSTITIAL } from '@env';
 
 import allQuestions from '../../assets/questions.json'
 
@@ -24,11 +24,11 @@ import { generalStyles } from '../styles/general.styles'
 import { correctCategory, countCategory } from '../helper/playing'
 import { emptyOptions } from '../helper/game'
 
-const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : `${EXPO_INTERSTITIAL}`;
+// const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : `${EXPO_INTERSTITIAL}`;
 
-const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
-    keywords: ['fashion', 'clothing'],
-});
+// const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
+//     keywords: ['fashion', 'clothing'],
+// });
 
 const Playing = ({ navigation }: { navigation: StackNavigation }) => {
 
@@ -106,7 +106,7 @@ const Playing = ({ navigation }: { navigation: StackNavigation }) => {
     const continueHome = () => {
         const optionsAllQuestions = allQuestions.filter((aq) => aq.options.length > 0)
         emptyOptions(optionsAllQuestions)
-        interstitial.show()
+        // interstitial.show()
         navigation.navigate('Home')
     }
 
@@ -122,15 +122,15 @@ const Playing = ({ navigation }: { navigation: StackNavigation }) => {
         }
     }, [corrects])
 
-    useEffect(() => {
-        const unsubscribe = interstitial.addAdEventListener(AdEventType.LOADED, () => {
-            console.log("Loading add");
-        });
+    // useEffect(() => {
+    //     const unsubscribe = interstitial.addAdEventListener(AdEventType.LOADED, () => {
+    //         console.log("Loading add");
+    //     });
 
-        interstitial.load();
+    //     interstitial.load();
 
-        return unsubscribe;
-    }, []);
+    //     return unsubscribe;
+    // }, []);
 
     useEffect(() => {
         const backHandler = BackHandler.addEventListener('hardwareBackPress', () => true)

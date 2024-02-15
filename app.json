@@ -2,11 +2,12 @@
   "expo": {
     "name": "Geografía de Argentina",
     "slug": "GeografiaDeArgentina",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
+      "image": "./assets/splash.png",
       "backgroundColor": "#5dc1b9"
     },
     "assetBundlePatterns": [
@@ -17,7 +18,7 @@
     },
     "android": {
       "package": "com.geografiadeargentina.aprendegeografiaargentina",
-      "versionCode": 2,
+      "versionCode": 3,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"

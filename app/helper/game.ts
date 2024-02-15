@@ -1,17 +1,18 @@
 import { ICategory, IQuestion } from "../interface/Game"
 
-export const generateGame = (questions: IQuestion[], amountQuestions: number, amountOptions: number): IQuestion[] => {
+export const generateGame = (questions: IQuestion[], allQuestions: IQuestion[], amountQuestions: number, amountOptions: number): IQuestion[] => {
 
     for (let i = 0; i < amountQuestions; i++) {
 
-        const options: IQuestion[] = shuffle(questions.filter(q => (q.category === questions[i].category) && (q.answer !== questions[i].answer)))
+        const options: IQuestion[] = shuffle(allQuestions.filter(q => (q.category === questions[i].category) && (q.answer !== questions[i].answer)))
+
         const optionRandom = Math.floor(Math.random() * amountOptions)
 
-        if(questions[i].options.length > 0) continue
+        if (questions[i].options.length > 0) continue
 
         for (let j = 0; j < amountOptions; j++) {
 
-            if(j === optionRandom) {
+            if (j === optionRandom) {
                 questions[i].options.push(questions[i].answer)
             } else {
                 questions[i].options.push(options[j].answer)
@@ -29,14 +30,16 @@ export const generateQuestions = (allQuestions: IQuestion[], categories: ICatego
     let avaibleQuestions: IQuestion[] = []
 
     for (let i = 0; i < categories.filter(c => c.isSelect).length; i++) {
-        const filterQuestions: IQuestion[] = allQuestions.filter(q => q.category === categories.filter(c => c.isSelect)[i].category)
+        const filterQuestions: IQuestion[] = allQuestions.filter(q => (q.category === categories.filter(c => c.isSelect)[i].category) && q.isAnswer)
 
         for (let j = 0; j < filterQuestions.length; j++) {
             avaibleQuestions.push(filterQuestions[j])
         }
     }
 
-    if(avaibleQuestions.length < amountQuestions) {
+    console.log(avaibleQuestions.length);
+    
+    if (avaibleQuestions.length < amountQuestions) {
 
         let copyAvaibleQuestions = [...avaibleQuestions]
 
@@ -45,7 +48,7 @@ export const generateQuestions = (allQuestions: IQuestion[], categories: ICatego
         }
 
         return copyAvaibleQuestions
-        
+
     }
 
     return shuffle(avaibleQuestions).slice(0, amountQuestions)

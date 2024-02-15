@@ -29,7 +29,7 @@ export const initialState: IUser = {
         corrects: 0,
         questions: 0
     }, {
-        category: "Lagos",
+        category: "Lagos/Lagunas",
         isSelect: false,
         corrects: 0,
         questions: 0
@@ -45,6 +45,16 @@ export const initialState: IUser = {
         questions: 0
     }, {
         category: "Pueblos Originarios",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Parques Nacionales",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Lugares turísticos y emblemáticos",
         isSelect: false,
         corrects: 0,
         questions: 0
@@ -190,16 +200,6 @@ export const initialState: IUser = {
         questions: 0
     }, {
         category: "Ciudades 6",
-        isSelect: false,
-        corrects: 0,
-        questions: 0
-    }, {
-        category: "Ciudades 7",
-        isSelect: false,
-        corrects: 0,
-        questions: 0
-    }, {
-        category: "Ciudades 8",
         isSelect: false,
         corrects: 0,
         questions: 0

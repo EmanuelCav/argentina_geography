@@ -19,4 +19,5 @@ export interface IQuestion {
     category: string;
     text?: string;
     answer: string;
+    isAnswer: boolean;
 }
