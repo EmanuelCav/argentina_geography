@@ -94,6 +94,21 @@ export const initialState: IUser = {
         corrects: 0,
         questions: 0
     }, {
+        category: "Departamentos de Córdoba",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Departamentos de Corrientes",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Departamentos de Entre Ríos",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
         category: "Departamentos de Formosa",
         isSelect: false,
         corrects: 0,
@@ -200,6 +215,16 @@ export const initialState: IUser = {
         questions: 0
     }, {
         category: "Ciudades 6",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Ciudades 7",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Ciudades 8",
         isSelect: false,
         corrects: 0,
         questions: 0
