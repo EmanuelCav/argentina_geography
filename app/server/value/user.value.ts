@@ -24,6 +24,21 @@ export const initialState: IUser = {
         corrects: 0,
         questions: 0
     }, {
+        category: "Habitantes",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Superficie",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
+        category: "Punto mas alto",
+        isSelect: false,
+        corrects: 0,
+        questions: 0
+    }, {
         category: "Ríos",
         isSelect: false,
         corrects: 0,
