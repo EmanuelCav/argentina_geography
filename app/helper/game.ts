@@ -5,6 +5,14 @@ export const generateGame = (questions: IQuestion[], allQuestions: IQuestion[], 
     for (let i = 0; i < amountQuestions; i++) {
 
         const options: IQuestion[] = shuffle(allQuestions.filter(q => (q.category === questions[i].category) && (q.answer !== questions[i].answer)))
+        
+        let answersOptions: string[] = []
+
+        for (let j = 0; j < options.length; j++) {
+            answersOptions.push(options[j].answer)
+        }
+
+        const optionsQuestion: string[] = [...new Set([...answersOptions])]
 
         const optionRandom = Math.floor(Math.random() * amountOptions)
 
@@ -15,7 +23,7 @@ export const generateGame = (questions: IQuestion[], allQuestions: IQuestion[], 
             if (j === optionRandom) {
                 questions[i].options.push(questions[i].answer)
             } else {
-                questions[i].options.push(options[j].answer)
+                questions[i].options.push(optionsQuestion[j])
             }
         }
 
@@ -36,8 +44,6 @@ export const generateQuestions = (allQuestions: IQuestion[], categories: ICatego
             avaibleQuestions.push(filterQuestions[j])
         }
     }
-
-    console.log(avaibleQuestions.length);
     
     if (avaibleQuestions.length < amountQuestions) {
 

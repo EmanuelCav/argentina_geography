@@ -34,7 +34,7 @@ export const initialState: IUser = {
         corrects: 0,
         questions: 0
     }, {
-        category: "Punto mas alto",
+        category: "Punto más alto",
         isSelect: false,
         corrects: 0,
         questions: 0

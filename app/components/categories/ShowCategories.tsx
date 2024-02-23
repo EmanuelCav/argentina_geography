@@ -23,7 +23,7 @@ const ShowCategories = ({ categories, categoryAction }: ShowCategoriesPropsType)
     }
 
     const rigth = () => {
-        if(max > categories.length) {
+        if(max >= categories.length) {
             return
         }
         setMin(min + 8)
@@ -41,7 +41,7 @@ const ShowCategories = ({ categories, categoryAction }: ShowCategoriesPropsType)
             </View>
             <View style={categoriesStyle.containerActionCategories}>
                 <Icon name="caretleft" color={min < 8 ? '#dddddd' : '#ffffff'} size={Dimensions.get("window").height / 28} onPress={left} />
-                <Icon name="caretright" color={max > categories.length ? '#dddddd' : '#ffffff'} size={Dimensions.get("window").height / 28} onPress={rigth} />
+                <Icon name="caretright" color={max >= categories.length ? '#dddddd' : '#ffffff'} size={Dimensions.get("window").height / 28} onPress={rigth} />
             </View>
         </View>
     )
