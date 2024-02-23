@@ -1,3 +1,4 @@
 export const UPDATE_OPTIONS = 'UPDATE_OPTIONS'
 export const SELECT_CATEGORY = 'SELECT_CATEGORY'
 export const USER = 'USER'
+export const ACTION_CATEGORY = 'ACTION_CATEGORY'

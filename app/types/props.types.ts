@@ -148,3 +148,9 @@ export type ActionsFinishPropsType = {
     showErrors: () => void; 
     continueHome : () => void;
 }
+
+export type ActionCategoryPropsType = {
+    text: string; 
+    changeAllCategory: (isSelect: boolean) => void;
+    isSelect: boolean;
+}

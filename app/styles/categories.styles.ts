@@ -46,7 +46,7 @@ export const categoriesStyle = StyleSheet.create({
 
     categoryText: {
         color: '#ffffff',
-        fontSize: Dimensions.get("window").height / 46
+        fontSize: Dimensions.get("window").height / 50
     },
 
     textTitleCategories: {
@@ -54,6 +54,31 @@ export const categoriesStyle = StyleSheet.create({
         fontSize: Dimensions.get("window").height / 41,
         fontWeight: '500',
         textAlign: 'center'
+    },
+
+    containerActionsCategories: {
+        height: '10%',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flexDirection: 'row',
+        width: '100%'
+    },
+
+    buttonActionCategory: {
+        borderRadius: 8,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: Dimensions.get("window").height / 106,
+        borderColor: '#ffffff',
+        borderWidth: 1,
+        borderStyle: 'solid',
+        width: '40%'
+    },
+
+    textButtonActionCategory: {
+        color: '#ffffff',
+        fontWeight: '500',
+        fontSize: Dimensions.get("window").height / 46
     }
 
 })

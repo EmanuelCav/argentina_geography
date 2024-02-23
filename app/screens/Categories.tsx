@@ -6,6 +6,7 @@ import { generalStyles } from '../styles/general.styles'
 import ButtonAccept from '../components/components/ButtonAccept'
 import ShowCategories from '../components/categories/ShowCategories'
 import TitleCategories from '../components/categories/TitleCategories'
+import ActionsCategories from "../components/categories/ActionsCategories";
 
 import { CategoriesType } from '../types/props.types'
 import { IUser } from "../interface/User";
@@ -18,7 +19,7 @@ import { GameContext } from "../server/context/game.context";
 
 const Categories = ({ navigation, route }: CategoriesType) => {
 
-    const { categories, categoryAction, amountOptions, amountQuestions } = useContext<IUser>(UserContext)
+    const { categories, categoryAction, amountOptions, amountQuestions, categoryAllAction } = useContext<IUser>(UserContext)
     const { gameAction } = useContext<IGame>(GameContext)
 
     const accept = () => {
@@ -34,6 +35,7 @@ const Categories = ({ navigation, route }: CategoriesType) => {
     return (
         <View style={generalStyles.containerGeneral}>
             <TitleCategories />
+            <ActionsCategories categoryAllAction={categoryAllAction!} />
             <ShowCategories categories={categories} categoryAction={categoryAction!} />
             <ButtonAccept text='ACEPTAR' isCategory={route.params.isPlaying ? categories.filter(c => c.isSelect).length === 0 : false} func={accept} />
         </View>

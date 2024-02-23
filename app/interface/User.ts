@@ -9,6 +9,7 @@ export interface IUser {
     optionsAction?: (optionData: IOptionUser, navigation: StackNavigation) => void;
     categoryAction?: (category: ICategory[]) => void;
     userAction?: (data: IUser) => void;
+    categoryAllAction?: (isSelect: boolean) => void;
 }
 
 export interface IOptionUser {

@@ -1,4 +1,4 @@
-import { Text, Pressable, Dimensions } from 'react-native'
+import { Text, Pressable, Dimensions, View } from 'react-native'
 import Checkbox from 'expo-checkbox'
 
 import { categoriesStyle } from '../../../styles/categories.styles'
@@ -21,7 +21,9 @@ const Category = ({ category, categories, categoryAction }: CategoryPropsType) =
       },
       categoriesStyle.containerCategory
     ]} onPress={changeCategory}>
-      <Text style={categoriesStyle.categoryText}>{category.category}</Text>
+      <View style={{ width: '94%' }}>
+        <Text style={categoriesStyle.categoryText}>{category.category}</Text>
+      </View>
       <Checkbox
         value={category.isSelect}
         style={{ padding: Dimensions.get("window").height / 92.5 }}

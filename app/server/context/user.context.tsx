@@ -5,7 +5,7 @@ import { ICategory } from '../../interface/Game'
 import { Action, StackNavigation } from '../../types/props.types'
 
 import { initialState } from '../value/user.value'
-import { SELECT_CATEGORY, UPDATE_OPTIONS, USER } from '../constants/user.const'
+import { ACTION_CATEGORY, SELECT_CATEGORY, UPDATE_OPTIONS, USER } from '../constants/user.const'
 import userReducer from '../reducer/user.reducer'
 
 import { setStorage } from '../../helper/storage'
@@ -80,8 +80,34 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
 
     }
 
+    const categoryAllAction = (isSelect: boolean) => {
+
+        try {
+
+            dispatch({
+                type: ACTION_CATEGORY,
+                payload: isSelect
+            })
+
+            setStorage({
+                categories: state.categories.map((c) => c.isSelect !== isSelect ? {
+                    category: c.category,
+                    corrects: c.corrects,
+                    questions: c.questions,
+                    isSelect
+                } : c),
+                amountQuestions: state.amountQuestions,
+                amountOptions: state.amountOptions
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+
     return (
-        <UserContext.Provider value={{ ...state, optionsAction, categoryAction, userAction }}>
+        <UserContext.Provider value={{ ...state, optionsAction, categoryAction, userAction, categoryAllAction }}>
             {children}
         </UserContext.Provider>
     )
