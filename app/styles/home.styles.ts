@@ -27,7 +27,15 @@ export const homeStyles = StyleSheet.create({
         borderColor: '#ffffff',
         borderStyle: 'solid',
         borderWidth: 2,
-        width: '66.66%'
+        width: '66.66%',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        elevation: 7,
     },
 
     buttonMenuText: {

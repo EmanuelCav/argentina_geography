@@ -9441,6 +9441,62 @@
     },
     {
         "question": "En qué provincia se encuentra",
+        "category": "Ciudades 2",
+        "answer": "Formosa",
+        "options": [],
+        "text": "Formosa",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 2",
+        "answer": "Chubut",
+        "options": [],
+        "text": "Chubut",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 2",
+        "answer": "La Pampa",
+        "options": [],
+        "text": "La Pampa",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 2",
+        "answer": "La Rioja",
+        "options": [],
+        "text": "La Rioja",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 2",
+        "answer": "Catamarca",
+        "options": [],
+        "text": "Catamarca",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 2",
+        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "options": [],
+        "text": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 2",
+        "answer": "San Juan",
+        "options": [],
+        "text": "San Juan",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
         "category": "Ciudades 3",
         "answer": "Buenos Aires",
         "options": [],
@@ -9862,6 +9918,22 @@
         "options": [],
         "text": "Tafí Viejo",
         "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 3",
+        "answer": "San Luis",
+        "options": [],
+        "text": "San Luis",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 3",
+        "answer": "Santa Cruz",
+        "options": [],
+        "text": "Santa Cruz",
+        "isAnswer": false
     },
     {
         "question": "En qué provincia se encuentra",
@@ -10289,6 +10361,46 @@
     },
     {
         "question": "En qué provincia se encuentra",
+        "category": "Ciudades 4",
+        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "options": [],
+        "text": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 4",
+        "answer": "Formosa",
+        "options": [],
+        "text": "Formosa",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 4",
+        "answer": "San Juan",
+        "options": [],
+        "text": "San Juan",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 4",
+        "answer": "Chubut",
+        "options": [],
+        "text": "Chubut",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 4",
+        "answer": "La Pampa",
+        "options": [],
+        "text": "La Pampa",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
         "category": "Ciudades 5",
         "answer": "Buenos Aires",
         "options": [],
@@ -10713,6 +10825,38 @@
     },
     {
         "question": "En qué provincia se encuentra",
+        "category": "Ciudades 5",
+        "answer": "La Pampa",
+        "options": [],
+        "text": "La Pampa",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 5",
+        "answer": "San Luis",
+        "options": [],
+        "text": "San Luis",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 5",
+        "answer": "Jujuy",
+        "options": [],
+        "text": "Jujuy",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 5",
+        "answer": "Catamarca",
+        "options": [],
+        "text": "Catamarca",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
         "category": "Ciudades 6",
         "answer": "Buenos Aires",
         "options": [],
@@ -11129,6 +11273,30 @@
     },
     {
         "question": "En qué provincia se encuentra",
+        "category": "Ciudades 6",
+        "answer": "San Luis",
+        "options": [],
+        "text": "San Luis",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 6",
+        "answer": "Chubut",
+        "options": [],
+        "text": "Chubut",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 6",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Mendoza",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
         "category": "Ciudades 7",
         "answer": "Entre Ríos",
         "options": [],
@@ -11542,6 +11710,46 @@
         "options": [],
         "text": "Capitán Sarmiento",
         "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 7",
+        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "options": [],
+        "text": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 7",
+        "answer": "Santa Cruz",
+        "options": [],
+        "text": "Santa Cruz",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 7",
+        "answer": "Chubut",
+        "options": [],
+        "text": "Chubut",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 7",
+        "answer": "Formosa",
+        "options": [],
+        "text": "Formosa",
+        "isAnswer": false
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 7",
+        "answer": "La Rioja",
+        "options": [],
+        "text": "La Rioja",
+        "isAnswer": false
     },
     {
         "question": "En qué provincia se encuentra",

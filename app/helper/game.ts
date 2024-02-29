@@ -12,7 +12,7 @@ export const generateGame = (questions: IQuestion[], allQuestions: IQuestion[], 
             answersOptions.push(options[j].answer)
         }
 
-        const optionsQuestion: string[] = [...new Set([...answersOptions])]
+        const optionsQuestion: string[] = [...new Set([...answersOptions])]        
 
         const optionRandom = Math.floor(Math.random() * amountOptions)
 

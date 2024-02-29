@@ -72,7 +72,15 @@ export const categoriesStyle = StyleSheet.create({
         borderColor: '#ffffff',
         borderWidth: 1,
         borderStyle: 'solid',
-        width: '40%'
+        width: '40%',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        elevation: 7,
     },
 
     textButtonActionCategory: {

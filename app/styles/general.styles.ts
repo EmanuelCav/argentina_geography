@@ -28,7 +28,15 @@ export const generalStyles = StyleSheet.create({
         borderStyle: 'solid',
         borderWidth: 2,
         width: '100%',
-        borderRadius: 12
+        borderRadius: 12,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        elevation: 7,
     },
 
     textButtonAccept: {

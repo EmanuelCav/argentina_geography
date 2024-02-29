@@ -10,7 +10,16 @@ export const playingStyles = StyleSheet.create({
         borderColor: '#ffffff',
         paddingHorizontal: Dimensions.get("window").width / 60,
         paddingVertical: Dimensions.get("window").height / 123,
-        width: '100%'
+        width: '100%',
+        borderRadius: 12,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        elevation: 7,
     },
 
     containerMainQuestion: {
@@ -83,7 +92,15 @@ export const playingStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         flex: 1,
-        marginVertical: Dimensions.get("window").height / 61.66
+        marginVertical: Dimensions.get("window").height / 61.66,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        elevation: 7,
     },
 
     textOption: {
@@ -164,7 +181,15 @@ export const playingStyles = StyleSheet.create({
         borderStyle: 'solid',
         borderWidth: 2,
         width: '100%',
-        marginTop: Dimensions.get("window").height / 92
+        marginTop: Dimensions.get("window").height / 92,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        elevation: 7,
     },
 
     textButtonFinish: {
