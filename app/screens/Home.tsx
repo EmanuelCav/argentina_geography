@@ -1,5 +1,6 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { View } from 'react-native'
+import { fetch } from "@react-native-community/netinfo";
 
 import Banner from '../components/add/Banner'
 import Menu from '../components/home/Menu'
@@ -21,6 +22,13 @@ const Home = ({ navigation }: { navigation: StackNavigation }) => {
   const { categories, amountOptions, amountQuestions, userAction } = useContext<IUser>(UserContext)
   const { gameAction } = useContext<IGame>(GameContext)
 
+  const [isConnection, setIsConnection] = useState<boolean>(true)
+  const [isChangeView, setIsChangeView] = useState<boolean>(false)
+
+  const handleChangeView = () => {
+    setIsChangeView(!isChangeView)
+  }
+
   useEffect(() => {
 
     (async () => {
@@ -34,11 +42,17 @@ const Home = ({ navigation }: { navigation: StackNavigation }) => {
 
   }, [])
 
+  useEffect(() => {
+    fetch().then(conn => conn).then(state => setIsConnection(state.isConnected!));
+  }, [isConnection, isChangeView])
+
   return (
     <View style={generalStyles.containerGeneral}>
-      <Banner />
+      {
+        isConnection && <Banner />
+      }
       <Title />
-      <Menu navigation={navigation} categories={categories} amountOptions={amountOptions} amountQuestions={amountQuestions} gameAction={gameAction!} />
+      <Menu navigation={navigation} categories={categories} amountOptions={amountOptions} amountQuestions={amountQuestions} gameAction={gameAction!} isConnection={isConnection} handleChangeView={handleChangeView} />
     </View>
   )
 }

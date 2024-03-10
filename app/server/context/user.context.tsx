@@ -94,7 +94,8 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
                     category: c.category,
                     corrects: c.corrects,
                     questions: c.questions,
-                    isSelect
+                    isSelect,
+                    isImage: c.isImage
                 } : c),
                 amountQuestions: state.amountQuestions,
                 amountOptions: state.amountOptions

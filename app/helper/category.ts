@@ -6,7 +6,8 @@ export const selectCategory = (categories: ICategory[], category: ICategory): IC
         category: category.category,
         isSelect: !category.isSelect,
         corrects: category.corrects,
-        questions: category.questions
+        questions: category.questions,
+        isImage: category.isImage
     } : c)
 
     return newCategories

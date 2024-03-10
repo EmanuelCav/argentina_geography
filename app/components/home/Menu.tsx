@@ -8,31 +8,39 @@ import { MenuPropsType } from '../../types/props.types'
 
 import ButtonMenu from './components/ButtonMenu'
 
-const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameAction }: MenuPropsType) => {
+const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameAction, handleChangeView, isConnection }: MenuPropsType) => {
 
   const start = () => {
     if (categories.filter(c => c.isSelect).length === 0) {
       navigation.navigate('Categories', {
         isPlaying: true
       })
+
+      handleChangeView()
       
       return
     }
     
-    gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation)
+    gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation, isConnection)
   }
 
   const category = () => {
+    handleChangeView()
+
     navigation.navigate('Categories', {
       isPlaying: false
     })
   }
 
   const options = () => {
+    handleChangeView()
+
     navigation.navigate('Options')
   }
 
   const statistics = () => {
+    handleChangeView()
+
     navigation.navigate('Statistics')
   }
 

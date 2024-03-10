@@ -6,7 +6,8 @@ export const countCategory = (categories: ICategory[], category: string): ICateg
         category: c.category,
         isSelect: c.isSelect,
         corrects: c.corrects,
-        questions: c.questions += 1
+        questions: c.questions += 1,
+        isImage: c.isImage
     } : c)
 
     return categoryCount
@@ -19,7 +20,8 @@ export const correctCategory = (categories: ICategory[], category: string): ICat
         category: c.category,
         isSelect: c.isSelect,
         corrects: c.corrects += 1,
-        questions: c.questions
+        questions: c.questions,
+        isImage: c.isImage
     } : c)
 
     return categoryCorrect

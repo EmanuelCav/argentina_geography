@@ -15,9 +15,9 @@ const GameGlobalContext = ({ children }: { children: ReactNode }) => {
 
     const [state, dispatch] = useReducer<(state: IGame, action: Action) => IGame>(gameReducer, initialState)
 
-    const gameAction = (allQuestions: IQuestion[], categories: ICategory[], amountQuestions: number, amountOptions: number, navigation: StackNavigation) => {
+    const gameAction = (allQuestions: IQuestion[], categories: ICategory[], amountQuestions: number, amountOptions: number, navigation: StackNavigation, isConnection: boolean) => {
         
-        const questions = generateQuestions(allQuestions, categories, amountQuestions)        
+        const questions = generateQuestions(allQuestions, categories, amountQuestions, isConnection)        
         
         const game = generateGame(questions, allQuestions, amountQuestions, amountOptions)
 

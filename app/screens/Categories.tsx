@@ -1,5 +1,6 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { View } from 'react-native'
+import { fetch } from "@react-native-community/netinfo";
 
 import { generalStyles } from '../styles/general.styles'
 
@@ -22,15 +23,21 @@ const Categories = ({ navigation, route }: CategoriesType) => {
     const { categories, categoryAction, amountOptions, amountQuestions, categoryAllAction } = useContext<IUser>(UserContext)
     const { gameAction } = useContext<IGame>(GameContext)
 
+    const [isConnection, setIsConnection] = useState<boolean>(true)
+
     const accept = () => {
         if (route.params.isPlaying) {
-            gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation)
-            
+            gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation, isConnection)
+
             return
         }
 
         navigation.goBack()
     }
+
+    useEffect(() => {
+        fetch().then(conn => conn).then(state => setIsConnection(state.isConnected!));
+    }, [isConnection])
 
     return (
         <View style={generalStyles.containerGeneral}>
