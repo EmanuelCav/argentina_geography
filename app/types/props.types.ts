@@ -4,11 +4,12 @@ import { SetStateAction } from "react";
 import { IOptionUser } from "../interface/User";
 import { ICategory, IQuestion } from "../interface/Game";
 import { RouteProp } from "@react-navigation/native";
-import { InterstitialAd } from "react-native-google-mobile-ads";
 
 export type RouteType = {
     Home: undefined;
-    Playing: undefined;
+    Playing: {
+        isConnection: boolean;
+    };
     Categories: {
         isPlaying: boolean
     };
@@ -16,7 +17,12 @@ export type RouteType = {
     Statistics: undefined;
 }
 
-export type StackNavigation = NativeStackNavigationProp<RouteType>
+export type StackNavigation = NativeStackNavigationProp<RouteType>;
+
+export type PlayingType = {
+    route: RouteProp<RouteType, 'Playing'>;
+    navigation: StackNavigation;
+}
 
 export type CategoriesType = {
     route: RouteProp<RouteType, 'Categories'>;

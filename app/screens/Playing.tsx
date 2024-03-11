@@ -10,7 +10,7 @@ import { GameContext } from '../server/context/game.context'
 
 import { IGame, IQuestion } from '../interface/Game'
 import { IUser } from '../interface/User'
-import { StackNavigation } from '../types/props.types'
+import { PlayingType } from '../types/props.types'
 
 import Question from '../components/playing/Question'
 import GameStatistics from '../components/playing/GameStatistics'
@@ -30,7 +30,7 @@ const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
     keywords: ['fashion', 'clothing'],
 });
 
-const Playing = ({ navigation }: { navigation: StackNavigation }) => {
+const Playing = ({ navigation, route }: PlayingType) => {
 
     const { categories, amountOptions, categoryAction } = useContext<IUser>(UserContext)
     const { questions } = useContext<IGame>(GameContext)
@@ -106,7 +106,9 @@ const Playing = ({ navigation }: { navigation: StackNavigation }) => {
     const continueHome = () => {
         const optionsAllQuestions = allQuestions.filter((aq) => aq.options.length > 0)
         emptyOptions(optionsAllQuestions)
-        interstitial.show()
+        if(route.params.isConnection) {
+            interstitial.show()
+        }
         navigation.navigate('Home')
     }
 

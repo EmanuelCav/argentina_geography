@@ -26,7 +26,9 @@ const GameGlobalContext = ({ children }: { children: ReactNode }) => {
             payload: game
         })
 
-        navigation.navigate('Playing')
+        navigation.navigate('Playing', {
+            isConnection
+        })
 
     }
 
