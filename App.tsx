@@ -10,6 +10,8 @@ import Categories from "./app/screens/Categories";
 import Playing from "./app/screens/Playing";
 import Statistics from "./app/screens/Statistics";
 
+import Loading from './app/components/response/Loading'
+
 import UserGlobalContext from "./app/server/context/user.context";
 import GameGlobalContext from "./app/server/context/game.context";
 
@@ -29,6 +31,7 @@ export default function App() {
       <UserGlobalContext>
         <GameGlobalContext>
           <Container>
+            <Loading />
             <StatusBar backgroundColor='#5cc197' style='light' translucent={false} />
             <Stack.Navigator initialRouteName="Home" screenOptions={{
               headerShown: false

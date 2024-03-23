@@ -10,6 +10,7 @@ export interface ICategory {
 
 export interface IGame {
     questions: IQuestion[];
+    loading: boolean,
     gameAction?: (allQuestions: IQuestion[], categories: ICategory[], amountQuesions: number, amountOptions: number, navigation: StackNavigation, isConnection: boolean) => void;
 }
 
