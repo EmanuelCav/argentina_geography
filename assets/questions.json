@@ -370,7 +370,7 @@
     {
         "question": "Cuál es la capital de",
         "category": "Capitales",
-        "answer": "Jujuy",
+        "answer": "San Salvador de Jujuy",
         "options": [],
         "text": "Jujuy",
         "isAnswer": true
@@ -10122,7 +10122,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 4",
-        "answer": "Buenos Aires",
+        "answer": "Salta",
         "options": [],
         "text": "San José de Metán",
         "isAnswer": true
@@ -10556,7 +10556,7 @@
         "category": "Ciudades 5",
         "answer": "Córdoba",
         "options": [],
-        "text": "Villa Dolores",
+        "text": "Villa Dolores (Departamento de Sann Javier)",
         "isAnswer": true
     },
     {
@@ -11274,6 +11274,14 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 6",
+        "answer": "Misiones",
+        "options": [],
+        "text": "Garupá",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 6",
         "answer": "San Luis",
         "options": [],
         "text": "San Luis",
@@ -11482,7 +11490,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 7",
-        "answer": "Entre Ríos",
+        "answer": "Santa Fe",
         "options": [],
         "text": "Fray Luis Beltrán (Departamento de San Lorenzo)",
         "isAnswer": true
@@ -11644,7 +11652,15 @@
         "category": "Ciudades 7",
         "answer": "Córdoba",
         "options": [],
-        "text": "Villa Nueva",
+        "text": "Villa Nueva (Departamento de General San Martín)",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 7",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Villa Nueva (Departamento de Guaymallén)",
         "isAnswer": true
     },
     {
@@ -11674,7 +11690,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 7",
-        "answer": "Entre Ríos",
+        "answer": "Catamarca",
         "options": [],
         "text": "Santa María (Departamento de Santa María)",
         "isAnswer": true
@@ -11709,6 +11725,14 @@
         "answer": "Buenos Aires",
         "options": [],
         "text": "Capitán Sarmiento",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 7",
+        "answer": "Misiones",
+        "options": [],
+        "text": "Candelaria",
         "isAnswer": true
     },
     {
@@ -11804,7 +11828,7 @@
         "category": "Ciudades 8",
         "answer": "Salta",
         "options": [],
-        "text": "Colonia Santa Rosa",
+        "text": "Colonia Santa Rosa (Departamento de Orán)",
         "isAnswer": true
     },
     {
@@ -11908,7 +11932,7 @@
         "category": "Ciudades 8",
         "answer": "Córdoba",
         "options": [],
-        "text": "Santa Rosa de la Calamuchita",
+        "text": "Santa Rosa de Calamuchita",
         "isAnswer": true
     },
     {
@@ -12157,6 +12181,582 @@
         "answer": "La Pampa",
         "options": [],
         "text": "Eduardo Castex",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Monte Maíz",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Huinca Renanco",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Fe",
+        "options": [],
+        "text": "Villa Cañás",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Fe",
+        "options": [],
+        "text": "San Carlos Centro",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Fe",
+        "options": [],
+        "text": "Laguna Paiva",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Fe",
+        "options": [],
+        "text": "Las Rosas",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Fe",
+        "options": [],
+        "text": "Puerto General San Martín",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Fe",
+        "options": [],
+        "text": "Calchaquí",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Fe",
+        "options": [],
+        "text": "Totoras",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Fe",
+        "options": [],
+        "text": "Frontera",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Fe",
+        "options": [],
+        "text": "Las Toscas",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Fe",
+        "options": [],
+        "text": "San José del Rincón",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Oliva",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Coronel Moldes",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Hernando",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Corral de Bustos-Ifflinger",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Malvinas Argentinas (Departamento de Colón)",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Estación Juárez Celman",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Mendiolaza",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "General Deheza",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Saldán",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Leones",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Monte Cristo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Vicuña Mackenna",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Córdoba",
+        "options": [],
+        "text": "Brinkmann",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Chubut",
+        "options": [],
+        "text": "Gaiman",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Chubut",
+        "options": [],
+        "text": "Lago Puelo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Cruz",
+        "options": [],
+        "text": "Veintiocho de Noviembre",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santa Cruz",
+        "options": [],
+        "text": "Perito Moreno",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Río Negro",
+        "options": [],
+        "text": "Sierra Grande",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Río Negro",
+        "options": [],
+        "text": "Choele Choel",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Río Negro",
+        "options": [],
+        "text": "Ingeniero Luis A. Huergo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Río Negro",
+        "options": [],
+        "text": "Ingeniero Jacobacci",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Neuquén",
+        "options": [],
+        "text": "San Patricio del Chañar",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "La Pampa",
+        "options": [],
+        "text": "Colonia 25 de Mayo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "La Pampa",
+        "options": [],
+        "text": "Intendente Alvear",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "La Pampa",
+        "options": [],
+        "text": "Realicó",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Villa Tulumaya",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "San Juan",
+        "options": [],
+        "text": "Villa Krause",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "San Juan",
+        "options": [],
+        "text": "Villa Barboza",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "San Juan",
+        "options": [],
+        "text": "Villa Aberastain",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "San Luis",
+        "options": [],
+        "text": "Tilisarao",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "San Luis",
+        "options": [],
+        "text": "Quines",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "San Luis",
+        "options": [],
+        "text": "La Toma",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "San Luis",
+        "options": [],
+        "text": "Concarán",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Entre Ríos",
+        "options": [],
+        "text": "Villa Elisa (Departamento de Colón)",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "City Bell",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Entre Ríos",
+        "options": [],
+        "text": "San Salvador",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Entre Ríos",
+        "options": [],
+        "text": "San José de Feliciano",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Corientes",
+        "options": [],
+        "text": "Colonia Santa Rosa (Departamento de Concepción)",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Corientes",
+        "options": [],
+        "text": "Mburucuyá",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Misiones",
+        "options": [],
+        "text": "San Ignacio",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Misiones",
+        "options": [],
+        "text": "Puerto Esperanza",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Misiones",
+        "options": [],
+        "text": "Jardín América",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Misiones",
+        "options": [],
+        "text": "Comandante Andresito",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Misiones",
+        "options": [],
+        "text": "Dos de Mayo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Misiones",
+        "options": [],
+        "text": "Bernardo de Irigoyen",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Misiones",
+        "options": [],
+        "text": "Campo Viera",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Catamarca",
+        "options": [],
+        "text": "San José de Piedra Blanca",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Catamarca",
+        "options": [],
+        "text": "Villa Dolores (Departamento de Valle Viejo)",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Santiago del Estero",
+        "options": [],
+        "text": "Clodomira",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Chaco",
+        "options": [],
+        "text": "Campo Largo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Chaco",
+        "options": [],
+        "text": "Puerto Tirol",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Chaco",
+        "options": [],
+        "text": "Pampa del Infierno",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Chaco",
+        "options": [],
+        "text": "La Leonesa",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Tucumán",
+        "options": [],
+        "text": "Simoca",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Formosa",
+        "options": [],
+        "text": "Ibarreta",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Formosa",
+        "options": [],
+        "text": "Laguna Blanca",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Salta",
+        "options": [],
+        "text": "Villa San Lorenzo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Salta",
+        "options": [],
+        "text": "Hipólito Yrigoyen",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Salta",
+        "options": [],
+        "text": "Las Lajitas",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Jujuy",
+        "options": [],
+        "text": "Abra Pampa",
         "isAnswer": true
     }
 ]

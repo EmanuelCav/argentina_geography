@@ -1,4 +1,5 @@
-import { ICategory } from "../interface/Game";
+import { ICategory, IQuestion } from "../interface/Game";
+import { shuffle } from "./game";
 
 export const countCategory = (categories: ICategory[], category: string): ICategory[] => {
 
@@ -25,5 +26,13 @@ export const correctCategory = (categories: ICategory[], category: string): ICat
     } : c)
 
     return categoryCorrect
+
+}
+
+export const helpsOptions = (question: IQuestion, amountOptions: number): string[] => {
+
+    const optionsFiltered = shuffle(question.options.filter(o => o !== question.answer)).slice(0, amountOptions / 2)
+
+    return optionsFiltered
 
 }

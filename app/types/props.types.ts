@@ -4,6 +4,7 @@ import { SetStateAction } from "react";
 import { IOptionUser } from "../interface/User";
 import { ICategory, IQuestion } from "../interface/Game";
 import { RouteProp } from "@react-navigation/native";
+import { HelpType } from "./key.props";
 
 export type RouteType = {
     Home: undefined;
@@ -96,6 +97,10 @@ export type GameStatisticsPropsType = {
     isIncorrect: boolean; 
     isFinish: boolean; 
     isPreFinish: boolean;
+    helps: number;
+    changeHelp: (type: HelpType) => void;
+    isHelped: boolean;
+    isGameError: boolean;
 }
 
 export type TimePropsType = {
@@ -120,12 +125,15 @@ export type OptionPropsTypes = {
     option: string;
     amountOptions: number;
     nextQuestion: (value: string) => void;
+    disabled: boolean;
 }
 
 export type SectionOptionsPropsTypes = {
     options: string[]
     amountOptions: number;
     nextQuestion: (value: string) => void;
+    optionsHelped: string[];
+    isHelped: boolean;
 }
 
 export type AnswerPropsType = {
@@ -142,6 +150,8 @@ export type FinishPropsType = {
     showErrors: () => void; 
     continueHome : () => void;
     isGameError: boolean;
+    isAdd: boolean;
+    changeHelp: (type: HelpType) => void;
 }
 
 export type StatisticsFinishPropsType = {
@@ -161,4 +171,10 @@ export type ActionCategoryPropsType = {
     text: string; 
     changeAllCategory: (isSelect: boolean) => void;
     isSelect: boolean;
+}
+
+export type HelpsPropsType = {
+    isAnswered: boolean; 
+    helps: number; 
+    changeHelp: (type: HelpType) => void;
 }

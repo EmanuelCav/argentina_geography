@@ -208,6 +208,65 @@ export const playingStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%'
+    },
+
+    containerHelpsAdd: {
+        width: '100%',
+        padding: Dimensions.get("window").height / 106,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        borderColor: '#ffffff',
+        borderStyle: 'solid',
+        borderWidth: 2,
+        marginTop: Dimensions.get("window").height / 92,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        elevation: 7,
+    },
+
+    containHelpText: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        marginRight: Dimensions.get("window").width / 210
+    },
+
+    textStatisticGame: {
+        color: '#ffffff',
+        fontSize: Dimensions.get("window").height / 48,
+        fontWeight: '500'
+    },
+
+    buttonHelp: {
+        width: '100%',
+        padding: Dimensions.get("window").height / 106,
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flexDirection: 'row',
+        borderColor: '#ffffff',
+        borderStyle: 'solid',
+        borderWidth: 2,
+        marginTop: Dimensions.get("window").height / 92,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        elevation: 7,
+    },
+
+    helpText: {
+        color: '#ffffff',
+        fontSize: Dimensions.get("window").height / 48,
+        fontWeight: '500'
     }
 
 })

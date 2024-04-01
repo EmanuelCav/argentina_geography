@@ -1,7 +1,7 @@
 import { IUser } from "../../interface/User";
 import { Action } from "../../types/props.types";
 
-import { SELECT_CATEGORY, UPDATE_OPTIONS, USER, ACTION_CATEGORY } from "../constants/user.const";
+import { SELECT_CATEGORY, UPDATE_OPTIONS, USER, ACTION_CATEGORY, CHANGE_HELPS } from "../constants/user.const";
 
 import { initialState } from "../value/user.value";
 
@@ -38,6 +38,12 @@ const userReducer = (state: IUser = initialState, action: Action): IUser | any =
                     questions: c.questions,
                     isSelect: action.payload
                 } : c)
+            }
+
+        case CHANGE_HELPS:
+            return {
+                ...state,
+                helps: state.helps + action.payload
             }
 
         default:

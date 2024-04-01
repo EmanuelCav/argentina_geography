@@ -5,10 +5,11 @@ import { ICategory } from '../../interface/Game'
 import { Action, StackNavigation } from '../../types/props.types'
 
 import { initialState } from '../value/user.value'
-import { ACTION_CATEGORY, SELECT_CATEGORY, UPDATE_OPTIONS, USER } from '../constants/user.const'
+import { ACTION_CATEGORY, CHANGE_HELPS, SELECT_CATEGORY, UPDATE_OPTIONS, USER } from '../constants/user.const'
 import userReducer from '../reducer/user.reducer'
 
 import { setStorage } from '../../helper/storage'
+import { HelpType } from '../../types/key.props'
 
 export const UserContext = createContext<IUser>(initialState)
 
@@ -31,7 +32,8 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
             setStorage({
                 categories: state.categories,
                 amountQuestions: optionData.amountQuestions,
-                amountOptions: optionData.amountOptions
+                amountOptions: optionData.amountOptions,
+                helps: state.helps
             })
 
             navigation.goBack()
@@ -54,7 +56,8 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
             setStorage({
                 categories,
                 amountQuestions: state.amountQuestions,
-                amountOptions: state.amountOptions
+                amountOptions: state.amountOptions,
+                helps: state.helps
             })
 
         } catch (error) {
@@ -98,7 +101,8 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
                     isImage: c.isImage
                 } : c),
                 amountQuestions: state.amountQuestions,
-                amountOptions: state.amountOptions
+                amountOptions: state.amountOptions,
+                helps: state.helps
             })
 
         } catch (error) {
@@ -107,8 +111,24 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
 
     }
 
+    const helpsAction = (type: HelpType) => {
+
+        if (type === 'help') {
+            dispatch({
+                type: CHANGE_HELPS,
+                payload: -1
+            })
+        } else {
+            dispatch({
+                type: CHANGE_HELPS,
+                payload: 2
+            })
+        }
+
+    }
+
     return (
-        <UserContext.Provider value={{ ...state, optionsAction, categoryAction, userAction, categoryAllAction }}>
+        <UserContext.Provider value={{ ...state, optionsAction, categoryAction, userAction, categoryAllAction, helpsAction }}>
             {children}
         </UserContext.Provider>
     )

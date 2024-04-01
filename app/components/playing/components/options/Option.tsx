@@ -4,7 +4,7 @@ import { playingStyles } from '../../../../styles/playing.styles'
 
 import { OptionPropsTypes } from '../../../../types/props.types'
 
-const Option = ({ option, amountOptions, nextQuestion }: OptionPropsTypes) => {
+const Option = ({ option, amountOptions, nextQuestion, disabled }: OptionPropsTypes) => {
 
     const usersOptions = (): number => {
         if (amountOptions === 2) {
@@ -29,9 +29,9 @@ const Option = ({ option, amountOptions, nextQuestion }: OptionPropsTypes) => {
     return (
         <Pressable style={({ pressed }) => [
             {
-                backgroundColor: pressed ? '#5cc197' : '#5dc1b9',
+                backgroundColor: pressed ? '#5cc197' : `${disabled ? '#dddddd' : '#5dc1b9' }` 
             },
-            playingStyles.containerOption]} onPress={() => nextQuestion(option)}>
+            playingStyles.containerOption]} onPress={() => nextQuestion(option)} disabled={disabled}>
             <Text adjustsFontSizeToFit style={[playingStyles.textOption, {
                 fontSize: ((Dimensions.get("window").height - ((Dimensions.get("window").height / 60) * 2)) / 2) / usersOptions()
             }]}>{option}</Text>

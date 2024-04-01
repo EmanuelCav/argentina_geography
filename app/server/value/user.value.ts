@@ -3,6 +3,7 @@ import { IUser } from "../../interface/User";
 export const initialState: IUser = {
     amountOptions: 4,
     amountQuestions: 10,
+    helps: 3,
     categories: [{
         category: "Provincias/Distritos",
         isSelect: false,
