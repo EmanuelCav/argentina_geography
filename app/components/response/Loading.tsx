@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { View, Image, Dimensions } from "react-native"
 
 import { IGame } from "../../interface/Game"

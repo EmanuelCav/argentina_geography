@@ -8,9 +8,12 @@ import allQuestions from '../../assets/questions.json'
 import { UserContext } from '../server/context/user.context'
 import { GameContext } from '../server/context/game.context'
 
+import { LOADING } from '../server/constants/game.const';
+
 import { IGame, IQuestion } from '../interface/Game'
 import { IUser } from '../interface/User'
 import { PlayingType } from '../types/props.types'
+import { HelpType } from '../types/key.props';
 
 import Question from '../components/playing/Question'
 import GameStatistics from '../components/playing/GameStatistics'
@@ -23,7 +26,6 @@ import { generalStyles } from '../styles/general.styles'
 
 import { correctCategory, countCategory, helpsOptions } from '../helper/playing'
 import { emptyOptions } from '../helper/game'
-import { HelpType } from '../types/key.props';
 
 const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : `${EXPO_INTERSTITIAL}`;
 
@@ -40,7 +42,7 @@ const rewarded = RewardedAd.createForAdRequest(adUnitIdReward, {
 const Playing = ({ navigation, route }: PlayingType) => {
 
     const { categories, amountOptions, categoryAction, helpsAction, helps } = useContext<IUser>(UserContext)
-    const { questions } = useContext<IGame>(GameContext)
+    const { questions, dispatch } = useContext<IGame>(GameContext)
 
     const [seconds, setSeconds] = useState<number>(0)
     const [minutes, setMinutes] = useState<number>(0)
@@ -86,12 +88,13 @@ const Playing = ({ navigation, route }: PlayingType) => {
             setIsPreFinish(true)
         }
 
+        setIsHelped(false)
+
     }
 
     const continueGame = () => {
         setIsCorrect(false)
         setIsIncorrect(false)
-        setIsHelped(false)
         setRealSeconds(0)
         setRealMinutes(0)
 
@@ -132,14 +135,23 @@ const Playing = ({ navigation, route }: PlayingType) => {
         setHelpType(type)
 
         if (type === 'add') {
-            rewarded.show()
-            setIsAdd(true)
+            if(route.params.isConnection) {
+                rewarded.show()
+                setIsAdd(true)
+            }
         }
     }
 
     const handleHelp = async (type: HelpType) => {
         helpsAction!(type)
     }
+
+    useEffect(() => {
+        dispatch({
+            type: LOADING,
+            payload: false
+        })
+    }, [])    
 
     useEffect(() => {
         if (!isGameError) {
@@ -159,11 +171,10 @@ const Playing = ({ navigation, route }: PlayingType) => {
     }, [corrects])
 
     useEffect(() => {
-        if (isHelped) {
+        if (isHelped && route.params.isConnection) {
             handleHelp(helpType)
         }
     }, [isHelped])
-
 
     useEffect(() => {
         const unsubscribe = interstitial.addAdEventListener(AdEventType.LOADED, () => {
@@ -217,7 +228,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
             }
             {
                 isFinish && <Finish seconds={realSeconds} minutes={realMinutes} corrects={corrects} questions={!isGameError ? questions.length : gameErrors.length}
-                    showErrors={showErrors} continueHome={continueHome} isGameError={isGameError} isAdd={isAdd} changeHelp={changeHelp} />
+                    showErrors={showErrors} continueHome={continueHome} isGameError={isGameError} isAdd={isAdd} changeHelp={changeHelp} isConnection={route.params.isConnection} />
             }
         </View>
     )

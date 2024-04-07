@@ -31,11 +31,6 @@ const GameGlobalContext = ({ children }: { children: ReactNode }) => {
             payload: game
         })
 
-        dispatch({
-            type: LOADING,
-            payload: false
-        })
-
         navigation.navigate('Playing', {
             isConnection
         })
@@ -43,7 +38,7 @@ const GameGlobalContext = ({ children }: { children: ReactNode }) => {
     }
 
     return (
-        <GameContext.Provider value={{ ...state, gameAction }}>
+        <GameContext.Provider value={{ ...state, gameAction, dispatch }}>
             {children}
         </GameContext.Provider>
     )

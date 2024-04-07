@@ -152,6 +152,7 @@ export type FinishPropsType = {
     isGameError: boolean;
     isAdd: boolean;
     changeHelp: (type: HelpType) => void;
+    isConnection: boolean;
 }
 
 export type StatisticsFinishPropsType = {

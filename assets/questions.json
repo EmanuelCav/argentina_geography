@@ -9946,6 +9946,14 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 4",
+        "answer": "Misiones",
+        "options": [],
+        "text": "Garupá",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 4",
         "answer": "Buenos Aires",
         "options": [],
         "text": "Guernica",
@@ -11269,14 +11277,6 @@
         "answer": "Buenos Aires",
         "options": [],
         "text": "Magdalena",
-        "isAnswer": true
-    },
-    {
-        "question": "En qué provincia se encuentra",
-        "category": "Ciudades 6",
-        "answer": "Misiones",
-        "options": [],
-        "text": "Garupá",
         "isAnswer": true
     },
     {
@@ -12757,6 +12757,270 @@
         "answer": "Jujuy",
         "options": [],
         "text": "Abra Pampa",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Bella Vista (Partido de San Miguel)",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "9 de Abril",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Claypole",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Rafael Castillo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Libertad",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Monte Chingolo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "San Francisco Solano",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Remedios de Escalada",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "La Tablada",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Lomas del Mirador",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "El Palomar",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Haedo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Villa Luzuriaga",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Boulogne Sur Mer",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Wilde",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Martínez",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Garín",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Villa Tesei",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Beccar",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "San Vicente (Partido de San Vicente)",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Villa Fiorito",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Los Polvorines",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Llavallol",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "San Antonio de Padua",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Bosques",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Ezpeleta",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "General Pacheco",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Paso del Rey",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "El Talar",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Valentín Alsina",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "El Jagüel",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Rafael Calzada",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Hudson",
         "isAnswer": true
     }
 ]

@@ -8,7 +8,7 @@ import StatisticsFinish from './components/finish/StatisticsFinish'
 import ActionsFinish from './components/finish/ActionsFinish'
 import HelpAdd from './components/finish/HelpAdd'
 
-const Finish = ({ seconds, minutes, corrects, questions, showErrors, continueHome, isGameError, isAdd, changeHelp }: FinishPropsType) => {
+const Finish = ({ seconds, minutes, corrects, questions, showErrors, continueHome, isGameError, isAdd, changeHelp, isConnection }: FinishPropsType) => {
     return (
         <View style={playingStyles.containerPreFinish}>
             <View style={playingStyles.containFinish}>
@@ -21,8 +21,12 @@ const Finish = ({ seconds, minutes, corrects, questions, showErrors, continueHom
                         <StatisticsFinish seconds={seconds} minutes={minutes} questions={questions} corrects={corrects} />
                 }
                 {
-                    !isAdd ? <HelpAdd changeHelp={changeHelp} />
-                    : <Text style={playingStyles.textPreFinish}>¡Ayudas entregadas!</Text>
+                    isConnection && <>
+                        {
+                            !isAdd ? <HelpAdd changeHelp={changeHelp} />
+                                : <Text style={playingStyles.textPreFinish}>¡Ayudas entregadas!</Text>
+                        }
+                    </>
                 }
                 <ActionsFinish areErrors={corrects < questions} showErrors={showErrors} continueHome={continueHome} />
             </View>

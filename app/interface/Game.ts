@@ -1,4 +1,5 @@
-import { StackNavigation } from "../types/props.types";
+import { Dispatch } from "react";
+import { Action, StackNavigation } from "../types/props.types";
 
 export interface ICategory {
     category: string;
@@ -12,6 +13,7 @@ export interface IGame {
     questions: IQuestion[];
     loading: boolean,
     gameAction?: (allQuestions: IQuestion[], categories: ICategory[], amountQuesions: number, amountOptions: number, navigation: StackNavigation, isConnection: boolean) => void;
+    dispatch: Dispatch<Action>;
 }
 
 export interface IQuestion {
