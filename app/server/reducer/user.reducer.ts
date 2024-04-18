@@ -26,7 +26,8 @@ const userReducer = (state: IUser = initialState, action: Action): IUser | any =
                 ...state,
                 amountOptions: action.payload.amountOptions,
                 amountQuestions: action.payload.amountQuestions,
-                categories: action.payload.categories
+                categories: action.payload.categories,
+                helps: action.payload.helps
             }
 
         case ACTION_CATEGORY:
