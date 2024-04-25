@@ -142,7 +142,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
         }
     }
 
-    const handleHelp = async (type: HelpType) => {
+    const handleHelp = (type: HelpType) => {
         helpsAction!(type)
     }
 

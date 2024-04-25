@@ -1,4 +1,5 @@
 import { View } from 'react-native'
+import { useEffect, useState } from 'react'
 
 import allQuestions from '../../../assets/questions.json'
 
@@ -8,7 +9,11 @@ import { MenuPropsType } from '../../types/props.types'
 
 import ButtonMenu from './components/ButtonMenu'
 
-const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameAction, handleChangeView, isConnection }: MenuPropsType) => {
+import { LOADING } from '../../server/constants/game.const'
+
+const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameAction, handleChangeView, isConnection, dispatch }: MenuPropsType) => {
+
+  const [isStart, setIsStart] = useState<boolean>(false)
 
   const start = () => {
     if (categories.filter(c => c.isSelect).length === 0) {
@@ -17,11 +22,16 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
       })
 
       handleChangeView()
-      
+
       return
     }
-    
-    gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation, isConnection)
+
+    dispatch({
+      type: LOADING,
+      payload: true
+    })
+
+    setIsStart(true)
   }
 
   const category = () => {
@@ -43,6 +53,13 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
 
     navigation.navigate('Statistics')
   }
+
+  useEffect(() => {
+    if (isStart) {
+      setIsStart(false)
+      gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation, isConnection)
+    }
+  }, [isStart])
 
   return (
     <View style={homeStyles.containerMenu}>

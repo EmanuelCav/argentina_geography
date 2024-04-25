@@ -5,7 +5,7 @@ import { homeStyles } from '../../../styles/home.styles'
 const TextTitle = () => {
     return (
         <View style={homeStyles.containerEventTitle}>
-            <Text style={homeStyles.textTitle}>Geografía de Argentina</Text>
+            <Text style={homeStyles.textTitle}>Mapa de Argentina Quiz</Text>
         </View>
     )
 }

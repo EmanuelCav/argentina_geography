@@ -17,17 +17,25 @@ import allQuestions from '../../assets/questions.json'
 
 import { UserContext } from '../server/context/user.context'
 import { GameContext } from "../server/context/game.context";
+import { LOADING } from "../server/constants/game.const";
 
 const Categories = ({ navigation, route }: CategoriesType) => {
 
     const { categories, categoryAction, amountOptions, amountQuestions, categoryAllAction } = useContext<IUser>(UserContext)
-    const { gameAction } = useContext<IGame>(GameContext)
+    const { gameAction, dispatch } = useContext<IGame>(GameContext)
 
     const [isConnection, setIsConnection] = useState<boolean>(true)
+    const [isStart, setIsStart] = useState<boolean>(false)
 
     const accept = () => {
         if (route.params.isPlaying) {
-            gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation, isConnection)
+            // gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation, isConnection)
+            dispatch({
+                type: LOADING,
+                payload: true
+            })
+
+            setIsStart(true)
 
             return
         }
@@ -38,6 +46,13 @@ const Categories = ({ navigation, route }: CategoriesType) => {
     useEffect(() => {
         fetch().then(conn => conn).then(state => setIsConnection(state.isConnected!));
     }, [isConnection])
+
+    useEffect(() => {
+        if (isStart) {
+            setIsStart(false)
+            gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation, isConnection)
+        }
+    }, [isStart])
 
     return (
         <View style={generalStyles.containerGeneral}>

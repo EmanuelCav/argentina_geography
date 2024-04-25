@@ -20,7 +20,7 @@ import { getStorage } from '../helper/storage'
 const Home = ({ navigation }: { navigation: StackNavigation }) => {
 
   const { categories, amountOptions, amountQuestions, userAction } = useContext<IUser>(UserContext)
-  const { gameAction } = useContext<IGame>(GameContext)
+  const { gameAction, dispatch } = useContext<IGame>(GameContext)
 
   const [isConnection, setIsConnection] = useState<boolean>(true)
   const [isChangeView, setIsChangeView] = useState<boolean>(false)
@@ -52,7 +52,8 @@ const Home = ({ navigation }: { navigation: StackNavigation }) => {
         isConnection && <Banner />
       }
       <Title />
-      <Menu navigation={navigation} categories={categories} amountOptions={amountOptions} amountQuestions={amountQuestions} gameAction={gameAction!} isConnection={isConnection} handleChangeView={handleChangeView} />
+      <Menu navigation={navigation} categories={categories} amountOptions={amountOptions} amountQuestions={amountQuestions} gameAction={gameAction!} 
+      isConnection={isConnection} handleChangeView={handleChangeView} dispatch={dispatch} />
     </View>
   )
 }

@@ -82,6 +82,7 @@ export type MenuPropsType = {
     gameAction: (allQuestions: IQuestion[], categories: ICategory[], amountQuesions: number, amountOptions: number, navigation: StackNavigation, isConnection: boolean) => void;
     handleChangeView: () => void;
     isConnection: boolean;
+    dispatch: any;
 }
 
 export type GameStatisticsPropsType = {
