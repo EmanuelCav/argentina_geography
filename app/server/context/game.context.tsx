@@ -5,7 +5,7 @@ import { ICategory, IGame, IQuestion } from '../../interface/Game'
 
 import gameReducer from '../reducer/game.reducer'
 import { initialState } from '../value/game.value'
-import { GENERATE_GAME, LOADING } from '../constants/game.const'
+import { GENERATE_GAME } from '../constants/game.const'
 
 import { generateGame, generateQuestions } from '../../helper/game'
 

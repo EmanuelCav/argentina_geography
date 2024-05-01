@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Dimensions, View } from 'react-native'
+import { Dimensions, View, Text } from 'react-native'
 import Icon from 'react-native-vector-icons/AntDesign'
 
 import { categoriesStyle } from '../../styles/categories.styles'
@@ -41,6 +41,7 @@ const ShowCategories = ({ categories, categoryAction }: ShowCategoriesPropsType)
             </View>
             <View style={categoriesStyle.containerActionCategories}>
                 <Icon name="caretleft" color={min < 8 ? '#dddddd' : '#ffffff'} size={Dimensions.get("window").height / 28} onPress={left} />
+                <Text style={categoriesStyle.categoryTextAction}>{max / (8)}/{categories.length / (max - min)}</Text>
                 <Icon name="caretright" color={max >= categories.length ? '#dddddd' : '#ffffff'} size={Dimensions.get("window").height / 28} onPress={rigth} />
             </View>
         </View>

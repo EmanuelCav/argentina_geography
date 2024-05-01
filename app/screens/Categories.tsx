@@ -29,8 +29,7 @@ const Categories = ({ navigation, route }: CategoriesType) => {
 
     const accept = () => {
         if (route.params.isPlaying) {
-            // gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation, isConnection)
-            dispatch({
+            dispatch!({
                 type: LOADING,
                 payload: true
             })
@@ -59,7 +58,7 @@ const Categories = ({ navigation, route }: CategoriesType) => {
             <TitleCategories />
             <ActionsCategories categoryAllAction={categoryAllAction!} />
             <ShowCategories categories={categories} categoryAction={categoryAction!} />
-            <ButtonAccept text={route.params.isPlaying === true ? 'INICIAR' : 'ACEPTAR'} isCategory={route.params.isPlaying ? categories.filter(c => c.isSelect).length === 0 : false} func={accept} />
+            <ButtonAccept text={route.params.isPlaying ? 'INICIAR' : 'ACEPTAR'} isCategory={route.params.isPlaying ? categories.filter(c => c.isSelect).length === 0 : false} func={accept} />
         </View>
     )
 }

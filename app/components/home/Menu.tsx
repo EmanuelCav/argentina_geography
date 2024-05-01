@@ -58,7 +58,13 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
     if (isStart) {
       setIsStart(false)
       gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation, isConnection)
+      return
     }
+
+    dispatch({
+      type: LOADING,
+      payload: false
+    })
   }, [isStart])
 
   return (

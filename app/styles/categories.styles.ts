@@ -49,6 +49,12 @@ export const categoriesStyle = StyleSheet.create({
         fontSize: Dimensions.get("window").height / 50
     },
 
+    categoryTextAction: {
+        color: '#ffffff',
+        fontSize: Dimensions.get("window").height / 41,
+        fontWeight: '600'
+    },
+
     textTitleCategories: {
         color: '#ffffff',
         fontSize: Dimensions.get("window").height / 41,

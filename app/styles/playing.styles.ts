@@ -243,6 +243,12 @@ export const playingStyles = StyleSheet.create({
         fontWeight: '500'
     },
 
+    textHelpGame: {
+        fontSize: Dimensions.get("window").height / 41,
+        color: '#ffffff',
+        marginRight: Dimensions.get("window").width / 66
+    },
+
     buttonHelp: {
         width: '100%',
         padding: Dimensions.get("window").height / 106,

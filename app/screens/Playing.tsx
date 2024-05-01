@@ -147,7 +147,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
     }
 
     useEffect(() => {
-        dispatch({
+        dispatch!({
             type: LOADING,
             payload: false
         })
