@@ -59,6 +59,8 @@ const Playing = ({ navigation, route }: PlayingType) => {
     const [isGameError, setIsGameError] = useState<boolean>(false)
     const [isHelped, setIsHelped] = useState<boolean>(false)
     const [isAdd, setIsAdd] = useState<boolean>(false)
+    const [isIntersitialLoaded, setIsIntersitialLoaded] = useState<boolean>(false)
+    const [isRecompensadoLoaded, setIsRecompensadoLoaded] = useState<boolean>(false)
 
     const [errors, setErrors] = useState<IQuestion[]>([])
     const [gameErrors, setGameErrors] = useState<IQuestion[]>([])
@@ -124,9 +126,13 @@ const Playing = ({ navigation, route }: PlayingType) => {
     const continueHome = () => {
         const optionsAllQuestions = allQuestions.filter((aq) => aq.options.length > 0)
         emptyOptions(optionsAllQuestions)
+
         if (route.params.isConnection) {
-            interstitial.show()
+            if (interstitial.loaded && isIntersitialLoaded) {
+                interstitial.show()
+            }
         }
+        setIsRecompensadoLoaded(false)
         navigation.navigate('Home')
     }
 
@@ -135,9 +141,13 @@ const Playing = ({ navigation, route }: PlayingType) => {
         setHelpType(type)
 
         if (type === 'add') {
-            if(route.params.isConnection) {
-                rewarded.show()
-                setIsAdd(true)
+            if (route.params.isConnection) {
+                if (isRecompensadoLoaded) {
+                    rewarded.show()
+                    setIsAdd(true)
+                } else {
+                    navigation.navigate('Home')
+                }
             }
         }
     }
@@ -151,7 +161,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
             type: LOADING,
             payload: false
         })
-    }, [])    
+    }, [])
 
     useEffect(() => {
         if (!isGameError) {
@@ -177,19 +187,28 @@ const Playing = ({ navigation, route }: PlayingType) => {
     }, [isHelped])
 
     useEffect(() => {
-        const unsubscribe = interstitial.addAdEventListener(AdEventType.LOADED, () => {
-            console.log("Loading add");
+        const unsubscribeLoaded = interstitial.addAdEventListener(AdEventType.LOADED, () => {
+            setIsIntersitialLoaded(true)
+        });
+
+        const unsubscribedClosed = interstitial.addAdEventListener(AdEventType.CLOSED, () => {
+            setIsIntersitialLoaded(false)
+            interstitial.load();
         });
 
         interstitial.load();
 
-        return unsubscribe;
+        return () => {
+            unsubscribeLoaded()
+            unsubscribedClosed()
+        };
     }, []);
 
     useEffect(() => {
         const unsubscribeLoaded = rewarded.addAdEventListener(RewardedAdEventType.LOADED, () => {
-            console.log("Loading add");
+            setIsRecompensadoLoaded(true)
         });
+
         const unsubscribeEarned = rewarded.addAdEventListener(
             RewardedAdEventType.EARNED_REWARD,
             reward => {
@@ -227,7 +246,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
                 isPreFinish && <PreFinish preFinish={preFinish} />
             }
             {
-                isFinish && <Finish seconds={realSeconds} minutes={realMinutes} corrects={corrects} questions={!isGameError ? questions.length : gameErrors.length}
+                isFinish && <Finish seconds={realSeconds} minutes={realMinutes} corrects={corrects} questions={!isGameError ? questions.length : gameErrors.length} isRecompensadoLoaded={isRecompensadoLoaded}
                     showErrors={showErrors} continueHome={continueHome} isGameError={isGameError} isAdd={isAdd} changeHelp={changeHelp} isConnection={route.params.isConnection} />
             }
         </View>
