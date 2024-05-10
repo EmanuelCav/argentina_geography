@@ -132,6 +132,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
                 interstitial.show()
             }
         }
+        
         setIsRecompensadoLoaded(false)
         navigation.navigate('Home')
     }
@@ -142,7 +143,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
 
         if (type === 'add') {
             if (route.params.isConnection) {
-                if (isRecompensadoLoaded) {
+                if (rewarded.loaded || isRecompensadoLoaded) {
                     rewarded.show()
                     setIsAdd(true)
                 } else {
@@ -246,7 +247,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
                 isPreFinish && <PreFinish preFinish={preFinish} />
             }
             {
-                isFinish && <Finish seconds={realSeconds} minutes={realMinutes} corrects={corrects} questions={!isGameError ? questions.length : gameErrors.length} isRecompensadoLoaded={isRecompensadoLoaded}
+                isFinish && <Finish seconds={realSeconds} minutes={realMinutes} corrects={corrects} questions={!isGameError ? questions.length : gameErrors.length} isRecompensadoLoaded={rewarded.loaded}
                     showErrors={showErrors} continueHome={continueHome} isGameError={isGameError} isAdd={isAdd} changeHelp={changeHelp} isConnection={route.params.isConnection} />
             }
         </View>

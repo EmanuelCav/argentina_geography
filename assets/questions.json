@@ -11002,6 +11002,22 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 6",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Rodeo de la Cruz",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 6",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Palmira",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 6",
         "answer": "Buenos Aires",
         "options": [],
         "text": "Mar del Tuyú",
@@ -12490,6 +12506,86 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 8",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Belgrano (Partido de Guaymallén)",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Dorrego (Partido de Guaymallén)",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Rodeo del Medio",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Buena Nueva",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Los Corralitos",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Chacras de Coria",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Mayor Drummond",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "La Colonia",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "Vistalba",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Mendoza",
+        "options": [],
+        "text": "El Plumerillo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
         "answer": "San Juan",
         "options": [],
         "text": "Villa Krause",
@@ -12578,7 +12674,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 8",
-        "answer": "Corientes",
+        "answer": "Corrientes",
         "options": [],
         "text": "Colonia Santa Rosa (Departamento de Concepción)",
         "isAnswer": true
@@ -12586,7 +12682,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 8",
-        "answer": "Corientes",
+        "answer": "Corrientes",
         "options": [],
         "text": "Mburucuyá",
         "isAnswer": true
