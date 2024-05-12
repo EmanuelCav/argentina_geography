@@ -212,8 +212,8 @@ const Playing = ({ navigation, route }: PlayingType) => {
 
         const unsubscribeEarned = rewarded.addAdEventListener(
             RewardedAdEventType.EARNED_REWARD,
-            reward => {
-                console.log('User earned reward of ', reward);
+            () => {
+                setIsRecompensadoLoaded(false)   
             },
         );
 

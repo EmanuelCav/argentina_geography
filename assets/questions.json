@@ -11530,6 +11530,30 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 7",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Los Hornos",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 7",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "San Carlos (Partido de La Plata)",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 7",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Villa Elvira (Partido de La Plata)",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 7",
         "answer": "Tucumán",
         "options": [],
         "text": "Monteros",
@@ -13117,6 +13141,38 @@
         "answer": "Buenos Aires",
         "options": [],
         "text": "Hudson",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Tolosa",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Altos de San Lorenzo",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "Melchor Romero",
+        "isAnswer": true
+    },
+    {
+        "question": "En qué provincia se encuentra",
+        "category": "Ciudades 8",
+        "answer": "Buenos Aires",
+        "options": [],
+        "text": "San Clemente del Tuyú",
         "isAnswer": true
     }
 ]
