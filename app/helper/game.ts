@@ -5,14 +5,14 @@ export const generateGame = (questions: IQuestion[], allQuestions: IQuestion[], 
     for (let i = 0; i < amountQuestions; i++) {
 
         const options: IQuestion[] = shuffle(allQuestions.filter(q => (q.category === questions[i].category) && (q.answer !== questions[i].answer)))
-        
+
         let answersOptions: string[] = []
 
         for (let j = 0; j < options.length; j++) {
             answersOptions.push(options[j].answer)
         }
 
-        const optionsQuestion: string[] = [...new Set([...answersOptions])]        
+        const optionsQuestion: string[] = [...new Set([...answersOptions])]
 
         const optionRandom = Math.floor(Math.random() * amountOptions)
 
@@ -37,10 +37,10 @@ export const generateQuestions = (allQuestions: IQuestion[], categories: ICatego
 
     let avaibleQuestions: IQuestion[] = []
 
-    if(isConnection) {
+    if (isConnection) {
         for (let i = 0; i < categories.filter(c => c.isSelect).length; i++) {
             const filterQuestions: IQuestion[] = allQuestions.filter(q => (q.category === categories.filter(c => c.isSelect)[i].category) && q.isAnswer)
-    
+
             for (let j = 0; j < filterQuestions.length; j++) {
                 avaibleQuestions.push(filterQuestions[j])
             }
@@ -48,13 +48,13 @@ export const generateQuestions = (allQuestions: IQuestion[], categories: ICatego
     } else {
         for (let i = 0; i < categories.filter(c => !c.isImage).length; i++) {
             const filterQuestions: IQuestion[] = allQuestions.filter(q => (q.category === categories.filter(c => !c.isImage)[i].category) && q.isAnswer)
-    
+
             for (let j = 0; j < filterQuestions.length; j++) {
                 avaibleQuestions.push(filterQuestions[j])
             }
         }
     }
-    
+
     if (avaibleQuestions.length < amountQuestions) {
 
         let copyAvaibleQuestions = [...avaibleQuestions]

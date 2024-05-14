@@ -1,4 +1,4 @@
-import { View } from 'react-native'
+import { View, Text } from 'react-native'
 import { useEffect, useState } from 'react'
 
 import allQuestions from '../../../assets/questions.json'
@@ -16,14 +16,17 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
   const [isStart, setIsStart] = useState<boolean>(false)
 
   const start = () => {
-    if (categories.filter(c => c.isSelect).length === 0) {
-      navigation.navigate('Categories', {
-        isPlaying: true
-      })
 
-      handleChangeView()
+    if (isConnection) {
+      if (categories.filter(c => c.isSelect).length === 0) {
+        navigation.navigate('Categories', {
+          isPlaying: true
+        })
 
-      return
+        handleChangeView()
+
+        return
+      }
     }
 
     dispatch({
@@ -69,10 +72,13 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
 
   return (
     <View style={homeStyles.containerMenu}>
-      <ButtonMenu text='INICIAR' func={start} />
-      <ButtonMenu text='CATEGORÍAS' func={category} />
-      <ButtonMenu text='OPCIONES' func={options} />
-      <ButtonMenu text='ESTADÍSTICAS' func={statistics} />
+      <ButtonMenu text='INICIAR' func={start} disabled={false} />
+      {
+        !isConnection && <Text style={homeStyles.textWithoutConnection}>Sin conexión no podrás seleccionar categorias</Text>
+      }
+      <ButtonMenu text='CATEGORÍAS' func={category} disabled={!isConnection} />
+      <ButtonMenu text='OPCIONES' func={options} disabled={false} />
+      <ButtonMenu text='ESTADÍSTICAS' func={statistics} disabled={false} />
     </View>
   )
 }

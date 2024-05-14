@@ -38,6 +38,7 @@ export type Action = {
 export type ButtonMenuPropsType = {
     text: string;
     func: () => void;
+    disabled: boolean;
 }
 
 

@@ -62,6 +62,12 @@ export const homeStyles = StyleSheet.create({
         padding: Dimensions.get("window").height / 37,
         width: '50%',
         height: '100%'
+    },
+
+    textWithoutConnection: {
+        color: '#f00',
+        fontSize: Dimensions.get("window").height / 49,
+        textAlign: 'center'
     }
 
 })
