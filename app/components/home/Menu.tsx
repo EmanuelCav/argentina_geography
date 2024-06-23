@@ -57,6 +57,12 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
     navigation.navigate('Statistics')
   }
 
+  const tent = () => {
+    handleChangeView()
+
+    navigation.navigate('Tent')
+  }
+
   useEffect(() => {
     if (isStart) {
       setIsStart(false)
@@ -79,6 +85,7 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
       <ButtonMenu text='CATEGORÍAS' func={category} disabled={!isConnection} />
       <ButtonMenu text='OPCIONES' func={options} disabled={false} />
       <ButtonMenu text='ESTADÍSTICAS' func={statistics} disabled={false} />
+      <ButtonMenu text='TIENDA' func={tent} disabled={false} />
     </View>
   )
 }

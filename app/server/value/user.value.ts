@@ -4,6 +4,7 @@ export const initialState: IUser = {
     amountOptions: 4,
     amountQuestions: 10,
     helps: 3,
+    isAdd: true,
     categories: [{
         category: "Provincias/Distritos",
         isSelect: false,

@@ -1,7 +1,7 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { SetStateAction } from "react";
 
-import { IOptionUser } from "../interface/User";
+import { IOptionUser, ITent } from "../interface/User";
 import { ICategory, IQuestion } from "../interface/Game";
 import { RouteProp } from "@react-navigation/native";
 import { HelpType } from "./key.props";
@@ -16,6 +16,7 @@ export type RouteType = {
     };
     Options: undefined;
     Statistics: undefined;
+    Tent: undefined;
 }
 
 export type StackNavigation = NativeStackNavigationProp<RouteType>;
@@ -155,7 +156,7 @@ export type FinishPropsType = {
     isAdd: boolean;
     changeHelp: (type: HelpType) => void;
     isConnection: boolean;
-    isRecompensadoLoaded: boolean;
+    isRecompensadoLoaded?: boolean;
 }
 
 export type StatisticsFinishPropsType = {
@@ -181,4 +182,9 @@ export type HelpsPropsType = {
     isAnswered: boolean; 
     helps: number; 
     changeHelp: (type: HelpType) => void;
+}
+
+export type ElementTentPropsType = {
+    handleTent: (tent: ITent) => void;
+    element: ITent;
 }

@@ -13,9 +13,9 @@ const ActionsFinish = ({ areErrors, continueHome, showErrors }: ActionsFinishPro
     }]}>
       {
         areErrors &&
-        <ButtonFinish text='REPASAR ERRORES' func={showErrors} />
+        <ButtonFinish text='REPASAR ERRORES' func={showErrors} disabled={false} />
       }
-      <ButtonFinish text='CONTINUAR' func={continueHome} />
+      <ButtonFinish text='CONTINUAR' func={continueHome} disabled={false} />
     </View>
   )
 }

@@ -9,6 +9,7 @@ import Options from "./app/screens/Options";
 import Categories from "./app/screens/Categories";
 import Playing from "./app/screens/Playing";
 import Statistics from "./app/screens/Statistics";
+import Tent from "./app/screens/Tent";
 
 import Loading from './app/components/response/Loading'
 
@@ -49,6 +50,9 @@ export default function App() {
                 animation: 'flip'
               }} />
               <Stack.Screen name="Statistics" component={Statistics} options={{
+                animation: 'flip'
+              }} />
+              <Stack.Screen name="Tent" component={Tent} options={{
                 animation: 'flip'
               }} />
             </Stack.Navigator>
