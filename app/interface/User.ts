@@ -11,9 +11,9 @@ export interface IUser {
     isAdd: boolean;
     optionsAction?: (optionData: IOptionUser, navigation: StackNavigation) => void;
     categoryAction?: (category: ICategory[]) => void;
-    userAction?: (data: IUser) => void;
     categoryAllAction?: (isSelect: boolean) => void;
     helpsAction?: (type: HelpType) => void;
+    paymentAction?: (data: IPayment) => void;
 }
 
 export interface IOptionUser {
@@ -25,5 +25,11 @@ export interface ITent {
     title: string;
     description: string;
     price: number;
+    quantity: number;
+    isAdd: boolean;
+}
+
+export interface IPayment {
+    isAdd: boolean;
     quantity: number;
 }

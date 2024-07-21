@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 import { fetch } from "@react-native-community/netinfo";
 
 import { generalStyles } from '../styles/general.styles'
@@ -15,6 +15,8 @@ import { IGame } from "../interface/Game";
 
 import allQuestions from '../../assets/questions.json'
 
+import { categoriesStyle } from "../styles/categories.styles";
+
 import { UserContext } from '../server/context/user.context'
 import { GameContext } from "../server/context/game.context";
 import { LOADING } from "../server/constants/game.const";
@@ -24,7 +26,7 @@ const Categories = ({ navigation, route }: CategoriesType) => {
     const { categories, categoryAction, amountOptions, amountQuestions, categoryAllAction } = useContext<IUser>(UserContext)
     const { gameAction, dispatch } = useContext<IGame>(GameContext)
 
-    const [isConnection, setIsConnection] = useState<boolean>(true)
+    const [isConnection, setIsConnection] = useState<boolean>(false)
     const [isStart, setIsStart] = useState<boolean>(false)
 
     const accept = () => {
@@ -63,7 +65,10 @@ const Categories = ({ navigation, route }: CategoriesType) => {
         <View style={generalStyles.containerGeneral}>
             <TitleCategories />
             <ActionsCategories categoryAllAction={categoryAllAction!} />
-            <ShowCategories categories={categories} categoryAction={categoryAction!} />
+            {
+                !isConnection && <Text style={categoriesStyle.textWithoutConnection}>Sin conexión no podrás seleccionar categorias</Text>
+            }
+            <ShowCategories categories={isConnection ? categories : categories.filter(c => !c.isImage)} categoryAction={categoryAction!} />
             <ButtonAccept text={route.params.isPlaying ? 'INICIAR' : 'ACEPTAR'} isCategory={route.params.isPlaying ? categories.filter(c => c.isSelect).length === 0 : false} func={accept} />
         </View>
     )

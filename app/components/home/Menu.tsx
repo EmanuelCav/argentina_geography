@@ -79,9 +79,6 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
   return (
     <View style={homeStyles.containerMenu}>
       <ButtonMenu text='INICIAR' func={start} disabled={false} />
-      {
-        !isConnection && <Text style={homeStyles.textWithoutConnection}>Sin conexión no podrás seleccionar categorias</Text>
-      }
       <ButtonMenu text='CATEGORÍAS' func={category} disabled={!isConnection} />
       <ButtonMenu text='OPCIONES' func={options} disabled={false} />
       <ButtonMenu text='ESTADÍSTICAS' func={statistics} disabled={false} />

@@ -1,38 +1,34 @@
-import { EXPO_ACCESS_TOKEN_DEV, EXPO_ACCESS_TOKEN_PROD, NODE_ENV } from "@env"
+import { EXPO_HOST, EXPO_HOST_PROD, NODE_ENV } from "@env"
 
 import { ITent } from "../interface/User"
 
 export const handleIntegrationMP = async (tent: ITent) => {
 
-    const { title, description, price, quantity } = tent
+    const { title, description, price, quantity, isAdd } = tent
 
     const preferencia = {
-        "items": [
-            {
-                "title": title,
-                "description": description,
-                "picture_url": "https://res.cloudinary.com/projects-emanuek/image/upload/v1714063248/portfolio/logo_2_luwfnx.png",
-                "quantity": quantity,
-                "currency_id": "ARS",
-                "unit_price": price / 10
-            }
-        ]
+        id: title,
+        title,
+        description,
+        quantity,
+        price,
+        isAdd
     }
 
     try {
 
-        const response = await fetch('https://api.mercadopago.com/checkout/preferences', {
+        const response = await fetch(`${NODE_ENV.trim() === "production" ? EXPO_HOST_PROD : EXPO_HOST}/payments`, {
             method: "POST",
             headers: {
-                'Authorization': `Bearer ${NODE_ENV !== 'production' ? EXPO_ACCESS_TOKEN_DEV : EXPO_ACCESS_TOKEN_PROD}`,
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
             body: JSON.stringify(preferencia)
         })
 
         const data = await response.json()
 
-        return data.init_point
+        return data
 
     } catch (error) {
         console.log(error)

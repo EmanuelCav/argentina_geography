@@ -1,5 +1,6 @@
 export const UPDATE_OPTIONS = 'UPDATE_OPTIONS'
+export const INITIALIZE_STATE = 'INITIALIZE_STATE'
 export const SELECT_CATEGORY = 'SELECT_CATEGORY'
-export const USER = 'USER'
 export const ACTION_CATEGORY = 'ACTION_CATEGORY'
 export const CHANGE_HELPS = 'CHANGE_HELPS'
+export const PAYMENT = 'PAYMENT'

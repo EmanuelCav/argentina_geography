@@ -1,13 +1,16 @@
 import { IUser } from "../../interface/User";
 import { Action } from "../../types/props.types";
 
-import { SELECT_CATEGORY, UPDATE_OPTIONS, USER, ACTION_CATEGORY, CHANGE_HELPS } from "../constants/user.const";
+import { SELECT_CATEGORY, UPDATE_OPTIONS, INITIALIZE_STATE, ACTION_CATEGORY, CHANGE_HELPS, PAYMENT } from "../constants/user.const";
 
 import { initialState } from "../value/user.value";
 
 const userReducer = (state: IUser = initialState, action: Action): IUser | any => {
 
     switch (action.type) {
+        case INITIALIZE_STATE:
+            return action.payload;
+
         case UPDATE_OPTIONS:
             return {
                 ...state,
@@ -19,15 +22,6 @@ const userReducer = (state: IUser = initialState, action: Action): IUser | any =
             return {
                 ...state,
                 categories: action.payload
-            }
-
-        case USER:
-            return {
-                ...state,
-                amountOptions: action.payload.amountOptions,
-                amountQuestions: action.payload.amountQuestions,
-                categories: action.payload.categories,
-                helps: action.payload.helps
             }
 
         case ACTION_CATEGORY:
@@ -45,6 +39,13 @@ const userReducer = (state: IUser = initialState, action: Action): IUser | any =
             return {
                 ...state,
                 helps: state.helps + action.payload
+            }
+
+        case PAYMENT:
+            return {
+                ...state,
+                helps: state.helps + action.payload.quantity,
+                isAdd: action.payload.isAdd
             }
 
         default:

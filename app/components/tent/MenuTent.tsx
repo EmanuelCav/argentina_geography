@@ -1,4 +1,4 @@
-import { View } from 'react-native'
+import { Alert, View } from 'react-native'
 import { openBrowserAsync } from "expo-web-browser";
 
 import ElementTent from './components/ElementTent'
@@ -12,11 +12,17 @@ import { handleIntegrationMP } from '../../utils/integration'
 const MenuTent = ({ elements }: { elements: ITent[] }) => {
 
     const handleTent = async (tent: ITent) => {
-        const data = await handleIntegrationMP(tent)
-        if (!data) {
-            return console.log("Ha ocurrido un error")
+
+        try {
+
+            const data = await handleIntegrationMP(tent)
+
+            await openBrowserAsync(data)
+
+        } catch (error) {
+            Alert.alert('Error', 'Hubo un error en el proceso de pago');
         }
-        openBrowserAsync(data)
+
     }
 
     return (

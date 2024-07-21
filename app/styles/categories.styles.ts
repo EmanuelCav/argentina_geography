@@ -93,6 +93,13 @@ export const categoriesStyle = StyleSheet.create({
         color: '#ffffff',
         fontWeight: '500',
         fontSize: Dimensions.get("window").height / 46
+    },
+
+    textWithoutConnection: {
+        color: '#f00',
+        fontSize: Dimensions.get("window").height / 49,
+        textAlign: 'center',
+        marginVertical: Dimensions.get("window").height / 140
     }
 
 })

@@ -27,21 +27,21 @@ import { generalStyles } from '../styles/general.styles'
 import { correctCategory, countCategory, helpsOptions } from '../helper/playing'
 import { emptyOptions } from '../helper/game'
 
-// const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : `${EXPO_INTERSTITIAL}`;
+const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : `${EXPO_INTERSTITIAL}`;
 
-// const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
-//     keywords: ['fashion', 'clothing'],
-// });
+const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
+    keywords: ['fashion', 'clothing'],
+});
 
-// const adUnitIdReward = __DEV__ ? TestIds.REWARDED : `${EXPO_RECOMPESADO}`;
+const adUnitIdReward = __DEV__ ? TestIds.REWARDED : `${EXPO_RECOMPESADO}`;
 
-// const rewarded = RewardedAd.createForAdRequest(adUnitIdReward, {
-//     keywords: ['fashion', 'clothing'],
-// });
+const rewarded = RewardedAd.createForAdRequest(adUnitIdReward, {
+    keywords: ['fashion', 'clothing'],
+});
 
 const Playing = ({ navigation, route }: PlayingType) => {
 
-    const { categories, amountOptions, categoryAction, helpsAction, helps } = useContext<IUser>(UserContext)
+    const { categories, amountOptions, categoryAction, helpsAction, helps, isAdd } = useContext<IUser>(UserContext)
     const { questions, dispatch } = useContext<IGame>(GameContext)
 
     const [seconds, setSeconds] = useState<number>(0)
@@ -58,7 +58,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
     const [isFinish, setIsFinish] = useState<boolean>(false)
     const [isGameError, setIsGameError] = useState<boolean>(false)
     const [isHelped, setIsHelped] = useState<boolean>(false)
-    const [isAdd, setIsAdd] = useState<boolean>(false)
+    const [isAdds, setIsAdds] = useState<boolean>(false)
     const [isIntersitialLoaded, setIsIntersitialLoaded] = useState<boolean>(false)
     const [isRecompensadoLoaded, setIsRecompensadoLoaded] = useState<boolean>(false)
 
@@ -128,11 +128,11 @@ const Playing = ({ navigation, route }: PlayingType) => {
         emptyOptions(optionsAllQuestions)
 
         if (route.params.isConnection) {
-            // if (interstitial.loaded && isIntersitialLoaded) {
-            //     interstitial.show()
-            // }
+            if (interstitial.loaded && isIntersitialLoaded && isAdd) {
+                interstitial.show()
+            }
         }
-        
+
         setIsRecompensadoLoaded(false)
         navigation.navigate('Home')
     }
@@ -143,12 +143,12 @@ const Playing = ({ navigation, route }: PlayingType) => {
 
         if (type === 'add') {
             if (route.params.isConnection) {
-                // if (rewarded.loaded || isRecompensadoLoaded) {
-                //     rewarded.show()
-                //     setIsAdd(true)
-                // } else {
-                //     navigation.navigate('Home')
-                // }
+                if (rewarded.loaded || isRecompensadoLoaded) {
+                    rewarded.show()
+                    setIsAdds(true)
+                } else {
+                    navigation.navigate('Home')
+                }
             }
         }
     }
@@ -187,43 +187,43 @@ const Playing = ({ navigation, route }: PlayingType) => {
         }
     }, [isHelped])
 
-    // useEffect(() => {
-    //     const unsubscribeLoaded = interstitial.addAdEventListener(AdEventType.LOADED, () => {
-    //         setIsIntersitialLoaded(true)
-    //     });
+    useEffect(() => {
+        const unsubscribeLoaded = interstitial.addAdEventListener(AdEventType.LOADED, () => {
+            setIsIntersitialLoaded(true)
+        });
 
-    //     const unsubscribedClosed = interstitial.addAdEventListener(AdEventType.CLOSED, () => {
-    //         setIsIntersitialLoaded(false)
-    //         interstitial.load();
-    //     });
+        const unsubscribedClosed = interstitial.addAdEventListener(AdEventType.CLOSED, () => {
+            setIsIntersitialLoaded(false)
+            interstitial.load();
+        });
 
-    //     interstitial.load();
+        interstitial.load();
 
-    //     return () => {
-    //         unsubscribeLoaded()
-    //         unsubscribedClosed()
-    //     };
-    // }, []);
+        return () => {
+            unsubscribeLoaded()
+            unsubscribedClosed()
+        };
+    }, []);
 
-    // useEffect(() => {
-    //     const unsubscribeLoaded = rewarded.addAdEventListener(RewardedAdEventType.LOADED, () => {
-    //         setIsRecompensadoLoaded(true)
-    //     });
+    useEffect(() => {
+        const unsubscribeLoaded = rewarded.addAdEventListener(RewardedAdEventType.LOADED, () => {
+            setIsRecompensadoLoaded(true)
+        });
 
-    //     const unsubscribeEarned = rewarded.addAdEventListener(
-    //         RewardedAdEventType.EARNED_REWARD,
-    //         () => {
-    //             setIsRecompensadoLoaded(false)   
-    //         },
-    //     );
+        const unsubscribeEarned = rewarded.addAdEventListener(
+            RewardedAdEventType.EARNED_REWARD,
+            () => {
+                setIsRecompensadoLoaded(false)
+            },
+        );
 
-    //     rewarded.load();
+        rewarded.load();
 
-    //     return () => {
-    //         unsubscribeLoaded();
-    //         unsubscribeEarned();
-    //     };
-    // }, []);
+        return () => {
+            unsubscribeLoaded();
+            unsubscribeEarned();
+        };
+    }, []);
 
     useEffect(() => {
         const backHandler = BackHandler.addEventListener('hardwareBackPress', () => true)
@@ -248,7 +248,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
             }
             {
                 isFinish && <Finish seconds={realSeconds} minutes={realMinutes} corrects={corrects} questions={!isGameError ? questions.length : gameErrors.length}
-                    showErrors={showErrors} continueHome={continueHome} isGameError={isGameError} isAdd={isAdd} changeHelp={changeHelp} isConnection={route.params.isConnection} />
+                    showErrors={showErrors} continueHome={continueHome} isGameError={isGameError} isAdd={isAdds} changeHelp={changeHelp} isConnection={route.params.isConnection} />
             }
         </View>
     )

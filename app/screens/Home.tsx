@@ -15,11 +15,9 @@ import { IGame } from '../interface/Game'
 import { UserContext } from '../server/context/user.context'
 import { GameContext } from '../server/context/game.context'
 
-import { getStorage } from '../helper/storage'
-
 const Home = ({ navigation }: { navigation: StackNavigation }) => {
 
-  const { categories, amountOptions, amountQuestions, userAction } = useContext<IUser>(UserContext)
+  const { categories, amountOptions, amountQuestions, isAdd } = useContext<IUser>(UserContext)
   const { gameAction, dispatch } = useContext<IGame>(GameContext)
 
   const [isConnection, setIsConnection] = useState<boolean>(true)
@@ -30,30 +28,17 @@ const Home = ({ navigation }: { navigation: StackNavigation }) => {
   }
 
   useEffect(() => {
-
-    (async () => {
-
-      const storage = await getStorage()
-
-      if (storage) {
-        userAction!(storage as any)
-      }
-    })()
-
-  }, [])
-
-  useEffect(() => {
     fetch().then(conn => conn).then(state => setIsConnection(state.isConnected!));
   }, [isConnection, isChangeView])
 
   return (
     <View style={generalStyles.containerGeneral}>
       {
-        // isConnection && <Banner />
+        isConnection && isAdd && <Banner />
       }
       <Title />
-      <Menu navigation={navigation} categories={categories} amountOptions={amountOptions} amountQuestions={amountQuestions} gameAction={gameAction!} 
-      isConnection={isConnection} handleChangeView={handleChangeView} dispatch={dispatch} />
+      <Menu navigation={navigation} categories={categories} amountOptions={amountOptions} amountQuestions={amountQuestions} gameAction={gameAction!}
+        isConnection={isConnection} handleChangeView={handleChangeView} dispatch={dispatch} />
     </View>
   )
 }
