@@ -26,7 +26,7 @@ const Categories = ({ navigation, route }: CategoriesType) => {
     const { categories, categoryAction, amountOptions, amountQuestions, categoryAllAction } = useContext<IUser>(UserContext)
     const { gameAction, dispatch } = useContext<IGame>(GameContext)
 
-    const [isConnection, setIsConnection] = useState<boolean>(false)
+    const [isConnection, setIsConnection] = useState<boolean>(true)
     const [isStart, setIsStart] = useState<boolean>(false)
 
     const accept = () => {

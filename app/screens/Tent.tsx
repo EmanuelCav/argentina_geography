@@ -33,9 +33,9 @@ const Tent = ({ navigation }: { navigation: StackNavigation }) => {
         quantity: 35,
         isAdd: false
     }, {
-        title: `50 Ayudas + ${isAdd && 'Quitar publicidad'}`,
-        description: `50 Ayudas + ${isAdd && 'Quitar publicidad'} - Mapa de Argentina - Quiz`,
-        price: 36000,
+        title: `50 Ayudas ${isAdd ? '+ Quitar publicidad': ''}`,
+        description: `50 Ayudas ${isAdd ? '+ Quitar publicidad' : ''} - Mapa de Argentina - Quiz`,
+        price: 3000,
         quantity: 50,
         isAdd: true
     }]
@@ -58,7 +58,9 @@ const Tent = ({ navigation }: { navigation: StackNavigation }) => {
         <View style={generalStyles.containerGeneral}>
             <HeaderTent />
             {
-                isPayed && <Text style={tentStyle.textPayment}>¡Pago exitoso!</Text>
+                isPayed && <View style={tentStyle.containerTextPayment}>
+                <Text style={tentStyle.textPayment}>¡Pago exitoso!</Text>
+                </View>
             }
             <MenuTent elements={elements} />
             <ButtonAccept text='ACEPTAR' func={goBack} isCategory={false} />

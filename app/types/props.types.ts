@@ -156,7 +156,7 @@ export type FinishPropsType = {
     isAdd: boolean;
     changeHelp: (type: HelpType) => void;
     isConnection: boolean;
-    isRecompensadoLoaded?: boolean;
+    isRecompensadoLoaded: boolean;
 }
 
 export type StatisticsFinishPropsType = {

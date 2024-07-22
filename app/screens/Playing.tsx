@@ -247,7 +247,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
                 isPreFinish && <PreFinish preFinish={preFinish} />
             }
             {
-                isFinish && <Finish seconds={realSeconds} minutes={realMinutes} corrects={corrects} questions={!isGameError ? questions.length : gameErrors.length}
+                isFinish && <Finish seconds={realSeconds} minutes={realMinutes} corrects={corrects} questions={!isGameError ? questions.length : gameErrors.length} isRecompensadoLoaded={isRecompensadoLoaded}
                     showErrors={showErrors} continueHome={continueHome} isGameError={isGameError} isAdd={isAdds} changeHelp={changeHelp} isConnection={route.params.isConnection} />
             }
         </View>
