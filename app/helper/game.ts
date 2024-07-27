@@ -33,25 +33,16 @@ export const generateGame = (questions: IQuestion[], allQuestions: IQuestion[], 
 
 }
 
-export const generateQuestions = (allQuestions: IQuestion[], categories: ICategory[], amountQuestions: number, isConnection: boolean): IQuestion[] => {
+export const generateQuestions = (allQuestions: IQuestion[], categories: ICategory[], amountQuestions: number): IQuestion[] => {
 
     let avaibleQuestions: IQuestion[] = []
 
-    if (isConnection) {
-        for (let i = 0; i < categories.filter(c => c.isSelect).length; i++) {
-            const filterQuestions: IQuestion[] = allQuestions.filter(q => (q.category === categories.filter(c => c.isSelect)[i].category) && q.isAnswer)
 
-            for (let j = 0; j < filterQuestions.length; j++) {
-                avaibleQuestions.push(filterQuestions[j])
-            }
-        }
-    } else {
-        for (let i = 0; i < categories.filter(c => !c.isImage).length; i++) {
-            const filterQuestions: IQuestion[] = allQuestions.filter(q => (q.category === categories.filter(c => !c.isImage)[i].category) && q.isAnswer)
+    for (let i = 0; i < categories.filter(c => c.isSelect).length; i++) {
+        const filterQuestions: IQuestion[] = allQuestions.filter(q => (q.category === categories.filter(c => c.isSelect)[i].category) && q.isAnswer)
 
-            for (let j = 0; j < filterQuestions.length; j++) {
-                avaibleQuestions.push(filterQuestions[j])
-            }
+        for (let j = 0; j < filterQuestions.length; j++) {
+            avaibleQuestions.push(filterQuestions[j])
         }
     }
 

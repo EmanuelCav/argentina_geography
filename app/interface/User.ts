@@ -10,7 +10,9 @@ export interface IUser {
     categories: ICategory[];
     isAdd: boolean;
     optionsAction?: (optionData: IOptionUser, navigation: StackNavigation) => void;
-    categoryAction?: (category: ICategory[]) => void;
+    categoryAction?: (category: string) => void;
+    countAction?: (category: string) => void;
+    correctAction?: (category: string) => void;
     categoryAllAction?: (isSelect: boolean) => void;
     helpsAction?: (type: HelpType) => void;
     paymentAction?: (data: IPayment) => void;

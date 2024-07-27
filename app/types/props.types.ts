@@ -66,13 +66,12 @@ export type ButtonOptionsPropsType = {
 }
 
 export type ShowCategoriesPropsType = {
-    categoryAction: (categories: ICategory[]) => void;
+    categoryAction: (category: string) => void;
     categories: ICategory[];
 }
 
 export type CategoryPropsType = {
-    categoryAction: (categories: ICategory[]) => void;
-    categories: ICategory[];
+    categoryAction: (category: string) => void;
     category: ICategory;
 }
 

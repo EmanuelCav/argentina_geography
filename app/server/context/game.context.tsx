@@ -17,7 +17,7 @@ const GameGlobalContext = ({ children }: { children: ReactNode }) => {
 
     const gameAction = (allQuestions: IQuestion[], categories: ICategory[], amountQuestions: number, amountOptions: number, navigation: StackNavigation, isConnection: boolean) => {
 
-        const questions = generateQuestions(allQuestions, categories, amountQuestions, isConnection)
+        const questions = generateQuestions(allQuestions, categories, amountQuestions)
 
         const game = generateGame(questions, allQuestions, amountQuestions, amountOptions)
 

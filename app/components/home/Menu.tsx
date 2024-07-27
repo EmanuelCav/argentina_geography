@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import { useEffect, useState } from 'react'
 
 import allQuestions from '../../../assets/questions.json'
@@ -19,6 +19,16 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
 
     if (isConnection) {
       if (categories.filter(c => c.isSelect).length === 0) {
+        navigation.navigate('Categories', {
+          isPlaying: true
+        })
+
+        handleChangeView()
+
+        return
+      }
+    } else {
+      if (categories.filter(c => !c.isImage).filter(c => c.isSelect).length === 0) {
         navigation.navigate('Categories', {
           isPlaying: true
         })
@@ -66,7 +76,7 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
   useEffect(() => {
     if (isStart) {
       setIsStart(false)
-      gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation, isConnection)
+      gameAction!(allQuestions, isConnection ? categories : categories.filter(c => !c.isImage), amountQuestions, amountOptions, navigation, isConnection)
       return
     }
 
@@ -79,7 +89,7 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
   return (
     <View style={homeStyles.containerMenu}>
       <ButtonMenu text='INICIAR' func={start} disabled={false} />
-      <ButtonMenu text='CATEGORÍAS' func={category} disabled={!isConnection} />
+      <ButtonMenu text='CATEGORÍAS' func={category} disabled={false} />
       <ButtonMenu text='OPCIONES' func={options} disabled={false} />
       <ButtonMenu text='ESTADÍSTICAS' func={statistics} disabled={false} />
       <ButtonMenu text='TIENDA' func={tent} disabled={false} />

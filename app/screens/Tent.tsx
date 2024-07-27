@@ -18,7 +18,7 @@ const Tent = ({ navigation }: { navigation: StackNavigation }) => {
 
     const { paymentAction, isAdd } = useContext<IUser>(UserContext)
 
-    const [isPayed, setIsPayed] = useState(false)
+    const [isPayed, setIsPayed] = useState<boolean>(false)
 
     const elements: ITent[] = [{
         title: "10 Ayudas",

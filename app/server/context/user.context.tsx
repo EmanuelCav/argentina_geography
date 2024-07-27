@@ -3,11 +3,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { EXPO_STORAGE } from '@env';
 
 import { IOptionUser, IPayment, IUser } from '../../interface/User'
-import { ICategory } from '../../interface/Game'
 import { Action, StackNavigation } from '../../types/props.types'
 
 import { initialState } from '../value/user.value'
-import { ACTION_CATEGORY, CHANGE_HELPS, INITIALIZE_STATE, PAYMENT, SELECT_CATEGORY, UPDATE_OPTIONS } from '../constants/user.const'
+import { ACTION_CATEGORY, CHANGE_HELPS, CORRECT_CATEGORY, COUNT_CATEGORY, INITIALIZE_STATE, PAYMENT, SELECT_CATEGORY, UPDATE_OPTIONS } from '../constants/user.const'
 import userReducer from '../reducer/user.reducer'
 
 import { HelpType } from '../../types/key.props'
@@ -60,13 +59,43 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
 
     }
 
-    const categoryAction = (categories: ICategory[]) => {
+    const categoryAction = (category: string) => {
 
         try {
 
             dispatch({
                 type: SELECT_CATEGORY,
-                payload: categories
+                payload: category
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+
+    const countAction = (category: string) => {
+
+        try {
+
+            dispatch({
+                type: COUNT_CATEGORY,
+                payload: category
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+
+    const correctAction = (category: string) => {
+
+        try {
+
+            dispatch({
+                type: CORRECT_CATEGORY,
+                payload: category
             })
 
         } catch (error) {
@@ -116,7 +145,7 @@ const UserGlobalContext = ({ children }: { children: ReactNode }) => {
     }
 
     return (
-        <UserContext.Provider value={{ ...state, optionsAction, categoryAction, categoryAllAction, helpsAction, paymentAction }}>
+        <UserContext.Provider value={{ ...state, optionsAction, categoryAction, categoryAllAction, helpsAction, paymentAction, correctAction, countAction }}>
             {children}
         </UserContext.Provider>
     )

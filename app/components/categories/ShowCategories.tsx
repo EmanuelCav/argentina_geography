@@ -35,7 +35,7 @@ const ShowCategories = ({ categories, categoryAction }: ShowCategoriesPropsType)
             <View style={categoriesStyle.containShowCategories}>
                 {
                     categories.map((category: ICategory, index: number) => {
-                        return <Category category={category} categoryAction={categoryAction} categories={categories} key={index} />
+                        return <Category category={category} categoryAction={categoryAction} key={index} />
                     }).slice(min, max)
                 }
             </View>

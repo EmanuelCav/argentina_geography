@@ -51,7 +51,7 @@ const Categories = ({ navigation, route }: CategoriesType) => {
     useEffect(() => {
         if (isStart) {
             setIsStart(false)
-            gameAction!(allQuestions, categories, amountQuestions, amountOptions, navigation, isConnection)
+            gameAction!(isConnection ? allQuestions : allQuestions.filter(aq => !aq.image), categories, amountQuestions, amountOptions, navigation, isConnection)
             return
         }
 
@@ -66,10 +66,11 @@ const Categories = ({ navigation, route }: CategoriesType) => {
             <TitleCategories />
             <ActionsCategories categoryAllAction={categoryAllAction!} />
             {
-                !isConnection && <Text style={categoriesStyle.textWithoutConnection}>Sin conexión no podrás seleccionar categorias</Text>
+                !isConnection && <Text style={categoriesStyle.textWithoutConnection}>Sin conexión no podrás seleccionar categorias con imágenes</Text>
             }
             <ShowCategories categories={isConnection ? categories : categories.filter(c => !c.isImage)} categoryAction={categoryAction!} />
-            <ButtonAccept text={route.params.isPlaying ? 'INICIAR' : 'ACEPTAR'} isCategory={route.params.isPlaying ? categories.filter(c => c.isSelect).length === 0 : false} func={accept} />
+            <ButtonAccept text={route.params.isPlaying ? 'INICIAR' : 'ACEPTAR'}
+                isCategory={route.params.isPlaying ? isConnection ? categories.filter(c => c.isSelect).length === 0 : categories.filter(c => !c.isImage).filter(c => c.isSelect).length === 0 : false} func={accept} />
         </View>
     )
 }

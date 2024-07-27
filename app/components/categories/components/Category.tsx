@@ -5,13 +5,10 @@ import { categoriesStyle } from '../../../styles/categories.styles'
 
 import { CategoryPropsType } from '../../../types/props.types'
 
-import { selectCategory } from '../../../helper/category'
-
-const Category = ({ category, categories, categoryAction }: CategoryPropsType) => {
+const Category = ({ category, categoryAction }: CategoryPropsType) => {
 
   const changeCategory = () => {
-    const newCategories = selectCategory(categories, category)
-    categoryAction!(newCategories)
+    categoryAction!(category.category)
   }
 
   return (

@@ -24,7 +24,7 @@ import Finish from '../components/playing/Finish'
 
 import { generalStyles } from '../styles/general.styles'
 
-import { correctCategory, countCategory, helpsOptions } from '../helper/playing'
+import { helpsOptions } from '../helper/playing'
 import { emptyOptions } from '../helper/game'
 
 const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : `${EXPO_INTERSTITIAL}`;
@@ -41,7 +41,7 @@ const rewarded = RewardedAd.createForAdRequest(adUnitIdReward, {
 
 const Playing = ({ navigation, route }: PlayingType) => {
 
-    const { categories, amountOptions, categoryAction, helpsAction, helps, isAdd } = useContext<IUser>(UserContext)
+    const { amountOptions, helpsAction, helps, isAdd, countAction, correctAction } = useContext<IUser>(UserContext)
     const { questions, dispatch } = useContext<IGame>(GameContext)
 
     const [seconds, setSeconds] = useState<number>(0)
@@ -133,7 +133,6 @@ const Playing = ({ navigation, route }: PlayingType) => {
             }
         }
 
-        setIsRecompensadoLoaded(false)
         navigation.navigate('Home')
     }
 
@@ -166,7 +165,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
 
     useEffect(() => {
         if (!isGameError) {
-            categoryAction!(countCategory(categories, questions[numberQuestion].category))
+            countAction!(questions[numberQuestion].category)
             setOptionsHelped(helpsOptions(questions[numberQuestion], amountOptions))
             return
         }
@@ -177,7 +176,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
 
     useEffect(() => {
         if (isCorrect && !isGameError) {
-            categoryAction!(correctCategory(categories, questions[numberQuestion].category))
+            correctAction!(questions[numberQuestion].category)
         }
     }, [corrects])
 

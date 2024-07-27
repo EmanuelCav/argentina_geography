@@ -1,7 +1,7 @@
 import { IUser } from "../../interface/User";
 import { Action } from "../../types/props.types";
 
-import { SELECT_CATEGORY, UPDATE_OPTIONS, INITIALIZE_STATE, ACTION_CATEGORY, CHANGE_HELPS, PAYMENT } from "../constants/user.const";
+import { SELECT_CATEGORY, UPDATE_OPTIONS, INITIALIZE_STATE, ACTION_CATEGORY, CHANGE_HELPS, PAYMENT, CORRECT_CATEGORY, COUNT_CATEGORY } from "../constants/user.const";
 
 import { initialState } from "../value/user.value";
 
@@ -21,7 +21,37 @@ const userReducer = (state: IUser = initialState, action: Action): IUser | any =
         case SELECT_CATEGORY:
             return {
                 ...state,
-                categories: action.payload
+                categories: state.categories.map((c) => c.category === action.payload ? {
+                    category: c.category,
+                    corrects: c.corrects,
+                    questions: c.questions,
+                    isSelect: !c.isSelect,
+                    isImage: c.isImage
+                } : c)
+            }
+
+        case CORRECT_CATEGORY:
+            return {
+                ...state,
+                categories: state.categories.map((c) => c.category === action.payload ? {
+                    category: c.category,
+                    isSelect: c.isSelect,
+                    corrects: c.corrects + 1,
+                    questions: c.questions,
+                    isImage: c.isImage
+                } : c)
+            }
+
+        case COUNT_CATEGORY:
+            return {
+                ...state,
+                categories: state.categories.map((c) => c.category === action.payload ? {
+                    category: c.category,
+                    isSelect: c.isSelect,
+                    corrects: c.corrects,
+                    questions: c.questions + 1,
+                    isImage: c.isImage
+                } : c)
             }
 
         case ACTION_CATEGORY:
@@ -31,7 +61,8 @@ const userReducer = (state: IUser = initialState, action: Action): IUser | any =
                     category: c.category,
                     corrects: c.corrects,
                     questions: c.questions,
-                    isSelect: action.payload
+                    isSelect: action.payload,
+                    isImage: c.isImage
                 } : c)
             }
 
