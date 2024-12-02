@@ -133,6 +133,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
             }
         }
 
+        setIsAdds(false)
         navigation.navigate('Home')
     }
 
@@ -246,7 +247,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
                 isPreFinish && <PreFinish preFinish={preFinish} />
             }
             {
-                isFinish && <Finish seconds={realSeconds} minutes={realMinutes} corrects={corrects} questions={!isGameError ? questions.length : gameErrors.length} isRecompensadoLoaded={isRecompensadoLoaded}
+                isFinish && <Finish seconds={realSeconds} minutes={realMinutes} corrects={corrects} questions={!isGameError ? questions.length : gameErrors.length} isRecompensadoLoaded={isRecompensadoLoaded || rewarded.loaded}
                     showErrors={showErrors} continueHome={continueHome} isGameError={isGameError} isAdd={isAdds} changeHelp={changeHelp} isConnection={route.params.isConnection} />
             }
         </View>
