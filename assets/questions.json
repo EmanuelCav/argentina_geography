@@ -2874,14 +2874,6 @@
     {
         "question": "¿Qué región/relieve se encuentra en la imagen?",
         "category": "Relieves y regiones",
-        "answer": "Yungas",
-        "options": [],
-        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707858190/geography_argentina/yungas_ueiqg3.png",
-        "isAnswer": true
-    },
-    {
-        "question": "¿Qué región/relieve se encuentra en la imagen?",
-        "category": "Relieves y regiones",
         "answer": "Sistema de Famatina",
         "options": [],
         "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707858184/geography_argentina/sistema_de_famatima_ixhuc1.png",

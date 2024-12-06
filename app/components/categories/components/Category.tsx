@@ -25,6 +25,7 @@ const Category = ({ category, categoryAction }: CategoryPropsType) => {
         value={category.isSelect}
         style={{ padding: Dimensions.get("window").height / 92.5 }}
         onValueChange={changeCategory}
+        color={"#16877e"}
       />
     </Pressable>
   )

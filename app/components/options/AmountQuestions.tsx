@@ -13,7 +13,7 @@ const AmountQuestions = ({ amountQuestions, setOptionsUser }: AmountQuestionsPro
             <Text style={optionStyle.titleOption}>Mueve el cursor para elegír la cantidad de preguntas</Text>
             <Text style={optionStyle.textAlertAmountQuestion}>{amountQuestions}</Text>
             <Slider
-                style={{ width: '100%', transform: [{ scaleY: 1.45 }] }}
+                style={{ width: '100%', transform: [{ scaleY: 1.25 }] }}
                 thumbTintColor='#5dc1b9'
                 minimumValue={5}
                 maximumValue={30}
