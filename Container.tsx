@@ -1,19 +1,18 @@
 import React, { ReactNode } from 'react'
-import { Dimensions, View, StyleSheet } from 'react-native'
+import { StyleSheet, SafeAreaView, StatusBar, Platform } from 'react-native'
 
 const Container = ({ children }: { children: ReactNode }) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
         {children}
-    </View>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
     container: {
-        width: Dimensions.get("window").width,
-        height: Dimensions.get("window").height,
-        padding: Dimensions.get("window").height / 74,
+        flex: 1,
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         backgroundColor: '#8de1e7'
     }
 })

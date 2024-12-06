@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { Dimensions, StatusBar, StyleSheet } from "react-native";
 
 export const playingStyles = StyleSheet.create({
 
@@ -140,6 +140,7 @@ export const playingStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'rgba(93, 193, 185, 0.5)',
+        margin: Dimensions.get("window").height / 74
     },
 
     containPreFinish: {

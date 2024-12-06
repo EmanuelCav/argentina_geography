@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { Dimensions, Platform, StatusBar, StyleSheet } from "react-native";
 
 export const responseStyle = StyleSheet.create({
 
@@ -11,7 +11,8 @@ export const responseStyle = StyleSheet.create({
         width: Dimensions.get("window").width,
         height: Dimensions.get("window").height,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
     }
 
 })

@@ -128,7 +128,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
         emptyOptions(optionsAllQuestions)
 
         if (route.params.isConnection) {
-            if (interstitial.loaded && isIntersitialLoaded && isAdd) {
+            if ((interstitial.loaded || isIntersitialLoaded) && isAdd) {
                 interstitial.show()
             }
         }
