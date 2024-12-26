@@ -13,14 +13,14 @@ export const optionStyle = StyleSheet.create({
     titleOption: {
         fontSize: Dimensions.get("window").height / 37,
         textAlign: 'center',
-        color: '#ffffff'
+        color: '#4ea6ad'
     },
 
     textAlertAmountQuestion: {
         fontSize: Dimensions.get("window").height / 41,
         fontWeight: '500',
         marginTop: Dimensions.get("window").height / 92,
-        color: '#ffffff'
+        color: '#4ea6ad'
     },
 
     containerAmountOptions: {

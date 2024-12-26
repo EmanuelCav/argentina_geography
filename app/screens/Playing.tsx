@@ -124,32 +124,49 @@ const Playing = ({ navigation, route }: PlayingType) => {
     }
 
     const continueHome = () => {
-        const optionsAllQuestions = allQuestions.filter((aq) => aq.options.length > 0)
-        emptyOptions(optionsAllQuestions)
 
-        if (route.params.isConnection) {
-            if ((interstitial.loaded || isIntersitialLoaded) && isAdd) {
-                interstitial.show()
+        try {
+
+            const optionsAllQuestions = allQuestions.filter((aq) => aq.options.length > 0)
+            emptyOptions(optionsAllQuestions)
+
+            if (route.params.isConnection) {
+                if ((interstitial.loaded || isIntersitialLoaded) && isAdd) {
+                    interstitial.show()
+                }
             }
+
+            setIsAdds(false)
+            navigation.navigate('Home')
+
+        } catch (error) {
+            console.error("Error showing interstitial ad or navigate:", error);
+            navigation.navigate('Home')
         }
 
-        setIsAdds(false)
-        navigation.navigate('Home')
     }
 
     const changeHelp = async (type: HelpType) => {
-        setIsHelped(true)
-        setHelpType(type)
 
-        if (type === 'add') {
-            if (route.params.isConnection) {
-                if (rewarded.loaded || isRecompensadoLoaded) {
-                    rewarded.show()
-                    setIsAdds(true)
-                } else {
-                    navigation.navigate('Home')
+        try {
+
+            setIsHelped(true)
+            setHelpType(type)
+
+            if (type === 'add') {
+                if (route.params.isConnection) {
+                    if (rewarded.loaded || isRecompensadoLoaded) {
+                        rewarded.show()
+                        setIsAdds(true)
+                    } else {
+                        navigation.navigate('Home')
+                    }
                 }
             }
+
+        } catch (error) {
+            console.error("Error showing rewarded ad:", error);
+            navigation.navigate('Home')
         }
     }
 
@@ -188,16 +205,25 @@ const Playing = ({ navigation, route }: PlayingType) => {
     }, [isHelped])
 
     useEffect(() => {
+
+        const loadInterstitialAd = () => {
+            try {
+                interstitial.load();
+            } catch (error) {
+                console.error("Error loading interstitial ad:", error);
+            }
+        };
+
         const unsubscribeLoaded = interstitial.addAdEventListener(AdEventType.LOADED, () => {
             setIsIntersitialLoaded(true)
         });
 
         const unsubscribedClosed = interstitial.addAdEventListener(AdEventType.CLOSED, () => {
             setIsIntersitialLoaded(false)
-            interstitial.load();
+            loadInterstitialAd();
         });
 
-        interstitial.load();
+        loadInterstitialAd();
 
         return () => {
             unsubscribeLoaded()
@@ -206,6 +232,15 @@ const Playing = ({ navigation, route }: PlayingType) => {
     }, []);
 
     useEffect(() => {
+
+        const loadRewardedAd = () => {
+            try {
+                rewarded.load();
+            } catch (error) {
+                console.error("Error loading rewarded ad:", error);
+            }
+        };
+
         const unsubscribeLoaded = rewarded.addAdEventListener(RewardedAdEventType.LOADED, () => {
             setIsRecompensadoLoaded(true)
         });
@@ -217,7 +252,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
             },
         );
 
-        rewarded.load();
+        loadRewardedAd();
 
         return () => {
             unsubscribeLoaded();

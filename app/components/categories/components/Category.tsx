@@ -18,7 +18,7 @@ const Category = ({ category, categoryAction }: CategoryPropsType) => {
       },
       categoriesStyle.containerCategory
     ]} onPress={changeCategory}>
-      <View style={{ width: '94%' }}>
+      <View style={{ flex: 1 }}>
         <Text style={categoriesStyle.categoryText}>{category.category}</Text>
       </View>
       <Checkbox

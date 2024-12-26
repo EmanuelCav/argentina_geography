@@ -8089,6 +8089,22 @@
     },
     {
         "question": "¿Qúe departamento se encuentra aquí?",
+        "category": "Departamentos de Santa Cruz",
+        "answer": "Gobernador Gregores",
+        "options": [],
+        "text": "Gobernador Gregores",
+        "isAnswer": false
+    },
+    {
+        "question": "¿Qúe departamento se encuentra aquí?",
+        "category": "Departamentos de Santa Cruz",
+        "answer": "Perito Moreno",
+        "options": [],
+        "text": "Perito Moreno",
+        "isAnswer": false
+    },
+    {
+        "question": "¿Qúe departamento se encuentra aquí?",
         "category": "Departamentos de Santa Fe",
         "answer": "San Martín",
         "options": [],
@@ -8517,6 +8533,22 @@
         "answer": "Base Marambio",
         "options": [],
         "text": "Base Marambio",
+        "isAnswer": false
+    },
+    {
+        "question": "¿Qúe departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Porvenir",
+        "options": [],
+        "text": "Porvenir",
+        "isAnswer": false
+    },
+    {
+        "question": "¿Qúe departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Lago Escondido",
+        "options": [],
+        "text": "Lago Escondido",
         "isAnswer": false
     },
     {
