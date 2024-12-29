@@ -33,7 +33,7 @@ export default function App() {
         <GameGlobalContext>
           <Container>
             <Loading />
-            <StatusBar backgroundColor='#5cc197' style='light' />
+            <StatusBar backgroundColor='#32b2c2' style='light' />
             <Stack.Navigator initialRouteName="Home" screenOptions={{
               headerShown: false
             }}>

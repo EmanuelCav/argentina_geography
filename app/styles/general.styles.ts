@@ -25,7 +25,7 @@ export const generalStyles = StyleSheet.create({
         padding: Dimensions.get("window").height / 74,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#5dc1b9',
+        borderColor: '#00ACC1',
         borderStyle: 'solid',
         borderWidth: 2,
         width: '100%',

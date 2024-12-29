@@ -15,7 +15,7 @@ const Container = ({ children }: { children: ReactNode }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#8de1e7'
+    backgroundColor: '#B3E5FC'
   }
 })
 

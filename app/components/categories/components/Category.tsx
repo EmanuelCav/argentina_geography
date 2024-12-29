@@ -14,7 +14,7 @@ const Category = ({ category, categoryAction }: CategoryPropsType) => {
   return (
     <Pressable style={({ pressed }) => [
       {
-        backgroundColor: pressed ? '#5cc197' : '#5dc1b9',
+        backgroundColor: pressed ? '#32b2c2' : '#00ACC1',
       },
       categoriesStyle.containerCategory
     ]} onPress={changeCategory}>
@@ -25,7 +25,7 @@ const Category = ({ category, categoryAction }: CategoryPropsType) => {
         value={category.isSelect}
         style={{ padding: Dimensions.get("window").height / 92.5 }}
         onValueChange={changeCategory}
-        color={"#16877e"}
+        color={"#028696"}
       />
     </Pressable>
   )

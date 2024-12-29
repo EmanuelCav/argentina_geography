@@ -8,7 +8,7 @@ export const statiscsStyles = StyleSheet.create({
         borderColor: '#ffffff',
         borderStyle: 'solid',
         padding: Dimensions.get("window").height / 106,
-        backgroundColor: '#5dc1b9'
+        backgroundColor: '#00ACC1'
     },
 
     containerBodyStatistics: {
@@ -19,7 +19,7 @@ export const statiscsStyles = StyleSheet.create({
         padding: Dimensions.get("window").height / 106,
         borderStyle: 'solid',
         borderColor: '#ffffff',
-        backgroundColor: '#5dc1b9',
+        backgroundColor: '#00ACC1',
         borderWidth: 2,
         marginVertical: Dimensions.get("window").height / 148
     },

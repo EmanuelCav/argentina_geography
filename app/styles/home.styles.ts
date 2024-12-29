@@ -7,10 +7,7 @@ export const homeStyles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        width: '100%',
-        borderBottomWidth: 1,
-        borderBottomColor: '#5dc1b9',
-        borderStyle: 'solid'
+        width: '100%'
     },
 
     containerMenu: {
@@ -51,7 +48,7 @@ export const homeStyles = StyleSheet.create({
 
     textTitle: {
         fontSize: Dimensions.get("window").height / 31,
-        color: '#5dc1b9',
+        color: '#00ACC1',
         fontWeight: '500',
         textAlign: 'center'
     },

@@ -58,7 +58,7 @@ export const categoriesStyle = StyleSheet.create({
     textTitleCategories: {
         color: '#4ea6ad',
         fontSize: Dimensions.get("window").height / 41,
-        fontWeight: '500',
+        fontWeight: '600',
         textAlign: 'center'
     },
 

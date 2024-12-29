@@ -8,7 +8,7 @@ const ButtonFinish = ({ text, func }: ButtonMenuPropsType) => {
     return (
         <Pressable style={({ pressed }) => [
             {
-                backgroundColor: pressed ? '#5cc197' : '#5dc1b9',
+                backgroundColor: pressed ? '#32b2c2' : '#00ACC1',
             },
             playingStyles.buttonFinish
         ]}

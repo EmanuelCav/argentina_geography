@@ -14,12 +14,12 @@ const AmountQuestions = ({ amountQuestions, setOptionsUser }: AmountQuestionsPro
             <Text style={optionStyle.textAlertAmountQuestion}>{amountQuestions}</Text>
             <Slider
                 style={{ width: '100%', transform: [{ scaleY: 1.25 }] }}
-                thumbTintColor='#5dc1b9'
+                thumbTintColor='#00ACC1'
                 minimumValue={5}
                 maximumValue={30}
                 value={amountQuestions}
-                minimumTrackTintColor='#5dc1b9'
-                maximumTrackTintColor='#5cc197'
+                minimumTrackTintColor='#00ACC1'
+                maximumTrackTintColor='#32b2c2'
                 onValueChange={(value) => setOptionsUser((optionData: IOptionUser) => ({
                     ...optionData, amountQuestions: value
                 }))}

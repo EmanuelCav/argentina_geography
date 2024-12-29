@@ -4,7 +4,7 @@ export const playingStyles = StyleSheet.create({
 
     containerQuestion: {
         height: '50%',
-        backgroundColor: '#5dc1b9',
+        backgroundColor: '#009cad',
         borderStyle: 'solid',
         borderWidth: 3,
         borderColor: '#ffffff',
@@ -65,7 +65,7 @@ export const playingStyles = StyleSheet.create({
 
     textGameStatistics: {
         fontSize: Dimensions.get("window").height / 41,
-        color: '#ffffff',
+        color: '#00ACC1',
         fontWeight: '500'
     },
 
@@ -139,7 +139,7 @@ export const playingStyles = StyleSheet.create({
         height: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(93, 193, 185, 0.5)',
+        backgroundColor: 'rgba(0, 172, 193, 0.5)',
         margin: Dimensions.get("window").height / 74
     },
 
@@ -148,7 +148,7 @@ export const playingStyles = StyleSheet.create({
         height: '25%',
         justifyContent: 'space-evenly',
         alignItems: 'center',
-        borderColor: '#5dc1b9',
+        borderColor: '#00ACC1',
         backgroundColor: '#ffffff',
         borderStyle: 'solid',
         borderWidth: 3,
@@ -158,7 +158,7 @@ export const playingStyles = StyleSheet.create({
     textPreFinish: {
         fontSize: Dimensions.get("window").height / 41,
         fontWeight: '600',
-        color: '#5dc1b9',
+        color: '#00ACC1',
         textAlign: 'center',
         marginTop: Dimensions.get("window").height / 92
     },
@@ -167,7 +167,7 @@ export const playingStyles = StyleSheet.create({
         width: '95%',
         justifyContent: 'space-evenly',
         alignItems: 'center',
-        borderColor: '#5dc1b9',
+        borderColor: '#00ACC1',
         backgroundColor: '#ffffff',
         borderStyle: 'solid',
         borderWidth: 3,

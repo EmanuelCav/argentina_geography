@@ -13,7 +13,8 @@ export const optionStyle = StyleSheet.create({
     titleOption: {
         fontSize: Dimensions.get("window").height / 37,
         textAlign: 'center',
-        color: '#4ea6ad'
+        color: '#4ea6ad',
+        fontWeight: '600'
     },
 
     textAlertAmountQuestion: {
@@ -34,7 +35,7 @@ export const optionStyle = StyleSheet.create({
         padding: Dimensions.get("window").height / 74,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#5dc1b9',
+        borderColor: '#00ACC1',
         borderStyle: 'solid',
         borderWidth: 2,
         width: '66.66%',
@@ -49,7 +50,7 @@ export const optionStyle = StyleSheet.create({
 
     textButtonOptionNotSelected: {
         fontSize: Dimensions.get("window").height / 41,
-        color: '#5dc1b9',
+        color: '#00ACC1',
         fontWeight: '500'
     }
 

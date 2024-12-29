@@ -8,7 +8,7 @@ const ButtonMenu = ({ text, func, disabled }: ButtonMenuPropsType) => {
   return (
     <Pressable onPress={func} style={({ pressed }) => [
       {
-        backgroundColor: pressed ? '#5cc197' : disabled ? '#dddddd' : '#5dc1b9',
+        backgroundColor: pressed ? '#32b2c2' : disabled ? '#dddddd' : '#00ACC1',
       },
       homeStyles.buttonMenu]} disabled={disabled}>
       <Text style={homeStyles.buttonMenuText}>{text}</Text>

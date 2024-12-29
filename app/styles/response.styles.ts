@@ -6,7 +6,7 @@ export const responseStyle = StyleSheet.create({
         position: 'absolute',
         top: 0,
         left: 0,
-        backgroundColor: '#5dc1b9',
+        backgroundColor: '#00ACC1',
         zIndex: 12,
         width: Dimensions.get("window").width,
         height: Dimensions.get("window").height,
