@@ -1,18 +1,16 @@
-<h1 align="center">Mapa del Alfajor</h1>
+<h1 align="center">Mapa de Argentina - Quiz</h1>
 <div align="center">
-  <img src="https://res.cloudinary.com/projects-emanuek/image/upload/v1738333596/icon_wav36h.jpg" width="40%" />
+  <img src="https://res.cloudinary.com/projects-emanuek/image/upload/v1714063248/portfolio/logo_2_luwfnx.png" width="40%" />
 </div>
 
-<h3>It allows you to discover where to find a specific alfajor with an interactive map. You can easily show which stores, kiosks or stores nearby sell the alfajor you are looking for, or add stores with their alfajores catalog.</h3>
+<h3>Educational mobile application for geography questions of Argentina: maps, provinces, capitals, cities and more. It is designed to teach and evaluate knowledge about the political and geographical division of the country, oriented both to learning and entertainment.</h3>
 
 ## Production ##
 
-- https://mapadelalfajor.com
+- https://play.google.com/store/apps/details?id=com.geografiadeargentina.aprendegeografiaargentina
 
 ## Tools ##
   
 - TypeScript
-- React
-- Zustand
-- Context
-- Firebase
+- React Native
+- Context API
