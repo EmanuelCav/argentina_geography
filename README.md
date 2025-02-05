@@ -3,7 +3,7 @@
   <img src="https://res.cloudinary.com/projects-emanuek/image/upload/v1714063248/portfolio/logo_2_luwfnx.png" width="40%" />
 </div>
 
-<h3>Educational mobile application of the political and geographic division of Argentina.</h3>
+<h3>Educational mobile application for geography questions of Argentina: maps, provinces, capitals, cities and more. It is designed to teach and evaluate knowledge about the political and geographical division of the country, oriented both to learning and entertainment.</h3>
 
 ## Production ##
 
@@ -13,4 +13,4 @@
   
 - TypeScript
 - React Native
-- Context
+- Context API
