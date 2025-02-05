@@ -52,9 +52,9 @@ export default function App() {
               <Stack.Screen name="Statistics" component={Statistics} options={{
                 animation: 'flip'
               }} />
-              <Stack.Screen name="Tent" component={Tent} options={{
+              {/* <Stack.Screen name="Tent" component={Tent} options={{
                 animation: 'flip'
-              }} />
+              }} /> */}
             </Stack.Navigator>
           </Container>
         </GameGlobalContext>

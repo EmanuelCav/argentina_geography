@@ -16,7 +16,7 @@ const MenuTent = ({ elements }: { elements: ITent[] }) => {
         try {
 
             const data = await handleIntegrationMP(tent)
-
+            
             await openBrowserAsync(data)
 
         } catch (error) {

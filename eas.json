@@ -16,7 +16,7 @@
         "EXPO_INTERSTITIAL": "ca-app-pub-8789796567862358/1807328074",
         "EXPO_RECOMPESADO": "ca-app-pub-8789796567862358/7519207763",
         "EXPO_STORAGE": "user_game_storage",
-        "EXPO_HOST": "http://192.168.0.5:4500",
+        "EXPO_HOST": "https://servergeographyargentina-production.up.railway.app",
         "EXPO_HOST_PROD": "https://servergeographyargentina-production.up.railway.app"
       }
     },
@@ -26,7 +26,7 @@
         "EXPO_INTERSTITIAL": "ca-app-pub-8789796567862358/1807328074",
         "EXPO_RECOMPESADO": "ca-app-pub-8789796567862358/7519207763",
         "EXPO_STORAGE": "user_game_storage",
-        "EXPO_HOST": "http://192.168.0.5:4500",
+        "EXPO_HOST": "https://servergeographyargentina-production.up.railway.app",
         "EXPO_HOST_PROD": "https://servergeographyargentina-production.up.railway.app"
       }
     }
