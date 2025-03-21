@@ -4,7 +4,7 @@ export const generalStyles = StyleSheet.create({
 
     containerGeneral: {
         flex: 1,
-        padding: Dimensions.get("window").height / 74,
+        padding: Dimensions.get("window").height / 106,
     },
 
     containerBanner: {

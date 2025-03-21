@@ -6,7 +6,7 @@ const HeaderTent = () => {
     return (
         <View style={tentStyle.containerHeaderTent}>
             <View style={tentStyle.containerEventTitle}>
-                <Image alt='Icon' source={require('../../../assets/mercp.png')} resizeMode='contain' style={tentStyle.imageTitleTent} />
+                <Image alt='Icon' source={require('../../../assets/imagen.png')} resizeMode='contain' style={tentStyle.imageTitleTent} />
             </View>
             <View style={tentStyle.containerEventTitle}>
                 <Text style={tentStyle.textTitleTent}>TIENDA</Text>

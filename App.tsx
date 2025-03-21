@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { StatusBar } from 'expo-status-bar';
 
 import Container from './Container';
 import Home from "./app/screens/Home";
@@ -28,12 +27,11 @@ const theme = {
 
 export default function App() {
   return (
-    <NavigationContainer theme={theme}>
-      <UserGlobalContext>
-        <GameGlobalContext>
-          <Container>
+    <Container>
+      <NavigationContainer theme={theme}>
+        <UserGlobalContext>
+          <GameGlobalContext>
             <Loading />
-            <StatusBar backgroundColor='#32b2c2' style='light' />
             <Stack.Navigator initialRouteName="Home" screenOptions={{
               headerShown: false
             }}>
@@ -52,14 +50,14 @@ export default function App() {
               <Stack.Screen name="Statistics" component={Statistics} options={{
                 animation: 'flip'
               }} />
-              {/* <Stack.Screen name="Tent" component={Tent} options={{
+              <Stack.Screen name="Tent" component={Tent} options={{
                 animation: 'flip'
-              }} /> */}
+              }} />
             </Stack.Navigator>
-          </Container>
-        </GameGlobalContext>
-      </UserGlobalContext>
-    </NavigationContainer>
+          </GameGlobalContext>
+        </UserGlobalContext>
+      </NavigationContainer>
+    </Container>
   );
 }
 

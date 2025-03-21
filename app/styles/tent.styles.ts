@@ -59,6 +59,14 @@ export const tentStyle = StyleSheet.create({
         marginBottom: Dimensions.get("window").height / 106
     },
 
+    buyStatus: {
+        fontSize: Dimensions.get("window").height / 47,
+        color: '#00ACC1',
+        fontWeight: '600',
+        marginVertical: Dimensions.get("window").height / 106,
+        textAlign: 'center'
+    },
+
     buttonMenu: {
         padding: Dimensions.get("window").height / 74,
         justifyContent: 'center',
@@ -90,12 +98,12 @@ export const tentStyle = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: Dimensions.get("window").height / 106,
-        borderColor: '#00ACC1',
+        borderColor: '#00ff00',
         borderWidth: 2
     },
 
     textPayment: {
-        color: '#00ACC1',
+        color: '#0f0',
         fontWeight: '500',
         fontSize: Dimensions.get("window").height / 49,
         textAlign: 'center',

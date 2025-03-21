@@ -2,12 +2,13 @@
   "expo": {
     "name": "Mapa de Argentina - Quiz",
     "slug": "GeografiaDeArgentina",
-    "version": "1.1.7",
+    "version": "1.1.8",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "backgroundColor": "#00ACC1"
+      "backgroundColor": "#00ACC1",
+      "resizeMode": "contain"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -17,15 +18,21 @@
     },
     "android": {
       "package": "com.geografiadeargentina.aprendegeografiaargentina",
-      "versionCode": 18,
+      "versionCode": 19,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "com.android.vending.BILLING"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "plugins": [
+      "react-native-iap"
+    ],
     "extra": {
       "eas": {
         "projectId": "7619cdad-0589-4c10-aa93-30c90f3912ca"

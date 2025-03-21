@@ -92,7 +92,7 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
       <ButtonMenu text='CATEGORÍAS' func={category} disabled={false} />
       <ButtonMenu text='OPCIONES' func={options} disabled={false} />
       <ButtonMenu text='ESTADÍSTICAS' func={statistics} disabled={false} />
-      {/* <ButtonMenu text='TIENDA' func={tent} disabled={false} /> */}
+      <ButtonMenu text='TIENDA' func={tent} disabled={false} />
     </View>
   )
 }

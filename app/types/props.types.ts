@@ -1,9 +1,10 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { SetStateAction } from "react";
-
-import { IOptionUser, ITent } from "../interface/User";
-import { ICategory, IQuestion } from "../interface/Game";
+import { Product } from "react-native-iap";
 import { RouteProp } from "@react-navigation/native";
+
+import { IOptionUser } from "../interface/User";
+import { ICategory, IQuestion } from "../interface/Game";
 import { HelpType } from "./key.props";
 
 export type RouteType = {
@@ -183,7 +184,12 @@ export type HelpsPropsType = {
     changeHelp: (type: HelpType) => void;
 }
 
+export type MenuTentPropsType = {
+    handleBuy: (productId: Product) => void;
+    elements: Product[]
+}
+
 export type ElementTentPropsType = {
-    handleTent: (tent: ITent) => void;
-    element: ITent;
+    handleBuy: (productId: Product) => void;
+    element: Product;
 }

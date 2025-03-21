@@ -30,14 +30,14 @@ export const playingStyles = StyleSheet.create({
     },
 
     textQuestion: {
-        fontSize: Dimensions.get("window").height / 41,
+        fontSize: Dimensions.get("window").height / 47,
         color: '#ffffff',
         fontWeight: '500',
         textAlign: 'center'
     },
 
     textQuestionText: {
-        fontSize: Dimensions.get("window").height / 33,
+        fontSize: Dimensions.get("window").height / 37,
         color: '#ffffff',
         fontWeight: '500',
         textAlign: 'center'
@@ -140,7 +140,7 @@ export const playingStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'rgba(0, 172, 193, 0.5)',
-        margin: Dimensions.get("window").height / 74
+        margin: Dimensions.get("window").height / 106
     },
 
     containPreFinish: {

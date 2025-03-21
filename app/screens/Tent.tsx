@@ -1,71 +1,109 @@
-import { Text, View } from 'react-native'
-import { useContext, useEffect, useState } from 'react'
-import { socket } from '../server/socket'
+import { useContext, useEffect, useState } from "react";
+import { View, Text, Alert } from "react-native";
+import * as RNIap from "react-native-iap";
 
-import MenuTent from '../components/tent/MenuTent'
-import HeaderTent from '../components/tent/HeaderTent'
-import ButtonAccept from '../components/components/ButtonAccept'
+import HeaderTent from "../components/tent/HeaderTent";
+import MenuTent from "../components/tent/MenuTent";
+import ButtonAccept from "../components/components/ButtonAccept";
 
-import { UserContext } from '../server/context/user.context'
+import { UserContext } from "../server/context/user.context";
+import { GameContext } from "../server/context/game.context";
+import { LOADING } from "../server/constants/game.const";
 
-import { generalStyles } from '../styles/general.styles'
-import { tentStyle } from '../styles/tent.styles'
+import { StackNavigation } from "../types/props.types";
+import { IUser } from "../interface/User";
+import { IGame } from "../interface/Game";
 
-import { StackNavigation } from '../types/props.types'
-import { IPayment, ITent, IUser } from '../interface/User'
+import { generalStyles } from "../styles/general.styles";
+import { tentStyle } from "../styles/tent.styles";
+
+const productIds: string[] = ["geo_ar_10ayudas", "geo_ar_50ayudas", "geo_ar_quitadds"];
 
 const Tent = ({ navigation }: { navigation: StackNavigation }) => {
 
     const { paymentAction, isAdd } = useContext<IUser>(UserContext)
+    const { dispatch } = useContext<IGame>(GameContext)
 
-    const [isPayed, setIsPayed] = useState<boolean>(false)
-
-    const elements: ITent[] = [{
-        title: "10 Ayudas",
-        description: "10 Ayudas - Mapa de Argentina - Quiz",
-        price: 500,
-        quantity: 10,
-        isAdd: false
-    }, {
-        title: "35 Ayudas",
-        description: "35 Ayudas - Mapa de Argentina - Quiz",
-        price: 2000,
-        quantity: 35,
-        isAdd: false
-    }, {
-        title: `50 Ayudas ${isAdd ? '+ Quitar publicidad': ''}`,
-        description: `50 Ayudas ${isAdd ? '+ Quitar publicidad' : ''} - Mapa de Argentina - Quiz`,
-        price: 3000,
-        quantity: 50,
-        isAdd: true
-    }]
-
-    const goBack = () => {
-        navigation.goBack()
-    }
+    const [buyStatus, setBuyStatus] = useState<string>("")
+    const [products, setProducts] = useState<RNIap.Product[]>([]);
 
     useEffect(() => {
-        socket.on('payment', (data: IPayment) => {
-            paymentAction!({
-                isAdd: !isAdd ? false : !elements.find(e => e.quantity === data.quantity)?.isAdd,
-                quantity: data.quantity
+
+        const initIAP = async () => {
+
+            dispatch!({
+                type: LOADING,
+                payload: true
             })
-            setIsPayed(true)
-        })
+
+            try {
+
+                await RNIap.initConnection()
+                const items = await RNIap.getProducts({ skus: productIds })
+                setProducts(items)
+
+            } catch (error) {
+                console.log("Error al inicializar IAP:", error);
+            } finally {
+                dispatch!({
+                    type: LOADING,
+                    payload: false
+                })
+            }
+        }
+
+        initIAP()
+
     }, [])
+
+    const handleBuy = async (product: RNIap.Product) => {
+        
+        try {
+
+            const purchase = await RNIap.requestPurchase({
+                skus: [product.productId],
+            })
+
+            if (purchase) {
+                const finalPurchase = Array.isArray(purchase) ? purchase[0] : purchase
+                const isConsumable = product.productId !== "geo_ar_quitadds"
+                await RNIap.finishTransaction({ purchase: finalPurchase, isConsumable })
+                
+                if (product.productId !== "geo_ar_quitadds") {
+                    setBuyStatus(`¡Has recibido ${Number(product.title.split(" ")[0])} ayudas correctamente!`)
+                } else {
+                    setBuyStatus("¡Se ha removido la publicidad correctamente!")
+                }
+                
+                paymentAction!({
+                    isAdd: !isAdd ? false : product.productId !== "geo_ar_quitadds",
+                    quantity: product.productId !== "geo_ar_quitadds" ? Number(product.title.split(" ")[0]) : 0
+                })
+                
+                Alert.alert("Compra Exitosa", "Tu compra ha sido realizada.")
+            }
+
+        } catch (error) {
+            console.log("Error en la compra:", error);
+            Alert.alert("Error", "No se pudo completar la compra.");
+        }
+    }
+
+    const handleGoBack = () => {
+        setBuyStatus("")
+        navigation.goBack()
+    }
 
     return (
         <View style={generalStyles.containerGeneral}>
             <HeaderTent />
             {
-                isPayed && <View style={tentStyle.containerTextPayment}>
-                <Text style={tentStyle.textPayment}>¡Pago exitoso!</Text>
-                </View>
+                buyStatus && <Text style={tentStyle.buyStatus}>{buyStatus}</Text>
             }
-            <MenuTent elements={elements} />
-            <ButtonAccept text='ACEPTAR' func={goBack} isCategory={false} />
+            <MenuTent elements={products} handleBuy={handleBuy} />
+            <ButtonAccept func={handleGoBack} text="REGRESAR" isCategory={false} />
         </View>
-    )
-}
+    );
+};
 
 export default Tent
