@@ -57,7 +57,7 @@ const Tent = ({ navigation }: { navigation: StackNavigation }) => {
     }, [])
 
     const handleBuy = async (product: RNIap.Product) => {
-        
+
         try {
 
             const purchase = await RNIap.requestPurchase({
@@ -68,24 +68,31 @@ const Tent = ({ navigation }: { navigation: StackNavigation }) => {
                 const finalPurchase = Array.isArray(purchase) ? purchase[0] : purchase
                 const isConsumable = product.productId !== "geo_ar_quitadds"
                 await RNIap.finishTransaction({ purchase: finalPurchase, isConsumable })
-                
+
                 if (product.productId !== "geo_ar_quitadds") {
                     setBuyStatus(`¡Has recibido ${Number(product.title.split(" ")[0])} ayudas correctamente!`)
                 } else {
                     setBuyStatus("¡Se ha removido la publicidad correctamente!")
                 }
-                
+
                 paymentAction!({
                     isAdd: !isAdd ? false : product.productId !== "geo_ar_quitadds",
                     quantity: product.productId !== "geo_ar_quitadds" ? Number(product.title.split(" ")[0]) : 0
                 })
-                
+
                 Alert.alert("Compra Exitosa", "Tu compra ha sido realizada.")
             }
 
-        } catch (error) {
-            console.log("Error en la compra:", error);
-            Alert.alert("Error", "No se pudo completar la compra.");
+        } catch (error: any) {
+            if (error.code === "E_ALREADY_OWNED") {
+                paymentAction!({
+                    isAdd: !isAdd ? false : product.productId !== "geo_ar_quitadds",
+                    quantity: product.productId !== "geo_ar_quitadds" ? Number(product.title.split(" ")[0]) : 0
+                })
+            } else {
+                console.log("Error en la compra:", error);
+                Alert.alert("Error", "No se pudo completar la compra.");
+            }
         }
     }
 
