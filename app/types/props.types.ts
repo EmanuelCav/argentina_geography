@@ -85,6 +85,7 @@ export type MenuPropsType = {
     handleChangeView: () => void;
     isConnection: boolean;
     dispatch: any;
+    categoryAllAction: (isSelect: boolean) => void;
 }
 
 export type GameStatisticsPropsType = {
@@ -102,6 +103,7 @@ export type GameStatisticsPropsType = {
     isPreFinish: boolean;
     helps: number;
     changeHelp: (type: HelpType) => void;
+    exit: (isExit: boolean) => void;
     isHelped: boolean;
     isGameError: boolean;
 }
@@ -157,6 +159,7 @@ export type FinishPropsType = {
     changeHelp: (type: HelpType) => void;
     isConnection: boolean;
     isRecompensadoLoaded: boolean;
+    isConnectionPlaying: boolean;
 }
 
 export type StatisticsFinishPropsType = {
@@ -170,6 +173,8 @@ export type ActionsFinishPropsType = {
     areErrors: boolean;
     showErrors: () => void; 
     continueHome : () => void;
+    isConnectionPlaying: boolean;
+    isConnection: boolean;
 }
 
 export type ActionCategoryPropsType = {
@@ -192,4 +197,9 @@ export type MenuTentPropsType = {
 export type ElementTentPropsType = {
     handleBuy: (productId: Product) => void;
     element: Product;
+}
+
+export type ShowExitPropsType = {
+    continueHome: () => void;
+    setIsExit: (isExit: boolean) => void;
 }

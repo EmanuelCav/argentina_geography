@@ -1,5 +1,6 @@
 import { View } from 'react-native'
 import { useEffect, useState } from 'react'
+import i18n from '../../../i18n';
 
 import allQuestions from '../../../assets/questions.json'
 
@@ -11,11 +12,25 @@ import ButtonMenu from './components/ButtonMenu'
 
 import { LOADING } from '../../server/constants/game.const'
 
-const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameAction, handleChangeView, isConnection, dispatch }: MenuPropsType) => {
+const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameAction, handleChangeView, isConnection, dispatch, categoryAllAction }: MenuPropsType) => {
 
   const [isStart, setIsStart] = useState<boolean>(false)
+  const [isFirstStart, setIsFirstStart] = useState<boolean>(false)
 
   const start = () => {
+
+    if (!isFirstStart) {
+      categoryAllAction(false)
+      setIsFirstStart(true)
+
+      navigation.navigate('Categories', {
+        isPlaying: true
+      })
+
+      handleChangeView()
+
+      return
+    }
 
     if (isConnection) {
       if (categories.filter(c => c.isSelect).length === 0) {
@@ -49,6 +64,11 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
 
   const category = () => {
     handleChangeView()
+
+    if (!isFirstStart) {
+      categoryAllAction(false)
+      setIsFirstStart(true)
+    }
 
     navigation.navigate('Categories', {
       isPlaying: false
@@ -88,11 +108,11 @@ const Menu = ({ navigation, categories, amountOptions, amountQuestions, gameActi
 
   return (
     <View style={homeStyles.containerMenu}>
-      <ButtonMenu text='INICIAR' func={start} disabled={false} />
-      <ButtonMenu text='CATEGORÍAS' func={category} disabled={false} />
-      <ButtonMenu text='OPCIONES' func={options} disabled={false} />
-      <ButtonMenu text='ESTADÍSTICAS' func={statistics} disabled={false} />
-      <ButtonMenu text='TIENDA' func={tent} disabled={false} />
+      <ButtonMenu text={i18n.t("start")} func={start} disabled={false} />
+      <ButtonMenu text={i18n.t("categories")} func={category} disabled={false} />
+      <ButtonMenu text={i18n.t("options")} func={options} disabled={false} />
+      <ButtonMenu text={i18n.t("statistics")} func={statistics} disabled={false} />
+      <ButtonMenu text={i18n.t("tent")} func={tent} disabled={false} />
     </View>
   )
 }

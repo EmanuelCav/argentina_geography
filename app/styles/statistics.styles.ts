@@ -25,13 +25,13 @@ export const statiscsStyles = StyleSheet.create({
     },
 
     categoryText: {
-        fontSize: Dimensions.get("window").height / 41,
+        fontSize: Dimensions.get("window").height / 43,
         color: '#ffffff',
         fontWeight: '500'
     },
 
     statisticText: {
-        fontSize: Dimensions.get("window").height / 46,
+        fontSize: Dimensions.get("window").height / 51,
         color: '#ffffff'
     }
 

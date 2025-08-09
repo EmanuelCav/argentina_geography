@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react'
 import { View } from 'react-native'
+import i18n from '../../i18n';
 
 import AmountOptions from '../components/options/AmountOptions'
 import AmountQuestions from '../components/options/AmountQuestions'
@@ -31,7 +32,7 @@ const Options = ({ navigation }: { navigation: StackNavigation }) => {
         <View style={generalStyles.containerGeneral}>
             <AmountOptions amountOptions={optionUser.amountOptions} setOptionsUser={setOptionUser} />
             <AmountQuestions amountQuestions={optionUser.amountQuestions} setOptionsUser={setOptionUser} />
-            <ButtonAccept text='ACEPTAR' func={goBack} isCategory={false} />
+            <ButtonAccept text={i18n.t("accept")} func={goBack} isCategory={false} />
         </View>
     )
 }

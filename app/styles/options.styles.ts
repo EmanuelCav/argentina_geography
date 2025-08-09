@@ -11,7 +11,7 @@ export const optionStyle = StyleSheet.create({
     },
 
     titleOption: {
-        fontSize: Dimensions.get("window").height / 37,
+        fontSize: Dimensions.get("window").height / 41,
         textAlign: 'center',
         color: '#4ea6ad',
         fontWeight: '600'

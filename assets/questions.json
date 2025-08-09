@@ -11,7 +11,7 @@
         "question": "¿Qué provincia se encuentra aquí?",
         "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075303/geography_argentina/tierra_del_fuego_u6prb7.png",
         "category": "Provincias/Distritos",
-        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Tierra del Fuego",
         "options": [],
         "isAnswer": true
     },
@@ -192,11 +192,203 @@
         "isAnswer": true
     },
     {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075303/geography_argentina/tucuman_dbghwh.png",
+        "category": "Provincias",
+        "answer": "Tucumán",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075303/geography_argentina/tierra_del_fuego_u6prb7.png",
+        "category": "Provincias",
+        "answer": "Tierra del Fuego",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075290/geography_argentina/santiago_del_estero_s5dani.png",
+        "category": "Provincias",
+        "answer": "Santiago del Estero",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075290/geography_argentina/santa_fe_jfm4ko.png",
+        "category": "Provincias",
+        "answer": "Santa Fe",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075289/geography_argentina/santa_cruz_ibhmo8.png",
+        "category": "Provincias",
+        "answer": "Santa Cruz",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075289/geography_argentina/san_luis_n58em2.png",
+        "category": "Provincias",
+        "answer": "San Luis",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075289/geography_argentina/san_juan_yrumty.png",
+        "category": "Provincias",
+        "answer": "San Juan",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075287/geography_argentina/salta_wldwck.png",
+        "category": "Provincias",
+        "answer": "Salta",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075287/geography_argentina/neuquen_znmbfs.png",
+        "category": "Provincias",
+        "answer": "Neuquén",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075287/geography_argentina/rio_negro_zma6b5.png",
+        "category": "Provincias",
+        "answer": "Río Negro",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075287/geography_argentina/misiones_rgxwmn.png",
+        "category": "Provincias",
+        "answer": "Misiones",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075286/geography_argentina/mendoza_o1sjyw.png",
+        "category": "Provincias",
+        "answer": "Mendoza",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075286/geography_argentina/la_rioja_uv1tr3.png",
+        "category": "Provincias",
+        "answer": "La Rioja",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075255/geography_argentina/la_pampa_depajm.png",
+        "category": "Provincias",
+        "answer": "La Pampa",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075230/geography_argentina/jujuy_vtrbmv.png",
+        "category": "Provincias",
+        "answer": "Jujuy",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/corrientes_lrebia.png",
+        "category": "Provincias",
+        "answer": "Corrientes",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/entre_rios_wzrue3.png",
+        "category": "Provincias",
+        "answer": "Entre Ríos",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/formosa_kdgifs.png",
+        "category": "Provincias",
+        "answer": "Formosa",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/cordoba_apvwft.png",
+        "category": "Provincias",
+        "answer": "Córdoba",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/catamarca_hghmjm.png",
+        "category": "Provincias",
+        "answer": "Catamarca",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075229/geography_argentina/chaco_lconwp.png",
+        "category": "Provincias",
+        "answer": "Chaco",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué distrito se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075228/geography_argentina/caba_oatjqm.png",
+        "category": "Provincias",
+        "answer": "Ciudad Autónoma de Buenos Aires",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075228/geography_argentina/chubut_r8wvqj.png",
+        "category": "Provincias",
+        "answer": "Chubut",
+        "options": [],
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué provincia se encuentra aquí?",
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707075228/geography_argentina/buenos_aires_quoagz.png",
+        "category": "Provincias",
+        "answer": "Buenos Aires",
+        "options": [],
+        "isAnswer": true
+    },
+    {
         "question": "Cuál es la capital de",
         "category": "Capitales",
         "answer": "Ushuaia",
         "options": [],
-        "text": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "text": "Tierra del Fuego",
         "isAnswer": true
     },
     {
@@ -834,7 +1026,7 @@
     {
         "question": "¿Qué bandera se encuentra en la imagen?",
         "category": "Banderas",
-        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Tierra del Fuego",
         "options": [],
         "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707848535/geography_argentina/bandera_tierra_del_fuego_neghon.png",
         "isAnswer": true
@@ -1034,7 +1226,7 @@
     {
         "question": "¿Qué escudo se encuentra en la imagen?",
         "category": "Escudos",
-        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Tierra del Fuego",
         "options": [],
         "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1707849130/geography_argentina/escudo_tierra_del_fuego_v2vum0.png",
         "isAnswer": true
@@ -8561,6 +8753,86 @@
     },
     {
         "question": "¿Qué departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego",
+        "answer": "Ushuaia",
+        "options": [],
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708521877/geography_argentina/ushuaia_vtqwln.png",
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego",
+        "answer": "Río Grande",
+        "options": [],
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708521876/geography_argentina/rio_grande_d5w9aa.png",
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego",
+        "answer": "Tolhuin",
+        "options": [],
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708521876/geography_argentina/tholuin_if5ptk.png",
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego",
+        "answer": "Antártida Argentina",
+        "options": [],
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708521876/geography_argentina/antartida_argentina_scmwnw.png",
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego",
+        "answer": "Islas del Atlántico Sur",
+        "options": [],
+        "image": "https://res.cloudinary.com/projects-emanuek/image/upload/v1708521876/geography_argentina/islas_del_atlantico_sur_u6up6m.png",
+        "isAnswer": true
+    },
+    {
+        "question": "¿Qué departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego",
+        "answer": "San Sebastián",
+        "options": [],
+        "text": "San Sebastián",
+        "isAnswer": false
+    },
+    {
+        "question": "¿Qué departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego",
+        "answer": "Puerto Argentino",
+        "options": [],
+        "text": "Puerto Argentino",
+        "isAnswer": false
+    },
+    {
+        "question": "¿Qué departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego",
+        "answer": "Base Marambio",
+        "options": [],
+        "text": "Base Marambio",
+        "isAnswer": false
+    },
+    {
+        "question": "¿Qué departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego",
+        "answer": "Porvenir",
+        "options": [],
+        "text": "Porvenir",
+        "isAnswer": false
+    },
+    {
+        "question": "¿Qué departamento se encuentra aquí?",
+        "category": "Departamentos de Tierra del Fuego",
+        "answer": "Lago Escondido",
+        "options": [],
+        "text": "Lago Escondido",
+        "isAnswer": false
+    },
+    {
+        "question": "¿Qué departamento se encuentra aquí?",
         "category": "Departamentos de Tucumán",
         "answer": "Yerba Buena",
         "options": [],
@@ -8730,7 +9002,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 1",
-        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Tierra del Fuego",
         "options": [],
         "text": "Ushuaia",
         "isAnswer": true
@@ -9570,7 +9842,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 2",
-        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Tierra del Fuego",
         "options": [],
         "text": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
         "isAnswer": false
@@ -9778,7 +10050,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 3",
-        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Tierra del Fuego",
         "options": [],
         "text": "Río Grande",
         "isAnswer": true
@@ -10458,7 +10730,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 4",
-        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Tierra del Fuego",
         "options": [],
         "text": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
         "isAnswer": false
@@ -10746,7 +11018,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 5",
-        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Tierra del Fuego",
         "options": [],
         "text": "Base Marambio",
         "isAnswer": true
@@ -10978,7 +11250,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 6",
-        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Tierra del Fuego",
         "options": [],
         "text": "Puerto Argentino",
         "isAnswer": true
@@ -11866,7 +12138,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 7",
-        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Tierra del Fuego",
         "options": [],
         "text": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
         "isAnswer": false
@@ -12178,7 +12450,7 @@
     {
         "question": "En qué provincia se encuentra",
         "category": "Ciudades 8",
-        "answer": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        "answer": "Tierra del Fuego",
         "options": [],
         "text": "Tolhuin",
         "isAnswer": true

@@ -64,7 +64,7 @@ export const playingStyles = StyleSheet.create({
     },
 
     textGameStatistics: {
-        fontSize: Dimensions.get("window").height / 41,
+        fontSize: Dimensions.get("window").height / 47,
         color: '#00ACC1',
         fontWeight: '500'
     },
@@ -135,6 +135,7 @@ export const playingStyles = StyleSheet.create({
         position: 'absolute',
         top: 0,
         left: 0,
+        zIndex: 20,
         width: '100%',
         height: '100%',
         justifyContent: 'center',
@@ -251,7 +252,6 @@ export const playingStyles = StyleSheet.create({
     },
 
     buttonHelp: {
-        width: '100%',
         padding: Dimensions.get("window").height / 106,
         justifyContent: 'space-around',
         alignItems: 'center',
@@ -274,6 +274,12 @@ export const playingStyles = StyleSheet.create({
         color: '#ffffff',
         fontSize: Dimensions.get("window").height / 48,
         fontWeight: '500'
+    },
+
+    containStatisticGame: {
+        width: '35%',
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 
 })

@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import { BackHandler, View } from 'react-native'
 import { InterstitialAd, AdEventType, RewardedAd, RewardedAdEventType, TestIds } from 'react-native-google-mobile-ads';
 import { EXPO_INTERSTITIAL, EXPO_RECOMPESADO } from '@env';
+import { fetch } from "@react-native-community/netinfo";
 
 import allQuestions from '../../assets/questions.json'
 
@@ -21,6 +22,7 @@ import Options from '../components/playing/Options'
 import Answer from '../components/playing/Answer'
 import PreFinish from '../components/playing/PreFinish'
 import Finish from '../components/playing/Finish'
+import ShowExit from '../components/playing/ShowExit';
 
 import { generalStyles } from '../styles/general.styles'
 
@@ -61,6 +63,8 @@ const Playing = ({ navigation, route }: PlayingType) => {
     const [isAdds, setIsAdds] = useState<boolean>(false)
     const [isIntersitialLoaded, setIsIntersitialLoaded] = useState<boolean>(false)
     const [isRecompensadoLoaded, setIsRecompensadoLoaded] = useState<boolean>(false)
+    const [isExit, setIsExit] = useState<boolean>(false)
+    const [isConnectionPlaying, setIsConnectionPlaying] = useState<boolean>(true)
 
     const [errors, setErrors] = useState<IQuestion[]>([])
     const [gameErrors, setGameErrors] = useState<IQuestion[]>([])
@@ -130,20 +134,18 @@ const Playing = ({ navigation, route }: PlayingType) => {
             const optionsAllQuestions = allQuestions.filter((aq) => aq.options.length > 0)
             emptyOptions(optionsAllQuestions)
 
-            if (route.params.isConnection) {
+            if (isConnectionPlaying) {
                 if ((interstitial.loaded || isIntersitialLoaded) && isAdd) {
                     interstitial.show()
                 }
             }
 
-            setIsAdds(false)
             navigation.navigate('Home')
 
         } catch (error) {
             console.error("Error showing interstitial ad or navigate:", error);
             navigation.navigate('Home')
         }
-
     }
 
     const changeHelp = async (type: HelpType) => {
@@ -154,7 +156,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
             setHelpType(type)
 
             if (type === 'add') {
-                if (route.params.isConnection) {
+                if (isConnectionPlaying) {
                     if (rewarded.loaded || isRecompensadoLoaded) {
                         rewarded.show()
                         setIsAdds(true)
@@ -182,6 +184,9 @@ const Playing = ({ navigation, route }: PlayingType) => {
     }, [])
 
     useEffect(() => {
+
+        fetch().then(conn => conn).then(state => setIsConnectionPlaying(state.isConnected!));
+
         if (!isGameError) {
             countAction!(questions[numberQuestion].category)
             setOptionsHelped(helpsOptions(questions[numberQuestion], amountOptions))
@@ -265,13 +270,32 @@ const Playing = ({ navigation, route }: PlayingType) => {
         return () => backHandler.remove()
     }, [])
 
+    useEffect(() => {
+        if (route.params.isConnection) {
+            if (!isConnectionPlaying) {
+                if (numberQuestion === 0) {
+                    const optionsAllQuestions = allQuestions.filter((aq) => aq.options.length > 0)
+                    emptyOptions(optionsAllQuestions)
+                    navigation.replace("Categories", {
+                        isPlaying: true
+                    })
+                } else {
+                    setIsPreFinish(true)
+                }
+            }
+        }
+    }, [isConnectionPlaying])
+
     return (
         <View style={generalStyles.containerGeneral}>
             <Question question={!isGameError ? questions[numberQuestion] : gameErrors[numberQuestion]} />
             <GameStatistics minutes={minutes} seconds={seconds} setSeconds={setSeconds} setMinutes={setMinutes}
                 questions={!isGameError ? questions.length : gameErrors.length} numberQuestion={numberQuestion + 1} realSeconds={realSeconds} realMinutes={realMinutes} isGameError={isGameError}
-                isCorrect={isCorrect} isIncorrect={isIncorrect} isFinish={isFinish} isPreFinish={isPreFinish} isHelped={isHelped} helps={helps} changeHelp={changeHelp}
+                isCorrect={isCorrect} isIncorrect={isIncorrect} isFinish={isFinish} isPreFinish={isPreFinish} isHelped={isHelped} helps={helps} changeHelp={changeHelp} exit={setIsExit}
             />
+            {
+                isExit && <ShowExit continueHome={continueHome} setIsExit={setIsExit} />
+            }
             {
                 (isCorrect || isIncorrect) ?
                     <Answer answer={isCorrect} correctAnswer={!isGameError ? questions[numberQuestion].answer : gameErrors[numberQuestion].answer} continueGame={continueGame} />
@@ -283,7 +307,7 @@ const Playing = ({ navigation, route }: PlayingType) => {
             }
             {
                 isFinish && <Finish seconds={realSeconds} minutes={realMinutes} corrects={corrects} questions={!isGameError ? questions.length : gameErrors.length} isRecompensadoLoaded={isRecompensadoLoaded || rewarded.loaded}
-                    showErrors={showErrors} continueHome={continueHome} isGameError={isGameError} isAdd={isAdds} changeHelp={changeHelp} isConnection={route.params.isConnection} />
+                    showErrors={showErrors} continueHome={continueHome} isGameError={isGameError} isAdd={isAdds} changeHelp={changeHelp} isConnection={route.params.isConnection} isConnectionPlaying={isConnectionPlaying} />
             }
         </View>
     )

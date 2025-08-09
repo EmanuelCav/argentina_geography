@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { View } from 'react-native'
+import i18n from '../../i18n';
 
 import ButtonAccept from '../components/components/ButtonAccept'
 import HeaderStatistics from "../components/statistics/HeaderStatistics";
@@ -24,7 +25,7 @@ const Statistics = ({ navigation }: { navigation: StackNavigation }) => {
         <View style={generalStyles.containerGeneral}>
             <HeaderStatistics categories={categories} />
             <BodyStatistics categories={categories} />
-            <ButtonAccept text='ACEPTAR' func={goBack} isCategory={false} />
+            <ButtonAccept text={i18n.t("accept")} func={goBack} isCategory={false} />
         </View>
     )
 }

@@ -6,7 +6,7 @@ export const initialState: IUser = {
     helps: 3,
     isAdd: true,
     categories: [{
-        category: "Provincias/Distritos",
+        category: "Provincias",
         isSelect: false,
         corrects: 0,
         questions: 0,
@@ -234,7 +234,7 @@ export const initialState: IUser = {
         questions: 0,
         isImage: true
     }, {
-        category: "Departamentos de Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+        category: "Departamentos de Tierra del Fuego",
         isSelect: false,
         corrects: 0,
         questions: 0,

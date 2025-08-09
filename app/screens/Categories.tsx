@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Text, View } from 'react-native'
 import { fetch } from "@react-native-community/netinfo";
+import i18n from '../../i18n';
 
 import { generalStyles } from '../styles/general.styles'
 
@@ -8,6 +9,7 @@ import ButtonAccept from '../components/components/ButtonAccept'
 import ShowCategories from '../components/categories/ShowCategories'
 import TitleCategories from '../components/categories/TitleCategories'
 import ActionsCategories from "../components/categories/ActionsCategories";
+import BackStart from "../components/categories/BackStart";
 
 import { CategoriesType } from '../types/props.types'
 import { IUser } from "../interface/User";
@@ -63,13 +65,14 @@ const Categories = ({ navigation, route }: CategoriesType) => {
 
     return (
         <View style={generalStyles.containerGeneral}>
+            <BackStart back={() => navigation.replace("Home")} />
             <TitleCategories />
             <ActionsCategories categoryAllAction={categoryAllAction!} />
             {
-                !isConnection && <Text style={categoriesStyle.textWithoutConnection}>Sin conexión no podrás seleccionar categorias con imágenes</Text>
+                !isConnection && <Text style={categoriesStyle.textWithoutConnection}>{i18n.t("offline")}</Text>
             }
             <ShowCategories categories={isConnection ? categories : categories.filter(c => !c.isImage)} categoryAction={categoryAction!} />
-            <ButtonAccept text={route.params.isPlaying ? 'INICIAR' : 'ACEPTAR'}
+            <ButtonAccept text={route.params.isPlaying ? `${i18n.t("start")}` : `${i18n.t("accept")}`}
                 isCategory={route.params.isPlaying ? isConnection ? categories.filter(c => c.isSelect).length === 0 : categories.filter(c => !c.isImage).filter(c => c.isSelect).length === 0 : false} func={accept} />
         </View>
     )

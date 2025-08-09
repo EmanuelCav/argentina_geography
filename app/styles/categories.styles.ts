@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet } from "react-native";
 export const categoriesStyle = StyleSheet.create({
 
     containerTitleCategories: {
-        height: '15%',
+        height: '8%',
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -46,7 +46,7 @@ export const categoriesStyle = StyleSheet.create({
 
     categoryText: {
         color: '#ffffff',
-        fontSize: Dimensions.get("window").height / 50
+        fontSize: Dimensions.get("window").height / 52
     },
 
     categoryTextAction: {
@@ -92,7 +92,7 @@ export const categoriesStyle = StyleSheet.create({
     textButtonActionCategory: {
         color: '#ffffff',
         fontWeight: '500',
-        fontSize: Dimensions.get("window").height / 46
+        fontSize: Dimensions.get("window").height / 52
     },
 
     textWithoutConnection: {
@@ -100,6 +100,12 @@ export const categoriesStyle = StyleSheet.create({
         fontSize: Dimensions.get("window").height / 49,
         textAlign: 'center',
         marginVertical: Dimensions.get("window").height / 140
+    },
+
+    backContainer: {
+        height: '7%',
+        justifyContent: 'center',
+        alignItems: 'flex-start'
     }
 
 })

@@ -1,4 +1,5 @@
-import { Text, Pressable } from 'react-native'
+import { Text, Pressable, View } from 'react-native'
+import i18n from '../../../i18n';
 
 import { playingStyles } from '../../styles/playing.styles'
 
@@ -14,17 +15,25 @@ const Answer = ({ answer, correctAnswer, continueGame }: AnswerPropsType) => {
             borderStyle: 'solid'
         }]} onPress={continueGame}>
             <ResponseAnswer answer={answer} />
-            {
-                !answer &&
-                <Text style={[playingStyles.textAnswer, {
-                    color: answer ? '#02c028' : '#ff0000',
-                }]}>
-                    Respuesta correcta: {correctAnswer}
-                </Text>
-            }
             <Text style={[playingStyles.textAnswer, {
                 color: answer ? '#02c028' : '#ff0000',
-            }]}>Toca para continuar</Text>
+                fontWeight: 'bold'
+            }]}>{i18n.t("touchToContinue")}</Text>
+            {
+                !answer &&
+                <View>
+                    <Text style={[playingStyles.textAnswer, {
+                        color: answer ? '#02c028' : '#ff0000',
+                    }]}>
+                        {i18n.t("correctAnswer")}:
+                    </Text>
+                    <Text style={[playingStyles.textAnswer, {
+                        color: answer ? '#02c028' : '#ff0000',
+                    }]}>
+                        {correctAnswer}
+                    </Text>
+                </View>
+            }
         </Pressable>
     )
 }

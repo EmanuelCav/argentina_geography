@@ -17,7 +17,7 @@ import { GameContext } from '../server/context/game.context'
 
 const Home = ({ navigation }: { navigation: StackNavigation }) => {
 
-  const { categories, amountOptions, amountQuestions, isAdd } = useContext<IUser>(UserContext)
+  const { categories, amountOptions, amountQuestions, isAdd, categoryAllAction } = useContext<IUser>(UserContext)
   const { gameAction, dispatch } = useContext<IGame>(GameContext)
 
   const [isConnection, setIsConnection] = useState<boolean>(true)
@@ -38,7 +38,7 @@ const Home = ({ navigation }: { navigation: StackNavigation }) => {
       }
       <Title />
       <Menu navigation={navigation} categories={categories} amountOptions={amountOptions} amountQuestions={amountQuestions} gameAction={gameAction!}
-        isConnection={isConnection} handleChangeView={handleChangeView} dispatch={dispatch} />
+        isConnection={isConnection} handleChangeView={handleChangeView} dispatch={dispatch} categoryAllAction={categoryAllAction!} />
     </View>
   )
 }
