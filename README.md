@@ -1,4 +1,4 @@
-<h1 align="center">Mapa de Argentina - Quiz</h1>
+<h1 align="center">Argentina Map - Quiz</h1>
 <div align="center">
   <img src="https://res.cloudinary.com/projects-emanuek/image/upload/v1714063248/portfolio/logo_2_luwfnx.png" width="40%" />
 </div>
